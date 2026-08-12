@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WBKSRMTK');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width">
+  <meta name="format-detection" content="telephone=no">
+  <title>記号論理・証明論の学習ゲーム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="/assets/js/main.js" type="module"></script>
+  <script src="./js/logic.js" type="module"></script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBKSRMTK"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <site-header>
+    <imagee-btn-help class="js-show-modal-btn" data-target="js-modal-help">？</imagee-btn-help>
+  </site-header>
+  <main class="wrapper">
+    <h1 class="u-screen-reader">記号論理・証明論の学習ゲーム</h1>
+
+    <imagee-modal id="js-modal-help" open="true">
+      <div class="logic-help">
+        <h2 id="dialog-ttl">操作説明</h2>
+        <p>このアプリでは、前提からゴールを導く自然演繹の証明を練習します。</p>
+
+        <section class="logic-help__section">
+          <h3>基本操作</h3>
+          <ol>
+            <li>「前提」と「ゴール」を確認します。</li>
+            <li>証明エリアの行をクリックして選択します。</li>
+            <li>右側の推論規則から、使える規則を選びます。</li>
+            <li>新しい証明行が追加され、ゴールと同じ式が root scope に出ると完成です。</li>
+          </ol>
+        </section>
+
+        <section class="logic-help__section">
+          <h3>仮定を使う証明</h3>
+          <p><strong>仮定を置く</strong> を押すと、新しいスコープを開始できます。</p>
+          <ul>
+            <li><strong>→I</strong>: 仮定 A のもとで B を導けたら、外側に A → B を導出します。</li>
+            <li><strong>¬I</strong>: 仮定 A のもとで ⊥ を導けたら、外側に ¬A を導出します。</li>
+          </ul>
+        </section>
+
+        <section class="logic-help__section">
+          <h3>論理体系の違い</h3>
+          <ul>
+            <li><strong>最小論理</strong>: ⊥E と ¬¬E は使えません。</li>
+            <li><strong>直観主義論理</strong>: ⊥E が使えます。</li>
+            <li><strong>古典論理</strong>: ⊥E に加えて ¬¬E が使えます。</li>
+          </ul>
+        </section>
+
+        <section class="logic-help__section">
+          <h3>無限練習</h3>
+          <p>上部の <strong>無限練習</strong> から論理体系を選ぶと、ランダムな原子命題を使った練習問題を次々に出題できます。</p>
+          <p>Stageの進捗とは別枠なので、自由に試行錯誤できます。</p>
+        </section>
+
+        <section class="logic-help__section">
+          <h3>最初の問題</h3>
+          <p><strong>A → B</strong> と <strong>A</strong> を選択し、<strong>→E</strong> を押すと <strong>B</strong> を導出できます。</p>
+        </section>
+
+        <section class="logic-help__section">
+          <h3>ボタン</h3>
+          <ul>
+            <li><strong>ヒント</strong>: 次に見るべきポイントを表示します。</li>
+            <li><strong>1手戻る</strong>: 直前の証明操作を取り消します。</li>
+            <li><strong>証明確認</strong>: 現在の証明が完成しているか確認します。</li>
+            <li><strong>リセット</strong>: 最初の状態に戻します。</li>
+            <li><strong>この体系では証明できない</strong>: 証明不能問題で正解判定に使います。</li>
+          </ul>
+        </section>
+      </div>
+    </imagee-modal>
+    <div class="logic-app" data-logic-app>
+      <div class="logic-app__stage" data-logic-stage></div>
+    </div>
+  </main>
+  <site-footer></site-footer>
+</body>
+</html>

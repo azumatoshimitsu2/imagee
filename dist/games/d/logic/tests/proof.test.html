@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Logic Proof Tests</title>
+  <link rel="stylesheet" href="./test.css">
+</head>
+<body>
+  <h1>Logic Proof Tests</h1>
+  <ol id="results"></ol>
+
+  <script type="module">
+    import { getProblemById } from "../js/data/problems.js";
+    import { parseFormula } from "../js/logic/parser.js";
+    import { createInitialProofState, addAssumption } from "../js/logic/proof/proof-state.js";
+    import { isProofComplete } from "../js/logic/proof/validator.js";
+    import { canApplyAndIntro } from "../js/logic/rules/and-intro.js";
+    import { applyImplicationIntro } from "../js/logic/rules/implication-intro.js";
+    import { createTestRunner } from "./test-runner.js";
+
+    const { assert, test } = createTestRunner(document.getElementById("results"));
+
+    test("→I closes an assumption scope", () => {
+      let state = createInitialProofState(getProblemById("minimal-implication-002"));
+      state = addAssumption(state, parseFormula("B"));
+      state = applyImplicationIntro(state, [state.lines[0]]);
+
+      assert(isProofComplete(state), "Expected completed proof.");
+      assert(state.currentScopeId === "root", "Expected current scope to return to root.");
+    });
+
+    test("Closed scope lines cannot be referenced from outside", () => {
+      let state = createInitialProofState(getProblemById("minimal-implication-002"));
+      state = addAssumption(state, parseFormula("B"));
+      const closedLine = state.lines[1];
+      state = applyImplicationIntro(state, [state.lines[0]]);
+
+      assert(
+        !canApplyAndIntro(state, [state.lines[0], closedLine]),
+        "Expected closed scope line to be inaccessible."
+      );
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+:root {
+  --sans-serif: "Noto Sans JP", "ヒラギノ角ゴシック", "Hiragino Sans", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+  --serif: serif;
+  --en-sans: "Roboto", sans-serif;;
+  --en-serif: serif;
+  --base: #fff;
+  --main: #000;
+  --sp-base-fs: 4vw;
+  --sp-pad: 4vw;
+}

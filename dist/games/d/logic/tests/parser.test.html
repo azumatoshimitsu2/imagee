@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Logic Parser Tests</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      line-height: 1.6;
+      margin: 2rem;
+    }
+
+    .pass {
+      color: #087f5b;
+    }
+
+    .fail {
+      color: #c92a2a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Logic Parser Tests</h1>
+  <ol id="results"></ol>
+
+  <script type="module">
+    import { formulasEqual } from "../js/logic/compare.js";
+    import { formatFormula } from "../js/logic/formatter.js";
+    import { parseFormula } from "../js/logic/parser.js";
+
+    const results = document.getElementById("results");
+
+    function test(name, callback) {
+      const item = document.createElement("li");
+
+      try {
+        callback();
+        item.className = "pass";
+        item.textContent = `✓ ${name}`;
+      } catch (error) {
+        item.className = "fail";
+        item.textContent = `✗ ${name}: ${error.message}`;
+        console.error(error);
+      }
+
+      results.append(item);
+    }
+
+    function assert(condition, message) {
+      if (!condition) {
+        throw new Error(message);
+      }
+    }
+
+    test("¬(A ∧ B) → C can be parsed and formatted", () => {
+      const formula = parseFormula("¬(A ∧ B) → C");
+
+      assert(
+        formatFormula(formula) === "¬(A ∧ B) → C",
+        "Expected ¬(A ∧ B) → C."
+      );
+    });
+
+    test("A → B → C is right-associative", () => {
+      const formula = parseFormula("A → B → C");
+
+      assert(
+        formatFormula(formula) === "A → B → C",
+        "Expected A → (B → C) without unnecessary parentheses."
+      );
+
+      assert(
+        formulasEqual(formula, parseFormula("A → (B → C)")),
+        "Expected A → B → C to equal A → (B → C)."
+      );
+    });
+
+    test("Whitespace and symbolic variants do not affect equality", () => {
+      assert(
+        formulasEqual(parseFormula("A→B"), parseFormula("A -> B")),
+        "Expected implication variants to be equal."
+      );
+    });
+
+    test("Operator precedence is ¬, ∧, ∨, →", () => {
+      const formula = parseFormula("¬A ∧ B ∨ C → D");
+
+      assert(
+        formatFormula(formula) === "¬A ∧ B ∨ C → D",
+        "Expected formatter to preserve precedence."
+      );
+    });
+
+    test("bottom and ⊥ parse as the same formula", () => {
+      assert(
+        formulasEqual(parseFormula("bottom"), parseFormula("⊥")),
+        "Expected bottom aliases to be equal."
+      );
+    });
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('./definition/layer.css');
+@import url('./definition/variable.css');
+@import url('./foundation/base.css');
+
+@layer utilities {
+  body.is-show-modal {
+    overflow: hidden;
+  }
+
+  .u-screen-reader {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal;
+  }
+}

@@ -1,0 +1,14 @@
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  margin: 2rem;
+}
+
+.pass {
+  color: #087f5b;
+}
+
+.fail {
+  color: #c92a2a;
+}
+

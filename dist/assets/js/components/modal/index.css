@@ -1,0 +1,85 @@
+:host {
+  overflow: auto;
+  display: none;
+  opacity: 0;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  transition-property: opacity;
+  transition-duration: .4s;
+}
+
+:host(:focus) {
+  border: 2px solid blue;
+}
+
+:host(.is-show) {
+  opacity: 1;
+}
+
+:host(.is-show) .c-modal__content {
+  margin-top: 0;
+}
+
+.c-modal {
+  min-height: 100%;
+}
+
+.c-modal__wrap {
+  background: #fff;
+  position: relative;
+  top: 2em;
+  left: 50%;
+  transform: translate(-50%,0);
+  max-width: 60%;
+  transition-property: margin;
+  transition-duration: .4s;
+  padding: 2em;
+  border-radius: 20px;
+}
+.c-modal__content {
+  overflow: auto;
+  position: relative;
+  background: #fff;
+  padding: 2em;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: -1em;
+  transition-property: margin;
+  transition-duration: .4s;
+}
+.c-modal__close-btn {
+  cursor: pointer;
+  display: flex;
+  background: #fff;
+  position: fixed;
+  right: 0;
+  top: 0;
+  border: 0;
+  aspect-ratio: 1/1;
+  width: 3em;
+  padding: 0;
+  transform: translate(50%, -50%);
+  border-radius: 100px;
+  border: 2px solid #000;
+}
+.c-modal__close-btn::before,
+.c-modal__close-btn::after {
+  content: "";
+  display: inline-block;
+  width: 1.6em;
+  height: 2px;
+  background: #000;
+  position: absolute;
+  translate: 0.55em 1.3em;
+}
+.c-modal__close-btn::before {
+  transform: rotate(-45deg);
+}
+.c-modal__close-btn::after {
+  transform: rotate(45deg);
+}

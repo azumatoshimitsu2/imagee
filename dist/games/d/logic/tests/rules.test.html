@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Logic Rule Tests</title>
+  <link rel="stylesheet" href="./test.css">
+</head>
+<body>
+  <h1>Logic Rule Tests</h1>
+  <ol id="results"></ol>
+
+  <script type="module">
+    import { getProblemById } from "../js/data/problems.js";
+    import { parseFormula } from "../js/logic/parser.js";
+    import { formatFormula } from "../js/logic/formatter.js";
+    import { createInitialProofState } from "../js/logic/proof/proof-state.js";
+    import { isProofComplete } from "../js/logic/proof/validator.js";
+    import { applyAndIntro } from "../js/logic/rules/and-intro.js";
+    import { applyAndElimLeft } from "../js/logic/rules/and-elim.js";
+    import { applyBottomElim } from "../js/logic/rules/bottom-elim.js";
+    import { applyDoubleNegationElim } from "../js/logic/rules/double-negation-elim.js";
+    import { applyImplicationElim } from "../js/logic/rules/implication-elim.js";
+    import { applyNegationElim } from "../js/logic/rules/negation-elim.js";
+    import { createTestRunner } from "./test-runner.js";
+
+    const { assert, test } = createTestRunner(document.getElementById("results"));
+
+    test("→E derives B from A → B and A", () => {
+      let state = createInitialProofState(getProblemById("minimal-implication-001"));
+      state = applyImplicationElim(state, [state.lines[0], state.lines[1]]);
+
+      assert(formatFormula(state.lines.at(-1).formula) === "B", "Expected B.");
+    });
+
+    test("∧I derives A ∧ B from A and B", () => {
+      let state = createInitialProofState(getProblemById("minimal-and-001"));
+      state = applyAndIntro(state, [state.lines[0], state.lines[1]]);
+
+      assert(formatFormula(state.lines.at(-1).formula) === "A ∧ B", "Expected A ∧ B.");
+    });
+
+    test("∧E derives A from A ∧ B", () => {
+      let state = createInitialProofState(getProblemById("minimal-and-002"));
+      state = applyAndElimLeft(state, [state.lines[0]]);
+
+      assert(formatFormula(state.lines.at(-1).formula) === "A", "Expected A.");
+    });
+
+    test("¬E derives bottom from A and ¬A", () => {
+      let state = createInitialProofState(getProblemById("minimal-negation-001"));
+      state = applyNegationElim(state, [state.lines[0], state.lines[1]]);
+
+      assert(formatFormula(state.lines.at(-1).formula) === "⊥", "Expected ⊥.");
+    });
+
+    test("⊥E derives A in intuitionistic logic", () => {
+      let state = createInitialProofState(getProblemById("intuitionistic-bottom-001"));
+      state = applyBottomElim(state, [state.lines[0]], { formula: parseFormula("A") });
+
+      assert(isProofComplete(state), "Expected completed proof.");
+    });
+
+    test("¬¬E derives A in classical logic", () => {
+      let state = createInitialProofState(getProblemById("classical-double-negation-001"));
+      state = applyDoubleNegationElim(state, [state.lines[0]]);
+
+      assert(isProofComplete(state), "Expected completed proof.");
+    });
+  </script>
+</body>
+</html>
+

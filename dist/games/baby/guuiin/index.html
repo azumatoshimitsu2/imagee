@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WBKSRMTK');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width">
+  <meta name="format-detection" content="telephone=no">
+  <title>グイーンってなるアルファベット</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/assets/js/main.js" type="module"></script>
+  <script src="./js/guuiin.js" type="module"></script>
+  <style>
+    .wrapper {
+      overflow: hidden;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .stage {
+      background: #fff;
+      max-width: min(100vw,910px);
+      padding: 5em 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .alphabet {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .alphabet button {
+      font-family: 'Archivo Black', sans-serif;
+      width: min(20vw,130px);
+      height: min(20vw,130px);
+      margin: 0;
+      font-size: min(22vw,130px);
+      line-height: 1;
+      transition-property: transform;
+      user-select: none;
+      text-align: center;
+      transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px)) 
+      scale(var(--s)) 
+      skew(calc(var(--deg) * 1deg));
+      padding: 0;
+      background-color: transparent;
+      border: 0;
+    }
+    .alphabet button.active {
+      z-index: 10;
+    }
+    .alphabet button.mouseout {
+      transition-duration: .4s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBKSRMTK"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <site-header>
+    <imagee-btn-help class="js-show-modal-btn" data-target="js-modal-1">？</imagee-btn-help>
+  </site-header>
+  <main class="wrapper">
+    <h1 class="u-screen-reader">グイーンってなるアルファベット</h1>
+
+    <imagee-modal id="js-modal-1" open="true">
+      <h2 id="dialog-ttl">ゲームの遊び方</h2>
+      <p>画面上にあるアルファベットを押し続けると押したアルファベットが大きくなります。</p>
+      <p>キーボード操作が可能な環境では、キーボードをおすと同様に大きくなります。</p>
+      <p>押したアルファベットを発音します。</p>
+    </imagee-modal>
+    <div class="stage">
+      <div class="alphabet">
+        <button type="button" class="a" style="--s:1; --x:0; --y:0; --deg:0;">A</button>
+        <button type="button" class="b" style="--s:1; --x:0; --y:0; --deg:0;">B</button>
+        <button type="button" class="c" style="--s:1; --x:0; --y:0; --deg:0;">C</button>
+        <button type="button" class="d" style="--s:1; --x:0; --y:0; --deg:0;">D</button>
+        <button type="button" class="e" style="--s:1; --x:0; --y:0; --deg:0;">E</button>
+        <button type="button" class="f" style="--s:1; --x:0; --y:0; --deg:0;">F</button>
+        <button type="button" class="g" style="--s:1; --x:0; --y:0; --deg:0;">G</button>
+        <button type="button" class="h" style="--s:1; --x:0; --y:0; --deg:0;">H</button>
+        <button type="button" class="i" style="--s:1; --x:0; --y:0; --deg:0;">I</button>
+        <button type="button" class="j" style="--s:1; --x:0; --y:0; --deg:0;">J</button>
+        <button type="button" class="k" style="--s:1; --x:0; --y:0; --deg:0;">K</button>
+        <button type="button" class="l" style="--s:1; --x:0; --y:0; --deg:0;">L</button>
+        <button type="button" class="m" style="--s:1; --x:0; --y:0; --deg:0;">M</button>
+        <button type="button" class="n" style="--s:1; --x:0; --y:0; --deg:0;">N</button>
+        <button type="button" class="o" style="--s:1; --x:0; --y:0; --deg:0;">O</button>
+        <button type="button" class="p" style="--s:1; --x:0; --y:0; --deg:0;">P</button>
+        <button type="button" class="q" style="--s:1; --x:0; --y:0; --deg:0;">Q</button>
+        <button type="button" class="r" style="--s:1; --x:0; --y:0; --deg:0;">R</button>
+        <button type="button" class="s" style="--s:1; --x:0; --y:0; --deg:0;">S</button>
+        <button type="button" class="t" style="--s:1; --x:0; --y:0; --deg:0;">T</button>
+        <button type="button" class="u" style="--s:1; --x:0; --y:0; --deg:0;">U</button>
+        <button type="button" class="v" style="--s:1; --x:0; --y:0; --deg:0;">V</button>
+        <button type="button" class="w" style="--s:1; --x:0; --y:0; --deg:0;">W</button>
+        <button type="button" class="x" style="--s:1; --x:0; --y:0; --deg:0;">X</button>
+        <button type="button" class="y" style="--s:1; --x:0; --y:0; --deg:0;">Y</button>
+        <button type="button" class="z" style="--s:1; --x:0; --y:0; --deg:0;">Z</button>
+      </div>
+    </div>
+  </main>
+  <site-footer></site-footer>
+</body>
+</html>

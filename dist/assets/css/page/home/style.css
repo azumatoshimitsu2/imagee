@@ -1,0 +1,99 @@
+@layer page {
+  body {
+    background: linear-gradient(to right,#0a111b,#0a101e);
+    color: #fff;
+    a {
+      color: #fff;
+    }
+  }
+
+  nav {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  h2 {
+
+  }
+  .home-logo {
+    background: linear-gradient(to right,#0a111b,#0a101e);
+    text-align: center;
+    img {
+      width: 100%;
+      max-width: 900px;
+    }
+  }
+
+  .home-nav {
+    a {
+      display: grid;
+      align-items: center;
+      grid-template-columns: 10rem 1fr;
+      gap: 2rem;
+      text-decoration: none;
+      border: 2px solid #fff;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    @media (hover: hover) {
+      a:hover img {
+        scale: 1.06;
+      }
+    }
+    dl {
+      padding: 1rem 1rem 1rem 0;
+    }
+    figure {
+      height: 100%;
+    }
+    figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .25s scale;
+    }
+    dt,dd, p {
+      margin: 0;
+    }
+    dt {
+      font-size: 160%;
+      font-weight: bold;
+      margin-bottom: .4rem;
+      line-height: 1.5;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .home-nav {
+      padding-left: var(--sp-pad);
+      padding-right: var(--sp-pad);
+      figure {
+        grid-area: figure;
+      }
+      dl {
+        display: contents;
+      }
+      dt {
+        grid-area: dt;
+        font-size: 120%;
+        padding-right: 1rem;
+      }
+      dd {
+        grid-area: dd;
+        padding: .8rem 1rem 1rem 1rem;
+        border-top: 1px solid #fff;
+      }
+      a {
+        gap: 0 1rem;
+        grid-template-columns: 6rem 1fr;
+        grid-template-areas:
+          "figure dt"
+          "dd dd";
+      }
+    }
+  }
+}
