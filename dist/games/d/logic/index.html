@@ -10,7 +10,7 @@
   })(window,document,'script','dataLayer','GTM-WBKSRMTK');</script>
   <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>記号論理・証明図ゲーム</title>
+    <title>記号論理ゲーム</title>
   <link rel="stylesheet" href="/assets/css/style.css">
   <script src="/assets/js/main.js" type="module"></script>
     <link rel="stylesheet" href="./css/style.css">
@@ -28,8 +28,8 @@
     <main class="logic-game-shell">
       <header class="logic-header">
         <div>
-          <p class="logic-kicker">logic game</p>
-          <h1>証明図を作る論理学習アプリ</h1>
+          <p class="logic-kicker">LOGIC GAME</p>
+          <h1>記号論理ゲーム</h1>
         </div>
         <div class="logic-toolbar">
           <div class="logic-category-selector" id="category-selector" aria-label="カテゴリ選択"></div>
@@ -47,11 +47,6 @@
           <div id="problem-header" class="problem-header-wrap"></div>
           <div id="proof-workspace" class="proof-workspace" aria-live="polite"></div>
         </section>
-
-        <aside class="logic-rule-panel">
-          <h2>利用可能な規則</h2>
-          <ul id="rule-list" class="rule-list"></ul>
-        </aside>
       </section>
       <div id="problem-status-wrap" class="problem-status-wrap"></div>
     </main>
@@ -60,6 +55,7 @@
       <p>前提から目標の式を導く、自然演繹の証明練習です。</p>
       <p>前提や証明行をクリックすると、その式を入力欄にコピーできます。</p>
       <p>依存元は、前提を P1, P2...、証明行を 1, 2... として入力します。例: P1,1</p>
+      <p>否定は ¬A、矛盾は ⊥ と入力します。A と ¬A からは ¬-除去で ⊥ を導けます。</p>
       <p>仮定から導いた行には未解消の仮定が表示されます。導入規則で仮定を閉じると、目標への証明として扱われます。</p>
       <p>解答ボタンを押すと、この問題の解答が証明行へ自動入力されます。</p>
     </imagee-modal>

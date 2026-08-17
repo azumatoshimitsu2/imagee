@@ -35,4 +35,10 @@
   img {
     height: auto  ;
   }
+  button,
+  select,
+  input,
+  textarea {
+    font-size: 16px;
+  }
 }

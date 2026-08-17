@@ -29,6 +29,14 @@ export function renderProofWorkspace(container, proofState, actions = {}) {
       element.classList.remove('is-copied');
     }, 700);
   };
+  const insertAtCursor = (input, value) => {
+    const start = input.selectionStart ?? input.value.length;
+    const end = input.selectionEnd ?? input.value.length;
+    input.value = `${input.value.slice(0, start)}${value}${input.value.slice(end)}`;
+    const nextPosition = start + value.length;
+    input.focus();
+    input.setSelectionRange(nextPosition, nextPosition);
+  };
 
   const referenceLines = getProblemReferenceLines(proofState);
   const premiseCount = referenceLines.length;
@@ -118,7 +126,16 @@ export function renderProofWorkspace(container, proofState, actions = {}) {
   form.innerHTML = `
     <label>
       <span>式</span>
-      <input type="text" name="formula" placeholder="例: A → B" inputmode="latin" autocomplete="off" autocapitalize="off" spellcheck="false" />
+      <input type="text" name="formula" placeholder="例: A → B, ¬A, ⊥" inputmode="latin" autocomplete="off" autocapitalize="off" spellcheck="false" />
+      <span class="logic-symbol-palette" aria-label="論理記号を入力">
+        <button type="button" data-insert-symbol="¬" title="否定">¬</button>
+        <button type="button" data-insert-symbol="⊥" title="矛盾">⊥</button>
+        <button type="button" data-insert-symbol="→" title="含意">→</button>
+        <button type="button" data-insert-symbol="∧" title="かつ">∧</button>
+        <button type="button" data-insert-symbol="∨" title="または">∨</button>
+        <button type="button" data-insert-symbol="(" title="左括弧">(</button>
+        <button type="button" data-insert-symbol=")" title="右括弧">)</button>
+      </span>
     </label>
     <label>
       <span>規則</span>
@@ -128,7 +145,7 @@ export function renderProofWorkspace(container, proofState, actions = {}) {
     </label>
     <label>
       <span>依存元</span>
-      <input type="text" name="dependencies" placeholder="例: P1,1" inputmode="latin" autocomplete="off" autocapitalize="off" spellcheck="false" />
+      <input type="text" name="dependencies" placeholder="例: P1,1" inputmode="latin" autocomplete="off" autocapitalize="sentences" spellcheck="false" />
     </label>
     <div class="logic-proof-actions">
       <button type="submit">証明行を追加</button>
@@ -164,6 +181,12 @@ export function renderProofWorkspace(container, proofState, actions = {}) {
       ? draft.dependencies.map(formatDependencyLabel).join(',')
       : ''
   );
+
+  form.querySelectorAll('[data-insert-symbol]').forEach((button) => {
+    button.addEventListener('click', () => {
+      insertAtCursor(form.elements.formula, button.dataset.insertSymbol ?? '');
+    });
+  });
 
   const resetButton = form.querySelector('[data-reset="true"]');
   resetButton.addEventListener('click', () => {

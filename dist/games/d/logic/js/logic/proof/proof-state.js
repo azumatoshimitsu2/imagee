@@ -160,6 +160,18 @@ function stripNegation(formula) {
   return null;
 }
 
+function isContradiction(formula) {
+  return normalizeFormula(formula) === 'bot';
+}
+
+function areContradictory(first, second) {
+  const firstNegated = stripNegation(first);
+  if (firstNegated && sameFormula(firstNegated, second)) return true;
+
+  const secondNegated = stripNegation(second);
+  return Boolean(secondNegated) && sameFormula(first, secondNegated);
+}
+
 function getRowsBeforeLine(state, line) {
   const proofLines = state.lines ?? [];
   const lineIndex = proofLines.findIndex((candidate) => candidate.id === line.id);
@@ -256,7 +268,7 @@ function getOpenAssumptionIndexes(state, line) {
       openAssumptions.delete(dependencies[0]);
     }
 
-    if (row.rule === '¬-導入' || row.rule === '反証法') {
+    if (row.rule === '¬-導入') {
       const dischargedFormula = stripNegation(row.formula);
       if (dischargedFormula) {
         [...openAssumptions].forEach((assumptionIndex) => {
@@ -265,6 +277,14 @@ function getOpenAssumptionIndexes(state, line) {
           }
         });
       }
+    }
+
+    if (row.rule === '反証法') {
+      [...openAssumptions].forEach((assumptionIndex) => {
+        if (sameFormula(stripNegation(rows[assumptionIndex]?.formula), row.formula)) {
+          openAssumptions.delete(assumptionIndex);
+        }
+      });
     }
 
     const result = [...openAssumptions];
@@ -398,19 +418,22 @@ function evaluateRule(state, line) {
     case '¬-導入': {
       const target = stripNegation(formula);
       if (!target) return false;
-      return dependencyVariants.some(([sourceIndex]) => {
-        if (!Number.isInteger(sourceIndex)) return false;
-        const source = previous[sourceIndex]?.formula;
-        return Boolean(source) && sameFormula(source, target);
+      return dependencyVariants.some(([assumptionIndex, contradictionIndex]) => {
+        if (!Number.isInteger(assumptionIndex) || !Number.isInteger(contradictionIndex)) return false;
+        const assumption = previous[assumptionIndex]?.formula;
+        const contradiction = previous[contradictionIndex]?.formula;
+        if (!assumption || !contradiction) return false;
+        return sameFormula(assumption, target) && isContradiction(contradiction);
       });
     }
     case '¬-除去': {
-      return dependencyVariants.some(([sourceIndex]) => {
-        if (!Number.isInteger(sourceIndex)) return false;
-        const source = previous[sourceIndex]?.formula;
-        if (!source) return false;
-        const target = stripNegation(source);
-        return Boolean(target) && sameFormula(formula, target);
+      if (!isContradiction(formula)) return false;
+      return dependencyVariants.some(([firstIndex, secondIndex]) => {
+        if (!Number.isInteger(firstIndex) || !Number.isInteger(secondIndex)) return false;
+        const first = previous[firstIndex]?.formula;
+        const second = previous[secondIndex]?.formula;
+        if (!first || !second) return false;
+        return areContradictory(first, second);
       });
     }
     case '二重否定除去': {
@@ -424,22 +447,13 @@ function evaluateRule(state, line) {
       });
     }
     case '反証法': {
-      const negatedFormula = stripNegation(formula);
-      if (!negatedFormula) return false;
-
-      return dependencyVariants.some((indexes) => {
-        const referenced = indexes
-          .filter((index) => Number.isInteger(index))
-          .map((index) => previous[index]?.formula)
-          .filter(Boolean);
-
-        return referenced.some((candidate) => {
-          const positive = stripNegation(candidate);
-          if (positive) {
-            return referenced.some((other) => sameFormula(other, positive));
-          }
-          return referenced.some((other) => sameFormula(stripNegation(other), candidate));
-        });
+      return dependencyVariants.some(([assumptionIndex, contradictionIndex]) => {
+        if (!Number.isInteger(assumptionIndex) || !Number.isInteger(contradictionIndex)) return false;
+        const assumption = previous[assumptionIndex]?.formula;
+        const contradiction = previous[contradictionIndex]?.formula;
+        if (!assumption || !contradiction || !isContradiction(contradiction)) return false;
+        const negatedAssumption = stripNegation(assumption);
+        return Boolean(negatedAssumption) && sameFormula(formula, negatedAssumption);
       });
     }
     case '排中律': {
@@ -461,14 +475,14 @@ function getExpectedDependencyCount(rule) {
       return 0;
     case '∧-除去':
     case '∨-導入':
-    case '¬-導入':
-    case '¬-除去':
     case '二重否定除去':
       return 1;
     case '→-導入':
     case '→-除去':
     case '∧-導入':
     case '∨-除去':
+    case '¬-導入':
+    case '¬-除去':
     case '反証法':
       return 2;
     default:

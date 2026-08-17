@@ -15,7 +15,6 @@ import {
 } from './logic/proof/proof-state.js';
 import { renderProblemPage, renderProblemStatus } from './ui/problem-page.js';
 import { renderProofWorkspace } from './ui/proof-workspace.js';
-import { formatRuleLabel } from './ui/rule-labels.js';
 
 const categorySelector = document.querySelector('#category-selector');
 const difficultySelector = document.querySelector('#difficulty-selector');
@@ -23,7 +22,6 @@ const problemList = document.querySelector('#problem-list');
 const problemHeader = document.querySelector('#problem-header');
 const problemStatus = document.querySelector('#problem-status-wrap');
 const workspace = document.querySelector('#proof-workspace');
-const ruleList = document.querySelector('#rule-list');
 
 const state = {
   category: 'minimal',
@@ -132,15 +130,7 @@ function renderProblemList() {
   generateButton.className = 'category-button';
   generateButton.textContent = '新しい問題を追加';
   generateButton.addEventListener('click', () => {
-    const currentProblems = [...state.problems];
-    const nextProblem = buildGeneratedProblem(state.category, currentProblems.length + 1, state.difficulty);
-    const numberedProblem = {
-      ...nextProblem,
-      title: `問題 ${currentProblems.length + 1}`
-    };
-    state.problems = [...currentProblems, numberedProblem].filter((problem) => (
-      state.difficulty === 'all' || problem.difficulty === state.difficulty
-    ));
+    appendGeneratedProblem();
     state.selectedProblemId = state.problems.at(-1)?.id ?? null;
     resetProofState();
     render();
@@ -148,16 +138,16 @@ function renderProblemList() {
   problemList.appendChild(generateButton);
 }
 
-function renderRuleList() {
-  const problem = getCurrentProblem();
-  ruleList.innerHTML = '';
-  if (!problem) return;
-  problem.availableRules.forEach((rule) => {
-    const item = document.createElement('li');
-    item.className = 'rule-item';
-    item.textContent = formatRuleLabel(rule);
-    ruleList.appendChild(item);
-  });
+function appendGeneratedProblem() {
+  const currentProblems = [...state.problems];
+  const nextProblem = buildGeneratedProblem(state.category, currentProblems.length + 1, state.difficulty);
+  const numberedProblem = {
+    ...nextProblem,
+    title: `問題 ${currentProblems.length + 1}`
+  };
+  state.problems = [...currentProblems, numberedProblem].filter((problem) => (
+    state.difficulty === 'all' || problem.difficulty === state.difficulty
+  ));
 }
 
 function goToNextProblem() {
@@ -168,7 +158,15 @@ function goToNextProblem() {
   }
 
   const currentIndex = state.problems.findIndex((problem) => problem.id === state.selectedProblemId);
-  const nextIndex = currentIndex >= 0 ? (currentIndex + 1) % state.problems.length : 0;
+  if (currentIndex === state.problems.length - 1) {
+    appendGeneratedProblem();
+    state.selectedProblemId = state.problems.at(-1)?.id ?? null;
+    resetProofState();
+    render();
+    return;
+  }
+
+  const nextIndex = currentIndex >= 0 ? currentIndex + 1 : 0;
   state.selectedProblemId = state.problems[nextIndex]?.id ?? null;
   resetProofState();
   render();
@@ -273,7 +271,6 @@ function render() {
   }
 
   renderProblemList();
-  renderRuleList();
   renderWorkspace();
   renderProblemPage(problemHeader, getCurrentProblem());
   renderProblemStatus(problemStatus, state.statusMessage, state.statusKind);

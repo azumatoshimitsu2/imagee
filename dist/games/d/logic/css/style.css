@@ -10,6 +10,10 @@
   --logic-warning: #a65b1c;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .logic-game-shell {
   max-width: 1400px;
   margin: 0 auto;
@@ -90,22 +94,21 @@
 
 .logic-layout {
   display: grid;
-  grid-template-columns: 240px minmax(0, 1fr) 260px;
+  grid-template-columns: 240px minmax(0, 1fr);
   gap: 1rem;
   min-height: 620px;
 }
 
 .logic-side-panel,
-.logic-main-panel,
-.logic-rule-panel {
+.logic-main-panel {
+  min-width: 0;
   background: var(--logic-panel);
   border: 1px solid var(--logic-border);
   border-radius: 16px;
   padding: 1rem;
 }
 
-.problem-list,
-.rule-list {
+.problem-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -114,8 +117,7 @@
   gap: 0.6rem;
 }
 
-.problem-item,
-.rule-item {
+.problem-item {
   border: 1px solid var(--logic-border);
   background: #fff;
   border-radius: 10px;
@@ -172,6 +174,8 @@
   margin: 0 auto;
   box-shadow: 0 10px 24px rgba(31, 31, 31, 0.14);
   pointer-events: auto;
+  max-height: min(34vh, 180px);
+  overflow: auto;
 }
 
 .problem-status.is-error {
@@ -235,7 +239,6 @@
 .is-selectable-line {
   width: 100%;
   color: inherit;
-  font: inherit;
   text-align: left;
   cursor: pointer;
 }
@@ -293,6 +296,8 @@
   font-family: "Times New Roman", serif;
   font-size: 1.05rem;
   line-height: 1.5;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .proof-line .line-rule {
@@ -317,6 +322,8 @@
   font-family: "Times New Roman", serif;
   font-size: 1.15rem;
   line-height: 1.45;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .proof-context-line .line-rule {
@@ -354,12 +361,37 @@
   border-radius: 8px;
   border: 1px solid var(--logic-border);
   padding: 0.7rem 0.8rem;
-  font: inherit;
 }
 
 .logic-proof-form input,
 .logic-proof-form select {
   background: #fff;
+}
+
+.logic-symbol-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.logic-symbol-palette button {
+  width: 36px;
+  height: 34px;
+  padding: 0;
+  background: #fff;
+  color: var(--logic-text);
+  border: 1px solid var(--logic-border);
+  cursor: pointer;
+  font-family: "Times New Roman", serif;
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.logic-symbol-palette button:hover,
+.logic-symbol-palette button:focus-visible {
+  border-color: var(--logic-accent);
+  background: #f2f7fb;
+  outline: none;
 }
 
 .logic-proof-actions {
@@ -383,15 +415,139 @@
 }
 
 @media (max-width: 980px) {
+  .logic-game-shell {
+    padding-inline: 1rem;
+  }
+
   .logic-layout {
     grid-template-columns: 1fr;
+    min-height: auto;
   }
 
   .logic-header {
     display: block;
   }
 
+  .logic-toolbar {
+    justify-content: flex-start;
+    margin-top: 1rem;
+  }
+
   .proof-context {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .logic-game-shell {
+    padding: 1.25rem 0.75rem 7rem;
+  }
+
+  .logic-header h1 {
+    font-size: 1.45rem;
+    line-height: 1.25;
+  }
+
+  .logic-category-selector,
+  .logic-difficulty-selector {
+    width: 100%;
+  }
+
+  .category-button,
+  .difficulty-control select {
+    min-height: 42px;
+  }
+
+  .logic-side-panel,
+  .logic-main-panel {
+    border-radius: 10px;
+    padding: 0.8rem;
+  }
+
+  .problem-list {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(150px, 1fr);
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+  }
+
+  .proof-context {
+    padding: 0.75rem;
+  }
+
+  .proof-context-line {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 0.45rem;
+  }
+
+  .proof-context-line .line-rule {
+    grid-column: 2;
+  }
+
+  .proof-goal .proof-context-line {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .proof-goal .proof-context-line .line-rule {
+    grid-column: 1;
+  }
+
+  .proof-line {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 0.4rem 0.55rem;
+    padding: 0.7rem 0.7rem 0.7rem calc(0.7rem + (var(--scope-depth, 0) * 0.75rem));
+  }
+
+  .proof-line .line-rule,
+  .proof-line .line-justification {
+    grid-column: 2;
+  }
+
+  .logic-proof-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .logic-proof-actions button {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .problem-status-wrap {
+    right: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .problem-status {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .logic-game-shell {
+    padding-inline: 0.5rem;
+  }
+
+  .logic-toolbar,
+  .logic-category-selector {
+    gap: 0.45rem;
+  }
+
+  .category-button {
+    flex: 1 1 calc(50% - 0.45rem);
+    padding-inline: 0.7rem;
+  }
+
+  .difficulty-control {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .difficulty-control select {
+    flex: 1;
+    min-width: 0;
   }
 }
