@@ -1,0 +1,17 @@
+{
+  "game_id": "ooki_kyoudai_ep01",
+  "title": "大小姉弟奇譚",
+  "episode": "第一話",
+  "episode_title": "雪原に消えた人",
+  "start_scene": "s001_yukiyama",
+  "save_version": 1,
+  "scenario_files": [
+    "scenario/chapter01.json",
+    "scenario/chapter02.json",
+    "scenario/chapter03.json",
+    "scenario/chapter04.json",
+    "scenario/epilogue.json"
+  ],
+  "series_storage_key": "ooki_kyoudai_series",
+  "save_storage_key": "ooki_kyoudai_save_slot_1"
+}

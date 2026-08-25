@@ -1,0 +1,1030 @@
+{
+  "chapter": "chapter02",
+  "title": "第二章　もう一つの密室",
+  "scenes": [
+    {
+      "id": "s017_end_point",
+      "number": 17,
+      "title": "足跡の終点C",
+      "background": "bg_snowfield",
+      "characters": [],
+      "production": {
+        "background_label": "雪原・足跡終点C／朝",
+        "bgm_note": "第二章調査曲。第一章より静かで、不安を強める。",
+        "se_note": "風、雪を踏む音",
+        "cast": [
+          "真生",
+          "菜緒"
+        ]
+      },
+      "events": [
+        {
+          "type": "narration",
+          "text": "始まりの謎は解けた。\n榊原さんは、空から降りてきた。\n正確には、索道で。\nでも終わりは、そのままだった。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「ここだよね」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「うん」"
+        },
+        {
+          "type": "narration",
+          "text": "最後の足跡。\nその先には、雪しかない。\n崖までは、まだ二十五メートルくらいある。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「飛んだ？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「姉ちゃん、そればっかりだな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「じゃあ埋まった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「人間が？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「雪に」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「それなら盛り上がるでしょ」"
+        },
+        {
+          "type": "narration",
+          "text": "俺は最後の足跡の周囲を見る。\n雪面は、一見すると平らだった。\nでも、少し離れて見ると――。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「姉ちゃん。ここ、四角くない？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「どこ？」"
+        },
+        {
+          "type": "image",
+          "id": "ev_depression",
+          "mode": "fullscreen"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「……ほんとだ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「地形じゃない気がする」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「掘る？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「まだやめとこう」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「珍しい。慎重」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「いつも慎重だよ」"
+        },
+        {
+          "type": "narration",
+          "text": "何かある。\nでも、何があるのか分からないまま掘るより、先にこの館が何だったのかを知りたかった。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「雪乃さんに聞こう」"
+        }
+      ],
+      "next": "s018_old_plan"
+    },
+    {
+      "id": "s018_old_plan",
+      "number": 18,
+      "title": "改築前の見取り図",
+      "background": "bg_lounge",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・談話室／朝",
+        "bgm_note": "静かな推理曲",
+        "se_note": "紙を広げる音、暖炉",
+        "cast": [
+          "真生",
+          "菜緒",
+          "雪乃"
+        ]
+      },
+      "events": [
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "雪乃が古い紙筒を持ってくる。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「昔の図面なら、たぶんこれ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「そんなの残ってるんだ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「お父さんが捨てられない人だから」"
+        },
+        {
+          "type": "narration",
+          "text": "広げられた紙は黄ばんでいた。\n何度も折られた跡がある。\n今の白梟館と似ている。\nでも、完全には同じじゃない。"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "ゲーム用アイテム画像「改築前の白梟館見取り図」を全画面表示。"
+        },
+        {
+          "type": "narration",
+          "text": "厨房。\n食堂。\n管理室。\nそして――。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「地下倉庫？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「あ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「今、地下なんてあった？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「ない……と思う」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「図面にはある」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「昔はあったのかも。厨房、何回か改装してるから」"
+        },
+        {
+          "type": "narration",
+          "text": "地下倉庫。\n足跡の終点。\nまだ、線にはならない。\nでも点は増えた。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「外から入れるとか？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「分からない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「おじいちゃんが昔、雪のときは外から地下に荷物を入れてたって言ってた気がする」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「外から？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「うん。でも場所までは……」"
+        },
+        {
+          "type": "narration",
+          "text": "今度は線になりかけた。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「もう一回、物置に戻ろう」"
+        },
+        {
+          "type": "choice",
+          "id": "choice_02_old_plan",
+          "prompt": "次に確かめるなら？",
+          "options": [
+            {
+              "text": "見取り図と現場の食い違いを追う",
+              "set": {
+                "flags": {
+                  "asked_souichiro": true
+                }
+              }
+            },
+            {
+              "text": "館の人の証言をもう一度整理する",
+              "set": {
+                "flags": {
+                  "asked_souichiro": false
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "next": "s019_work_tag"
+    },
+    {
+      "id": "s019_work_tag",
+      "number": 19,
+      "title": "古い作業札",
+      "background": "bg_hut_in",
+      "characters": [],
+      "production": {
+        "background_label": "旧荷受け小屋A・内部",
+        "bgm_note": "調査曲",
+        "se_note": "金属板を持ち上げる音",
+        "cast": [
+          "真生",
+          "菜緒",
+          "雪乃"
+        ]
+      },
+      "events": [
+        {
+          "type": "narration",
+          "text": "二度目に見ると、小屋は少し違って見えた。\n最初は索道しか目に入らなかった。\n今は、索道以外のものが気になる。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「これ何？」"
+        },
+        {
+          "type": "narration",
+          "text": "姉ちゃんが棚の奥から、小さな札を引っ張り出した。\n文字は半分消えている。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「ふゆ……？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「冬季搬入、かな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「その下」"
+        },
+        {
+          "type": "image",
+          "id": "ev_worktag",
+          "mode": "fullscreen"
+        },
+        {
+          "type": "narration",
+          "text": "冬季搬入\n\nB → C → 地下倉庫"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「Bは、あの足跡の始まり？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「たぶん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「じゃあCって……」"
+        },
+        {
+          "type": "narration",
+          "text": "三人とも、同じ場所を思い浮かべた。\n足跡が消えた地点。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「Cから地下倉庫へ行ける」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「じゃあ榊原さん、消えたんじゃない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「地下に入った」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「でも、地下倉庫って……」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「行ってみれば分かる」"
+        }
+      ],
+      "next": "s020_dig_c"
+    },
+    {
+      "id": "s020_dig_c",
+      "number": 20,
+      "title": "雪の下の入口",
+      "background": "bg_snowfield",
+      "characters": [],
+      "production": {
+        "background_label": "雪原・地点C／朝",
+        "bgm_note": "徐々に緊張を強める",
+        "se_note": "鉄扉を引く音。びくともしない。",
+        "cast": [
+          "真生",
+          "菜緒",
+          "雪乃"
+        ]
+      },
+      "events": [
+        {
+          "type": "narration",
+          "text": "四角い窪みを中心に、雪をどける。\n最初は何もないように見えた。\nでも、菜緒が手袋のまま雪を掻き出していくと、硬いものに当たった。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「石」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「階段……？」"
+        },
+        {
+          "type": "image",
+          "id": "ev_hatch",
+          "mode": "fullscreen"
+        },
+        {
+          "type": "narration",
+          "text": "地面の下へ降りる石段。\nその先に、錆びた鉄扉。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「Cだ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「開けるよ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「待って」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「普通にね」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「それならどうぞ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「……普通には無理」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「だからって大きくなるなよ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「まだ何も言ってないじゃん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「顔に書いてある」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「え？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「何でもないです」"
+        },
+        {
+          "type": "narration",
+          "text": "鉄扉は錆びていた。\nそのうえ、斜路へ雪と土が流れ込み、内側から押している。\n周りの石組みも古い。\n無理に開けば、入口ごと崩れるかもしれない。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「ここからは無理だ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「でも中にいるかもしれない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「だから、別の入口を探す」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「館内側？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「見取り図には、厨房から降りる場所があった」"
+        }
+      ],
+      "next": "s021_kitchen_wall"
+    },
+    {
+      "id": "s021_kitchen_wall",
+      "number": 21,
+      "title": "厨房の壁",
+      "background": "bg_kitchen",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・厨房／午前",
+        "bgm_note": "低い緊張音",
+        "se_note": "冷蔵庫の低い駆動音、食器の微かな音",
+        "cast": [
+          "真生",
+          "菜緒",
+          "雪乃"
+        ]
+      },
+      "events": [
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "改築前見取り図を画面右下に小さく再表示できる。"
+        },
+        {
+          "type": "narration",
+          "text": "見取り図では、この壁の向こうに階段がある。\n今は棚と配管しかない。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「ここ、十何年か前に全部直したって聞いてる」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「入口ごと埋めたの？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「たぶん」"
+        },
+        {
+          "type": "narration",
+          "text": "棚を少し動かす。\n壁の色が途中だけ違う。\n古い扉を塞いだ跡だ。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「壊す？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「姉ちゃん、今日それしか言ってなくない？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「早いじゃん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「館壊す気？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「じゃあどうするの」"
+        },
+        {
+          "type": "narration",
+          "text": "配管の奥。\n壁との間に、ほんの少しだけ隙間がある。\n人間の手すら入らない。\nでも。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「……俺なら入れる」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「だめ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「即答だな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「中どうなってるか分かんないじゃん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「Cから続いてるなら、榊原さんがいるかもしれない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「だからって」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「姉ちゃんが大きくなるより安全だよ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「比較がおかしい」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「三分。戻らなかったら、壁壊して」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「最初から壊させてよ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「嫌だよ」"
+        },
+        {
+          "type": "narration",
+          "text": "姉ちゃんはしばらく俺を見た。\nそれから、ため息をついた。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「三分ね」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「うん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「二分五十九秒で戻ってきて」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「細かい」"
+        }
+      ],
+      "next": "s022_shrink"
+    },
+    {
+      "id": "s022_shrink",
+      "number": 22,
+      "title": "真生の番",
+      "background": "bg_kitchen",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・厨房／午前",
+        "bgm_note": "ほぼ無音。低い持続音のみ。",
+        "se_note": "衣擦れ、配管の小さな反響音",
+        "cast": [
+          "真生",
+          "菜緒",
+          "雪乃",
+          "冬馬（廊下）"
+        ]
+      },
+      "events": [
+        {
+          "type": "narration",
+          "text": "身体を小さくする。\n慣れている。\n慣れているはずなのに、他人の家でやるのは好きじゃない。\n床が遠くなる。\n配管が太くなる。\n姉ちゃんの靴が、壁みたいに見える。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「気をつけて」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「分かってる」"
+        },
+        {
+          "type": "narration",
+          "text": "声まで小さくなるから、たぶん聞こえていない。\n俺は配管と壁の間へ入る。"
+        },
+        {
+          "type": "narration",
+          "text": "塞がれた扉の裏側には、わずかな空間が残っていた。\n木材の隙間を抜ける。\nその先に――下へ続く暗い階段。"
+        },
+        {
+          "type": "narration",
+          "text": "そのとき。\n俺たちは知らなかった。\n厨房の前を、冬馬さんが通りかかったことを。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「……」"
+        },
+        {
+          "type": "narration",
+          "text": "冬馬さんは声をかけなかった。\nそのまま廊下を去った。"
+        }
+      ],
+      "next": "s023_underground"
+    },
+    {
+      "id": "s023_underground",
+      "number": 23,
+      "title": "地下搬入坑道",
+      "background": "bg_tunnel",
+      "characters": [],
+      "production": {
+        "background_label": "地下搬入坑道／暗所",
+        "bgm_note": "低く閉塞感のある音",
+        "se_note": "微かな咳。",
+        "cast": [
+          "真生"
+        ]
+      },
+      "events": [
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "真生が小型ライトを使用。画面の視野を狭くする。"
+        },
+        {
+          "type": "narration",
+          "text": "暗い。\n埃っぽい。\nそして寒い。\n厨房の真下とは思えない。"
+        },
+        {
+          "type": "narration",
+          "text": "階段を下りると、低い通路へ出た。\n昔は荷物を運んでいたのだろう。\n床には錆びたレールのような跡が残っている。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「榊原さん？」"
+        },
+        {
+          "type": "narration",
+          "text": "返事はない。\n少し進む。\n壁際に空の木箱。\n古い台車。\n壊れたランタン。\nそして――。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「……榊原さん？」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "BGM停止。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「誰だ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「大小です。真生」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「どうやって入った」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「それ、今説明すると長いです」"
+        },
+        {
+          "type": "narration",
+          "text": "生きていた。\n毛布代わりの保温シートを肩にかけて、壁際に座っている。\n怪我もしていない。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「みんな探してます」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「そうだろうな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「戻りましょう」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「いや」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「……え？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「まだ戻れない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「どういうことですか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「君がここへ来たことも、今は誰にも言わないでくれ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「無理です」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「頼む」"
+        },
+        {
+          "type": "narration",
+          "text": "榊原さんは、逃げている顔ではなかった。\n何かを待っている顔だった。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「誰から隠れてるんですか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「それを確かめるために隠れている」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「意味分かんないです」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「分からなくていい」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「ただ――」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「見つけないでくれ」"
+        }
+      ],
+      "next": "s024_return_kitchen"
+    },
+    {
+      "id": "s024_return_kitchen",
+      "number": 24,
+      "title": "見つけたのに",
+      "background": "bg_kitchen",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・厨房／午前",
+        "bgm_note": "静かな不安の曲",
+        "se_note": "配管の反響→厨房の環境音",
+        "cast": [
+          "真生",
+          "菜緒",
+          "雪乃"
+        ]
+      },
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「遅い！」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「三分？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「四分十二秒」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「測ってたの？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「当たり前でしょ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「どうだった？」"
+        },
+        {
+          "type": "narration",
+          "text": "何て言うか迷った。\nでも、嘘をつく気にはなれなかった。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「いた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「榊原さん？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「うん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「生きてるの？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「生きてる。怪我もしてない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「じゃあ連れて――」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「戻らないって」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「は？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「見つけないでくれって言われた」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「……どういうこと？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「俺にも分からない」"
+        },
+        {
+          "type": "narration",
+          "text": "人が消えた謎は、解けた。\nでも事件は、終わらなかった。\nむしろここからだった。\n榊原さんは事故に遭ったんじゃない。\n自分で消えた。\nそして誰かから隠れている。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「真生」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「うん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「これ、最初から事件だったんじゃない？」"
+        },
+        {
+          "type": "narration",
+          "text": "たぶん。\nでも、何の事件なのかはまだ分からない。"
+        },
+        {
+          "type": "effect",
+          "effect": "fade_black",
+          "duration": 600
+        },
+        {
+          "type": "title",
+          "text": "第二章　もう一つの密室　了",
+          "duration": 1200
+        }
+      ],
+      "next": "s025_keisuke_identity"
+    }
+  ]
+}

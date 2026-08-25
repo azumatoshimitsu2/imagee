@@ -1,0 +1,704 @@
+{
+  "chapter": "epilogue",
+  "title": "終章　春を待つもの",
+  "scenes": [
+    {
+      "id": "s046_epilogue_school",
+      "number": 46,
+      "title": "いつもの教室",
+      "background": "bg_class",
+      "characters": [],
+      "production": {
+        "background_label": "中学校・教室／数日後・放課後",
+        "bgm_note": "日常曲。第一章の学校パートと同系統。",
+        "se_note": "遠くの運動部、椅子を引く音、窓の風",
+        "cast": [
+          "真生",
+          "菜緒"
+        ]
+      },
+      "events": [
+        {
+          "type": "narration",
+          "text": "白梟館から帰って、三日が経った。\n山で人が消えていたことも。\n二十年前の事故のことも。\n俺たちが地下の穴を通ったことも。\n学校には関係がない。\nだから世界は、驚くほど普通だった。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「真生、帰るよ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「なんで俺の教室にいるの」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「迎え」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「一人で帰れる」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「知ってる」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「じゃあ何で」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「帰りに肉まん食べたい」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「それ俺いらないじゃん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「一人で食べるより二人の方がおいしい」"
+        },
+        {
+          "type": "narration",
+          "text": "そういうことを、姉ちゃんは時々平気で言う。\n俺は鞄を持った。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「あ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「何」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「雪乃さんから写真来てる」"
+        },
+        {
+          "type": "image",
+          "id": "ev_photo",
+          "mode": "fullscreen"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「圭介さん、まだいるって」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「帰らないのかな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「二十年ぶりなんだから、三日くらいいいでしょ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「そうだけど」"
+        },
+        {
+          "type": "narration",
+          "text": "写真の中で、宗一郎さんと圭介さんは少し離れて立っていた。\nでも、同じ方向を見ていた。"
+        }
+      ],
+      "next": "s047_toma_photo"
+    },
+    {
+      "id": "s047_toma_photo",
+      "number": 47,
+      "title": "古い写真",
+      "background": "bg_school_in",
+      "characters": [],
+      "production": {
+        "background_label": "中学校・昇降口／夕方",
+        "bgm_note": "日常曲から徐々に音数を減らす",
+        "se_note": "紙袋を開く音。",
+        "cast": [
+          "真生",
+          "菜緒",
+          "冬馬"
+        ]
+      },
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「あ、いた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「冬馬さん？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「何で学校に？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「君たちを待ってた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「怖い言い方しないでください」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「ごめん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「で、何？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「これ」"
+        },
+        {
+          "type": "image",
+          "id": "ev_oldphoto",
+          "mode": "fullscreen"
+        },
+        {
+          "type": "narration",
+          "text": "白黒ではない。\nでも色が抜けて、茶色くなりかけた写真だった。\nどこかの山小屋の前に、何人かの男女が立っている。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「これ、白梟館？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「違う。もっと古い山小屋らしい」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「らしい？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「昨日、館の古い書類を整理してたら出てきた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「何年前？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「日付はない。でもたぶん、五十年以上前」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「それを何で俺たちに？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「ここ」"
+        },
+        {
+          "type": "image",
+          "id": "ev_oldphoto",
+          "mode": "fullscreen"
+        },
+        {
+          "type": "narration",
+          "text": "一人の少女が、掌の上に小さな何かを載せている。\nその隣にいる少年が、それを覗き込んでいる。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「……石？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「最初、僕もそう思った」"
+        },
+        {
+          "type": "narration",
+          "text": "俺は写真を近づける。\n少女の掌の上にあるのは、石じゃなかった。\n椅子だった。\n木でできた、小さな椅子。\n玩具かもしれない。\nもちろん、玩具かもしれない。"
+        },
+        {
+          "type": "image",
+          "id": "ev_oldphoto2",
+          "mode": "fullscreen"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「変だと思わない？」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「昔の人って、小さい椅子流行ってたのかな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「その逃げ方無理あるよ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「君たち、何か知ってる？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「知らない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「早いよ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「知らないものは知らない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「そっか」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "emphasis",
+          "text": "真生・地の文:"
+        },
+        {
+          "type": "narration",
+          "text": "冬馬さんは、あっさり写真を引っ込めた。\nそのことの方が、少し気になった。"
+        }
+      ],
+      "next": "s048_toma_saw"
+    },
+    {
+      "id": "s048_toma_saw",
+      "number": 48,
+      "title": "見ていた人",
+      "background": "bg_school_gate",
+      "characters": [],
+      "production": {
+        "background_label": "中学校・校門前／夕方",
+        "bgm_note": "ほぼ無音",
+        "se_note": "車の走る音、冬の風",
+        "cast": [
+          "真生",
+          "菜緒",
+          "冬馬"
+        ]
+      },
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「じゃあ、もう一つだけ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「まだあるの？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「地下でさ」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「真生君、急にいなくなったよね」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「……」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「暗かったからじゃない？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「うん。僕もそう思った」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「でも、その前に見たんだ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「何を」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「菜緒さんが真生君の肩に触ったところ」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「その直後、真生君が消えた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「……手品」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「姉ちゃん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「何」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「もう少し考えてから喋って」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「大丈夫」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「何が？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「誰にも言ってない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「どうしてですか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「言ってほしくない顔してたから」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「私たちが？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「今もしてる」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "text": "否定する言葉はいくらでもあった。\n暗かった。\n見間違いだ。\n写真だって玩具だ。\nでも俺たちは、二十年前の嘘がどうなったのかを見てきたばかりだった。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「……見たこと、忘れてもらえませんか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「それは無理かな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「だよね」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「でも、話すかどうかは別だよ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「条件は？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「ない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「本当に？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「うん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「ただ、もし君たちが自分たちのことを調べるなら」"
+        },
+        {
+          "type": "image",
+          "id": "ev_oldphoto",
+          "mode": "fullscreen"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "冬馬",
+          "text": "「僕も、これが何なのか知りたい」"
+        }
+      ],
+      "next": "s049_the_chair"
+    },
+    {
+      "id": "s049_the_chair",
+      "number": 49,
+      "title": "椅子",
+      "background": "bg_residential",
+      "characters": [],
+      "production": {
+        "background_label": "帰り道・住宅街／夕暮れ",
+        "bgm_note": "第一話メインテーマ。穏やかだが未知を感じさせる。",
+        "se_note": "足音、遠くの車、鳥",
+        "cast": [
+          "真生",
+          "菜緒"
+        ]
+      },
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「どう思う？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「冬馬さん？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「写真」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「玩具かもしれない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「そう思う？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「思いたい」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「私は違うと思う」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「なんで」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「分かんない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「分かんないのに？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「なんとなく」"
+        },
+        {
+          "type": "narration",
+          "text": "姉ちゃんの「なんとなく」は、だいたい説明になっていない。\nでも、時々当たる。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「ねえ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「何」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「私たち以外にもいるのかな」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「いたんじゃない？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「今も？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「それは分からない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「会ってみたい？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「……ちょっとだけ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「私も」"
+        }
+      ],
+      "next": "s050_first_story_end"
+    },
+    {
+      "id": "s050_first_story_end",
+      "number": 50,
+      "title": "春を待つもの",
+      "background": "bg_mountain",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館近くの山／夕暮れ",
+        "bgm_note": "最後の一音を残して終了。",
+        "se_note": "雪解け水の音を少し強める。",
+        "cast": [
+          "なし"
+        ]
+      },
+      "events": [
+        {
+          "type": "narration",
+          "text": "雪の表面から、一滴の水が落ちる。\nさらに一滴。\n白い雪の下から、黒い土がわずかに現れる。"
+        },
+        {
+          "type": "narration",
+          "text": "雪は、全部を隠す。\n足跡も。\n道も。\n誰かがそこにいたことも。\nでも、雪は消すわけじゃない。\nただ、見えなくしているだけだ。"
+        },
+        {
+          "type": "narration",
+          "text": "雪の下から現れた土の中に、古びた金属の小箱の角がわずかに覗いている。\n箱の表面には、二つの図形。\n大きな四角と、小さな四角。"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "text": "春になれば、見えるものがある。\nたぶん、人の秘密も同じだ。"
+        },
+        {
+          "type": "effect",
+          "effect": "fade_black",
+          "duration": 600
+        },
+        {
+          "type": "title",
+          "text": "第一話　白梟館の消失　了",
+          "duration": 1200
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "title",
+          "text": "姉弟の物語は、まだ始まったばかり。",
+          "duration": 1200
+        }
+      ],
+      "next": null
+    }
+  ]
+}

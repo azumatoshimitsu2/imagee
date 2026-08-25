@@ -1,0 +1,1527 @@
+{
+  "chapter": "chapter04",
+  "title": "第四章　雪のような嘘",
+  "scenes": [
+    {
+      "id": "s035_return_to_keisuke",
+      "number": 35,
+      "title": "もう一度、地下へ",
+      "background": "bg_kitchen",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・厨房／午前",
+        "bgm_note": "静かな緊張曲",
+        "se_note": "冷蔵庫の低い駆動音、遠い風",
+        "cast": [
+          "真生",
+          "菜緒"
+        ]
+      },
+      "events": [
+        {
+          "type": "narration",
+          "text": "三枝さんは、真相を知らなかった。\n水野さんも知らない。\n知っているのは、二十年前に山にいた人間だけだ。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「宗一郎さんに聞く？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「その前に圭介さん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「また入るの？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「うん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「今度は二分」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「短くなってるじゃん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「四分十二秒も待たされたから」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「話してたんだから仕方ないだろ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「じゃあ三分」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「交渉なんだ」"
+        },
+        {
+          "type": "narration",
+          "text": "俺は配管の奥を見る。\n圭介さんは、誰が自分を脅したのかを知るために隠れていると言った。\nなら、もう隠れる理由はない。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「三枝さんだった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「うん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「それを伝えてくる」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "真生が小さくなり、配管の隙間へ入る。"
+        }
+      ],
+      "next": "s036_keisuke_and_letter"
+    },
+    {
+      "id": "s036_keisuke_and_letter",
+      "number": 36,
+      "title": "脅迫状の差出人",
+      "background": "bg_cellar",
+      "characters": [],
+      "production": {
+        "background_label": "地下貯蔵室／午前",
+        "bgm_note": "わずかに変化。",
+        "se_note": "水滴、地下の反響音",
+        "cast": [
+          "真生",
+          "圭介"
+        ]
+      },
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「また君か」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「三枝さんでした」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「……何が」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「脅迫状」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「そうか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「驚かないんですね」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「疑ってはいた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「でも三枝さん、何も知らなかった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「何も？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「お父さんの日記に、圭介さんは悪くないって書いてあった。それだけです」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「……あの人らしい」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「三枝さんのお父さんも、あの山にいたんですよね」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「いた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「水野さんのお父さんを、見捨てたんですか？」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「そういうことになっている」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「宗一郎さんと同じ言い方だ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「……」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「本当は何があったんですか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「知ってどうする」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「分かりません」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「なら知らない方がいい」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「でも、水野さんは二十年間知らないままです」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「宗一郎さんも、二十年間黙ったままです」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「……君は面倒な子だな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「よく言われます」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「嘘だろう」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「今初めて言われました」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「……戻ろう」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「いいんですか？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「隠れていた理由はなくなった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「それに、兄貴もそろそろ逃げるのをやめる頃だ」"
+        }
+      ],
+      "next": "s037_keisuke_returns"
+    },
+    {
+      "id": "s037_keisuke_returns",
+      "number": 37,
+      "title": "帰ってきた男",
+      "background": "bg_kitchen",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・厨房→食堂／午前",
+        "bgm_note": "緊張を保った静かな曲",
+        "se_note": "壁際の物音、椅子を引く音",
+        "cast": [
+          "真生",
+          "菜緒",
+          "雪乃",
+          "宗一郎",
+          "冬馬",
+          "三枝",
+          "遥",
+          "圭介"
+        ]
+      },
+      "events": [
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "圭介はC側から出られないため、菜緒・雪乃が宗一郎へ事情を説明し、厨房の塞がれた旧入口を工具で部分的に解体する。能力は使わない。時間経過を短い暗転で処理。"
+        },
+        {
+          "type": "narration",
+          "text": "三十分ほどして、圭介さんは白梟館へ戻った。\n壁を壊したわけではない。\n宗一郎さんが厨房設備の一部を外し、塞がれていた古い扉を人一人が通れるところまで開けた。\n最初からこうすればよかった気もする。\nでも、圭介さんが生きていると分からないうちに、誰も厨房を解体しようとは思わない。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「……叔父さん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「大きくなったな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「覚えてるんですか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「赤ん坊の頃だけな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「それ、覚えてるって言わないです」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「そうか」"
+        },
+        {
+          "type": "narration",
+          "text": "雪乃さんは笑わなかった。\n圭介さんも笑わなかった。\nでも、少しだけ似た顔をしていた。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「圭介さん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「君か」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「……すみませんでした」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「何についてだ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「手紙を送ったことです」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「そうか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「それだけですか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「殴ってほしいのか？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「いえ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「なら、それでいい」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「圭介さん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「君には、話さないといけないな」"
+        },
+        {
+          "type": "narration",
+          "text": "宗一郎さんが目を閉じた。\nそして、ゆっくり開いた。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「俺が話す」"
+        }
+      ],
+      "next": "s038_twenty_years_truth"
+    },
+    {
+      "id": "s038_twenty_years_truth",
+      "number": 38,
+      "title": "吹雪の中の四人",
+      "background": "bg_past",
+      "characters": [],
+      "production": {
+        "background_label": "二十年前の雪山／回想",
+        "bgm_note": "低い弦と風。悲劇を煽りすぎない。",
+        "se_note": "風が急激に強くなる。",
+        "cast": [
+          "若い宗一郎",
+          "若い圭介",
+          "遥の父",
+          "三枝の父"
+        ]
+      },
+      "events": [
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "回想人物は彩度を落とした立ち絵。現在の宗一郎の語りと回想を交互にする。"
+        },
+        {
+          "type": "narration",
+          "text": "「二十年前、俺たち四人は山に入った」"
+        },
+        {
+          "type": "narration",
+          "text": "「俺と圭介。水野。そして三枝さんの父親だ」"
+        },
+        {
+          "type": "narration",
+          "text": "窓の外では、今も雪が降っていた。\nでも宗一郎さんが話し始めると、もっと古い雪の音が聞こえるような気がした。"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "背景切替",
+          "text": "山中。雪が強くなり始めている。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「戻ろう。雲が落ちてきてる」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い宗一郎",
+          "text": "「この先の避難小屋まで行った方が近い」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「風が変わった。戻った方がいい」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥の父",
+          "text": "「どうする？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝の父",
+          "text": "「宗一郎。この山はお前が一番知ってる」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い宗一郎",
+          "text": "「進もう」"
+        },
+        {
+          "type": "narration",
+          "text": "「判断したのは俺だ」"
+        },
+        {
+          "type": "narration",
+          "text": "「天候が崩れることは分かっていた。でも避難小屋までなら行けると思った」"
+        },
+        {
+          "type": "narration",
+          "text": "「間違っていた」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "ホワイトアウト。"
+        }
+      ],
+      "next": "s039_accident"
+    },
+    {
+      "id": "s039_accident",
+      "number": 39,
+      "title": "置いていけ",
+      "background": "bg_past",
+      "characters": [],
+      "production": {
+        "background_label": "二十年前の雪山／吹雪",
+        "bgm_note": "徐々に弱くなる。",
+        "se_note": "足を引きずりながら雪を進む音。",
+        "cast": [
+          "若い宗一郎",
+          "若い圭介",
+          "遥の父",
+          "三枝の父"
+        ]
+      },
+      "events": [
+        {
+          "type": "narration",
+          "text": "「水野が足を滑らせた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥の父",
+          "text": "「ぐっ……！」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「水野！」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝の父",
+          "text": "「足が……まずいぞ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い宗一郎",
+          "text": "「ここにいろ。俺たちが救助を呼ぶ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「俺が残る」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い宗一郎",
+          "text": "「圭介」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「二人で行け。その方が早い」"
+        },
+        {
+          "type": "narration",
+          "text": "「俺と三枝さんの父親は、救助を呼びに向かった」"
+        },
+        {
+          "type": "narration",
+          "text": "「圭介には、絶対に動くなと言った」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "宗一郎と三枝の父が吹雪へ消える。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥の父",
+          "text": "「圭介」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「しゃべるな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥の父",
+          "text": "「寒いな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「俺の着ろ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥の父",
+          "text": "「お前が凍える」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「俺は動ける」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "圭介が自分の防寒具を水野へ着せる。"
+        },
+        {
+          "type": "narration",
+          "text": "「だが、水野の容体が悪くなった」"
+        },
+        {
+          "type": "narration",
+          "text": "「圭介は待つのをやめた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「背負うぞ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥の父",
+          "text": "「やめろ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「黙ってろ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥の父",
+          "text": "「お前まで死ぬ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「死なない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥の父",
+          "text": "「置いていけ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「嫌だ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥の父",
+          "text": "「圭介」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "若い圭介",
+          "text": "「嫌だって言ってるだろ」"
+        },
+        {
+          "type": "narration",
+          "text": "「圭介は、水野を背負って下りた」"
+        },
+        {
+          "type": "narration",
+          "text": "「自分の防寒具を着せたまま」"
+        },
+        {
+          "type": "narration",
+          "text": "「でも、間に合わなかった」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "白画面へフェード。死亡そのものは直接描写しない。"
+        }
+      ],
+      "next": "s040_the_lie"
+    },
+    {
+      "id": "s040_the_lie",
+      "number": 40,
+      "title": "誰が決めたのか",
+      "background": "bg_dining",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・食堂／現在",
+        "bgm_note": "ほぼ無音。ごく小さなピアノ。",
+        "se_note": "風",
+        "cast": [
+          "真生",
+          "菜緒",
+          "雪乃",
+          "宗一郎",
+          "圭介",
+          "遥",
+          "三枝",
+          "冬馬"
+        ]
+      },
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「救助隊が見つけた時、水野はもう死んでいた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「圭介も意識がなかった。重度の低体温症だった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「……じゃあ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「君のお父さんを見捨てたんじゃない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「どうして……」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「すまない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「どうして圭介さんが悪いことになったんですか」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「俺が進むと決めた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「事故のあと、その判断が問題になった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「当然だ。責任は俺にあった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「兄貴」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「黙ってろ」"
+        },
+        {
+          "type": "narration",
+          "text": "圭介さんが、少しだけ笑った。\n昨日から初めて見る顔だった。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「だが圭介は、自分が進もうと言ったことにした」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「どうして？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「お前がいたからだ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「私？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「まだ小さかった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「俺は白梟館を継いだばかりだった。妻を亡くして、雪乃を一人で育てていた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「圭介は、それを理由にした」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「俺には守るものがなかった。それだけだ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「違う」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「兄貴」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「違うだろ」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「お前の人生だってあった」"
+        }
+      ],
+      "next": "s041_haruka_and_keisuke"
+    },
+    {
+      "id": "s041_haruka_and_keisuke",
+      "number": 41,
+      "title": "娘への言葉",
+      "background": "bg_dining",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・食堂／現在",
+        "bgm_note": "静かなピアノ",
+        "se_note": "風が少し弱まる",
+        "cast": [
+          "真生",
+          "菜緒",
+          "雪乃",
+          "宗一郎",
+          "圭介",
+          "遥",
+          "三枝",
+          "冬馬"
+        ]
+      },
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「父は……最後に何か言いましたか」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「言った」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「何て？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「娘に会いたいって」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「何度も」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「……」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「君はまだ小さかった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「帰ったら何をしてやろうとか、そんな話をしてた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「覚えてるんですか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「忘れられなかった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「二十年も？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「二十年だからだ」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "emphasis",
+          "text": "真生・地の文:"
+        },
+        {
+          "type": "narration",
+          "text": "水野さんは泣かなかった。\nただ、長い間握っていた手を、ゆっくり開いた。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「ありがとうございました」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「礼を言われることじゃない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「父を一人にしなかったことです」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「……そうか」"
+        }
+      ],
+      "next": "s042_saegusa_father"
+    },
+    {
+      "id": "s042_saegusa_father",
+      "number": 42,
+      "title": "日記に書けなかったこと",
+      "background": "bg_dining",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・食堂／現在",
+        "bgm_note": "静かな余韻",
+        "se_note": "紙を開く音",
+        "cast": [
+          "真生",
+          "菜緒",
+          "雪乃",
+          "宗一郎",
+          "圭介",
+          "遥",
+          "三枝",
+          "冬馬"
+        ]
+      },
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「父は、全部知っていたんですね」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「知っていた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「なのに、日記には書かなかった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「圭介に何度も言った。真実を話そうと」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「俺が止めた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「三枝さんのお父さんも止めようとした」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「それでも俺が決めた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「だから、あの文章……」"
+        },
+        {
+          "type": "image",
+          "id": "ev_diary",
+          "mode": "fullscreen"
+        },
+        {
+          "type": "narration",
+          "text": "圭介は悪くない。\n\n私はそれを知っている。\n\n宗一郎も知っている。\n\nだが、圭介自身がそうすると決めた。\n\n私に何が言える。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「父は、書けなかったんじゃない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「書かなかった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「約束したから」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「そうだ」"
+        },
+        {
+          "type": "narration",
+          "text": "一冊の日記に残された空白。\nその空白を埋めようとして、三枝さんは脅迫状を書いた。\n水野さんは父の遺品から疑った。\n宗一郎さんは弟を呼び戻した。\n二十年前に閉じたはずの出来事が、別々の場所から少しずつ開いていった。"
+        },
+        {
+          "type": "choice",
+          "id": "choice_05_truth_answer",
+          "prompt": "誰かを守るためについた嘘でも、真実に戻すべきだと思うか？",
+          "persistent": true,
+          "options": [
+            {
+              "text": "真実に戻すべきだと思う",
+              "set": {
+                "variables": {
+                  "truth_answer": "truth"
+                }
+              }
+            },
+            {
+              "text": "誰かを守れるなら、嘘でもいい",
+              "set": {
+                "variables": {
+                  "truth_answer": "protect"
+                }
+              }
+            },
+            {
+              "text": "分からない",
+              "set": {
+                "variables": {
+                  "truth_answer": "uncertain"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "next": "s043_who_was_wrong"
+    },
+    {
+      "id": "s043_who_was_wrong",
+      "number": 43,
+      "title": "誰が悪かったのか",
+      "background": "bg_dining",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・食堂／昼前",
+        "bgm_note": "少しだけ明るくなる。",
+        "se_note": "遠くから除雪車のエンジン音。",
+        "cast": [
+          "真生",
+          "菜緒",
+          "雪乃",
+          "宗一郎",
+          "圭介",
+          "遥",
+          "三枝",
+          "冬馬"
+        ]
+      },
+      "events": [
+        {
+          "type": "narration",
+          "text": "三枝さんが、昨日と同じ問いを口にした。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「じゃあ結局、誰が悪かったんですか」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「俺だ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「そう簡単な話じゃない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「進むと決めたのは俺だ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「あの時点じゃ、避難小屋へ行く判断にも理由はあった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「結果として人が死んだ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「結果を知った今なら、何だって言える」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「父は、誰かを恨んでいたんでしょうか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「少なくとも、最後までそんなことは言わなかった」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「事故だったんじゃないですか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「事故で済ませていいとは思っていない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「そうじゃなくて」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「誰か一人を悪者にしないと、事故って終われないんですか？」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "narration",
+          "text": "姉ちゃんにしては、まともなことを言った。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「何、その顔」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「何でもない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「絶対失礼なこと考えた」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「……音」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「除雪車だ」"
+        },
+        {
+          "type": "narration",
+          "text": "外の世界が、戻ってくる。\nでもその前に、圭介さんが俺を見た。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「真生君」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「はい」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「少し、いいか」"
+        }
+      ],
+      "next": "s044_truth_and_lie"
+    },
+    {
+      "id": "s044_truth_and_lie",
+      "number": 44,
+      "title": "雪のような嘘",
+      "background": "bg_lounge",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・談話室の窓辺／昼前",
+        "bgm_note": "第一話のテーマを静かに変奏",
+        "se_note": "弱い風、遠い除雪車",
+        "cast": [
+          "真生",
+          "圭介",
+          "菜緒"
+        ]
+      },
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「君なら、どうする？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「何をですか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「誰かを守るためについた嘘でも、真実に戻すべきだと思うか？」"
+        },
+        {
+          "type": "narration",
+          "text": "すぐには答えられなかった。\n圭介さんの嘘は、宗一郎さんと雪乃さんを守った。\nでも同時に、水野さんから父親の最後を奪った。\n三枝さんの父親にも、二十年間沈黙させた。\nそして圭介さん自身からも、二十年を奪った。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「分かりません」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「そうか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「でも」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「ん？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「嘘をついた時と、二十年後じゃ、守ってるものが同じとは限らないと思います」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「……なるほどな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「雪って便利だよな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「いつからいたの」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「今」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「絶対嘘」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「全部隠してくれるじゃん」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "演出",
+          "text": "窓の外。雪に覆われた道路と山。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「足跡も、道も、何があったかも」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "text": "「うん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "text": "「でも、いつか溶ける」"
+        },
+        {
+          "type": "narration",
+          "text": "俺は姉ちゃんを見る。\n俺たちにも、雪の下に隠しているものがある。\n人には言えない力。\n使い方は知っている。\nでも、どうして俺たちにこんな力があるのかは知らない。\nいつか、それも溶ける日が来るのだろうか。"
+        }
+      ],
+      "next": "s045_snow_stops"
+    },
+    {
+      "id": "s045_snow_stops",
+      "number": 45,
+      "title": "雪がやむ",
+      "background": "bg_entrance",
+      "characters": [],
+      "production": {
+        "background_label": "白梟館・玄関前／昼",
+        "bgm_note": "穏やかな冬の曲",
+        "se_note": "除雪車、雪解けの滴、弱い風",
+        "cast": [
+          "真生",
+          "菜緒",
+          "宗一郎",
+          "雪乃",
+          "圭介",
+          "遥",
+          "三枝",
+          "冬馬"
+        ]
+      },
+      "events": [
+        {
+          "type": "narration",
+          "text": "昼前、道路が開いた。\n電話も、少し遅れて復旧した。\n白梟館は、もう密室じゃない。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「警察には、俺から説明します」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「脅迫状のことも？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "三枝",
+          "text": "「全部」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「俺も話す」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「二十年前のことも、俺が話す」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "text": "「今度は二人で？」"
+        },
+        {
+          "type": "stage_direction",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「そうだな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「兄貴が余計なこと言わないように見張る」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "text": "「お前が言うな」"
+        },
+        {
+          "type": "narration",
+          "text": "兄弟らしい会話を、初めて聞いた気がした。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「私も残ります」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「いいのか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "text": "「聞きたいこと、まだありますから」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "text": "「……そうだな」"
+        },
+        {
+          "type": "narration",
+          "text": "事件が全部きれいに終わったわけじゃない。\nこれから説明しなければならないこともある。\n謝らなければならないこともある。\nたぶん、許されないことだってある。\nでも少なくとも、もう誰も地下には隠れていなかった。"
+        },
+        {
+          "type": "effect",
+          "effect": "fade_black",
+          "duration": 600
+        },
+        {
+          "type": "title",
+          "text": "第四章　雪がやむ　了",
+          "duration": 1200
+        }
+      ],
+      "next": "s046_epilogue_school"
+    }
+  ]
+}

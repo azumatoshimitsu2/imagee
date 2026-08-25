@@ -1,0 +1,20 @@
+{
+  "bgm": {
+    "bgm_mystery_low": {
+      "file": "assets/audio/bgm/mystery_low.mp3",
+      "loop": true
+    },
+    "bgm_theme": {
+      "file": "assets/audio/bgm/theme.mp3",
+      "loop": true
+    }
+  },
+  "se": {
+    "se_wind": {
+      "file": "assets/audio/se/wind.mp3"
+    },
+    "se_page": {
+      "file": "assets/audio/se/page.mp3"
+    }
+  }
+}

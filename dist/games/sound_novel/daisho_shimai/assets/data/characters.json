@@ -1,0 +1,107 @@
+{
+  "真生": {
+    "name": "大小真生",
+    "short_name": "真生",
+    "portraits": {
+      "normal": "assets/img/characters/mao/normal.webp"
+    }
+  },
+  "菜緒": {
+    "name": "大小菜緒",
+    "short_name": "菜緒",
+    "portraits": {
+      "normal": "assets/img/characters/nao/normal.webp"
+    }
+  },
+  "千尋": {
+    "name": "大小千尋",
+    "short_name": "千尋",
+    "portraits": {
+      "normal": "assets/img/characters/chihiro/normal.webp"
+    }
+  },
+  "宗一郎": {
+    "name": "白石宗一郎",
+    "short_name": "宗一郎",
+    "portraits": {
+      "normal": "assets/img/characters/souichiro/normal.webp"
+    }
+  },
+  "雪乃": {
+    "name": "白石雪乃",
+    "short_name": "雪乃",
+    "portraits": {
+      "normal": "assets/img/characters/yukino/normal.webp"
+    }
+  },
+  "冬馬": {
+    "name": "久世冬馬",
+    "short_name": "冬馬",
+    "portraits": {
+      "normal": "assets/img/characters/touma/normal.webp"
+    }
+  },
+  "三枝": {
+    "name": "三枝隆史",
+    "short_name": "三枝",
+    "portraits": {
+      "normal": "assets/img/characters/saegusa/normal.webp"
+    }
+  },
+  "遥": {
+    "name": "水野遥",
+    "short_name": "遥",
+    "portraits": {
+      "normal": "assets/img/characters/haruka/normal.webp"
+    }
+  },
+  "圭介": {
+    "name": "白石圭介",
+    "short_name": "圭介",
+    "portraits": {
+      "normal": "assets/img/characters/keisuke/normal.webp"
+    }
+  },
+  "若い圭介": {
+    "name": "若い白石圭介",
+    "short_name": "若い圭介",
+    "portraits": {
+      "normal": "assets/img/characters/young_keisuke/normal.webp"
+    }
+  },
+  "若い宗一郎": {
+    "name": "若い白石宗一郎",
+    "short_name": "若い宗一郎",
+    "portraits": {
+      "normal": "assets/img/characters/young_souichiro/normal.webp"
+    }
+  },
+  "遥の父": {
+    "name": "水野遥の父",
+    "short_name": "遥の父",
+    "portraits": {
+      "normal": "assets/img/characters/haruka_father/normal.webp"
+    }
+  },
+  "三枝の父": {
+    "name": "三枝隆史の父",
+    "short_name": "三枝の父",
+    "portraits": {
+      "normal": "assets/img/characters/saegusa_father/normal.webp"
+    }
+  },
+  "三枝・読み上げ": {
+    "name": "三枝隆史",
+    "short_name": "三枝",
+    "portraits": {
+      "normal": "assets/img/characters/saegusa/normal.webp"
+    }
+  },
+  "菜緒・真生": {
+    "name": "菜緒・真生",
+    "short_name": "菜緒・真生",
+    "portraits": {
+      "normal": "assets/img/characters/twins/normal.webp"
+    }
+  }
+}

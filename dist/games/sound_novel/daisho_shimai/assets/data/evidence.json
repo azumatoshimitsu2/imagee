@@ -1,0 +1,47 @@
+{
+  "ev_footprints": {
+    "name": "雪原全景と足跡",
+    "file": "assets/img/evidence/footprints.webp",
+    "zoomable": true
+  },
+  "ev_ropeway": {
+    "name": "搬器・ワイヤー・雪原の位置関係",
+    "file": "assets/img/evidence/ropeway.webp",
+    "zoomable": true
+  },
+  "ev_depression": {
+    "name": "雪面の四角い窪み",
+    "file": "assets/img/evidence/depression.webp",
+    "zoomable": true
+  },
+  "ev_worktag": {
+    "name": "旧設備の作業札",
+    "file": "assets/img/evidence/worktag.webp",
+    "zoomable": true
+  },
+  "ev_hatch": {
+    "name": "石段と鉄扉",
+    "file": "assets/img/evidence/hatch.webp",
+    "zoomable": true
+  },
+  "ev_diary": {
+    "name": "三枝の父の日記",
+    "file": "assets/img/evidence/diary.webp",
+    "zoomable": true
+  },
+  "ev_photo": {
+    "name": "白梟館から届いた写真",
+    "file": "assets/img/evidence/photo.webp",
+    "zoomable": true
+  },
+  "ev_oldphoto": {
+    "name": "冬馬が持つ古い写真",
+    "file": "assets/img/evidence/oldphoto.webp",
+    "zoomable": true
+  },
+  "ev_oldphoto2": {
+    "name": "古い写真の拡大",
+    "file": "assets/img/evidence/oldphoto2.webp",
+    "zoomable": true
+  }
+}

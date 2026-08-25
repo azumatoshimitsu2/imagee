@@ -1,0 +1,19 @@
+{
+  "flags": {
+    "investigated_start": false,
+    "investigated_end": false,
+    "asked_souichiro": false,
+    "asked_haruka": false,
+    "asked_saegusa": false,
+    "deduction_three_intentions": false
+  },
+  "variables": {
+    "first_footprint_target": null,
+    "haruka_interpretation": null,
+    "threat_suspect": null,
+    "truth_answer": null
+  },
+  "persistent_variables": [
+    "truth_answer"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "bg_mountain": {
+    "name": "冬の山道・山",
+    "file": "assets/img/bg/mountain.webp"
+  },
+  "bg_entrance": {
+    "name": "白梟館・玄関前",
+    "file": "assets/img/bg/entrance.webp"
+  },
+  "bg_lounge": {
+    "name": "白梟館・談話室",
+    "file": "assets/img/bg/lounge.webp"
+  },
+  "bg_corridor2": {
+    "name": "白梟館・二階廊下",
+    "file": "assets/img/bg/corridor2.webp"
+  },
+  "bg_dining": {
+    "name": "白梟館・食堂",
+    "file": "assets/img/bg/dining.webp"
+  },
+  "bg_corridor1": {
+    "name": "白梟館・一階廊下",
+    "file": "assets/img/bg/corridor1.webp"
+  },
+  "bg_guest": {
+    "name": "真生・菜緒の客室",
+    "file": "assets/img/bg/guest.webp"
+  },
+  "bg_snowfield": {
+    "name": "雪原",
+    "file": "assets/img/bg/snowfield.webp"
+  },
+  "bg_forest": {
+    "name": "樹林帯",
+    "file": "assets/img/bg/forest.webp"
+  },
+  "bg_hut_out": {
+    "name": "旧荷受け小屋A・外",
+    "file": "assets/img/bg/hut_out.webp"
+  },
+  "bg_hut_in": {
+    "name": "旧荷受け小屋A・内部",
+    "file": "assets/img/bg/hut_in.webp"
+  },
+  "bg_kitchen": {
+    "name": "白梟館・厨房",
+    "file": "assets/img/bg/kitchen.webp"
+  },
+  "bg_tunnel": {
+    "name": "地下搬入坑道",
+    "file": "assets/img/bg/tunnel.webp"
+  },
+  "bg_office": {
+    "name": "白梟館・管理室",
+    "file": "assets/img/bg/office.webp"
+  },
+  "bg_cellar": {
+    "name": "地下貯蔵室",
+    "file": "assets/img/bg/cellar.webp"
+  },
+  "bg_past": {
+    "name": "二十年前の雪山",
+    "file": "assets/img/bg/past.webp"
+  },
+  "bg_class": {
+    "name": "中学校・教室",
+    "file": "assets/img/bg/class.webp"
+  },
+  "bg_school_in": {
+    "name": "中学校・昇降口",
+    "file": "assets/img/bg/school_in.webp"
+  },
+  "bg_school_gate": {
+    "name": "中学校・校門前",
+    "file": "assets/img/bg/school_gate.webp"
+  },
+  "bg_residential": {
+    "name": "帰り道・住宅街",
+    "file": "assets/img/bg/residential.webp"
+  }
+}
