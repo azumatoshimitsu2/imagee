@@ -22,12 +22,13 @@ const problemList = document.querySelector('#problem-list');
 const problemHeader = document.querySelector('#problem-header');
 const problemStatus = document.querySelector('#problem-status-wrap');
 const workspace = document.querySelector('#proof-workspace');
+const INITIAL_PROBLEM_COUNT = 2;
 
 const state = {
   category: 'minimal',
   difficulty: 'all',
   selectedProblemId: null,
-  problems: getProblemBank('minimal', 5, 'all'),
+  problems: getProblemBank('minimal', INITIAL_PROBLEM_COUNT, 'all'),
   proofState: null,
   statusMessage: '問題を選んで証明を始めましょう。',
   statusKind: 'info',
@@ -64,7 +65,7 @@ function renderCategoryButtons() {
         : '古典論理';
     button.addEventListener('click', () => {
       state.category = category;
-      state.problems = getProblemBank(category, 5, state.difficulty);
+      state.problems = getProblemBank(category, INITIAL_PROBLEM_COUNT, state.difficulty);
       state.selectedProblemId = state.problems[0]?.id ?? null;
       resetProofState();
       render();
@@ -93,7 +94,7 @@ function renderDifficultySelector() {
 
     select.addEventListener('change', (event) => {
       state.difficulty = event.target.value;
-      state.problems = getProblemBank(state.category, 5, state.difficulty);
+      state.problems = getProblemBank(state.category, INITIAL_PROBLEM_COUNT, state.difficulty);
       state.selectedProblemId = state.problems[0]?.id ?? null;
       resetProofState();
       render();
