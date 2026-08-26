@@ -34,6 +34,36 @@ function getDebugStartScene(chapters) {
   return sceneId ?? null;
 }
 
+function collectBackgroundFiles(backgrounds, chapters) {
+  const ids = new Set();
+  const files = new Set(["assets/img/bg/start.webp"]);
+
+  for (const chapter of chapters) {
+    for (const scene of chapter.scenes ?? []) {
+      if (scene.background) ids.add(scene.background);
+      for (const event of scene.events ?? []) {
+        if (event.type === "background" && event.id) ids.add(event.id);
+      }
+    }
+  }
+
+  for (const id of ids) {
+    const file = backgrounds[id]?.file;
+    if (file) files.add(file);
+  }
+
+  return [...files];
+}
+
+function preloadImages(files) {
+  return Promise.allSettled(files.map(file => new Promise(resolve => {
+    const img = new Image();
+    img.onload = () => resolve({file, ok: true});
+    img.onerror = () => resolve({file, ok: false});
+    img.src = file;
+  })));
+}
+
 async function main() {
   const [game, flagSpec, characters, backgrounds, evidence] = await Promise.all([
     loadJson("assets/data/game.json"),
@@ -60,6 +90,7 @@ async function main() {
   const continueButton = document.querySelector("#continue-btn");
   const startScene = getDebugStartScene(chapters) ?? game.start_scene;
   const isEvidenceOpen = () => !ui.evidenceLayer.classList.contains("hidden");
+  preloadImages(collectBackgroundFiles(backgrounds, chapters));
   let started = false;
 
   const openGame = () => {
