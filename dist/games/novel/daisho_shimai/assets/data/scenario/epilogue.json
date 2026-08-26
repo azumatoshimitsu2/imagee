@@ -511,7 +511,543 @@
           "text": "「僕も、これが何なのか知りたい」"
         }
       ],
-      "next": "s049_the_chair"
+      "next": "s049_router"
+    },
+    {
+      "number": 48.9,
+      "title": "選んだ答え",
+      "id": "s049_router",
+      "background": "bg_residential",
+      "bgm": "第一話メインテーマ",
+      "se": "足音、遠くの車",
+      "cast": [
+        "真生",
+        "菜緒"
+      ],
+      "next": null,
+      "events": [
+        {
+          "type": "branch",
+          "cases": [
+            {
+              "if": {
+                "variables": {
+                  "truth_answer": "truth"
+                }
+              },
+              "jump": "s049t_the_chair"
+            },
+            {
+              "if": {
+                "variables": {
+                  "truth_answer": "protect"
+                }
+              },
+              "jump": "s049p_the_chair"
+            }
+          ],
+          "default": "s049u_the_chair"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
+    },
+    {
+      "number": 49.1,
+      "title": "椅子――真実を選んだあと",
+      "id": "s049t_the_chair",
+      "background": "bg_residential",
+      "bgm": "第一話メインテーマ。穏やかだが未知を感じさせる。",
+      "se": "足音、遠くの車、鳥",
+      "cast": [
+        "真生",
+        "菜緒"
+      ],
+      "next": "s050_first_story_end",
+      "events": [
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "圭介さんには、真実へ戻すべきだと答えた。\nその直後に、自分たちの秘密へつながる写真を見せられた。\n言った言葉が、今度は自分に返ってきた気がした。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「どう思う？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「冬馬さん？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「写真」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「玩具かもしれない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「そう思う？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「思いたい」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「私は違うと思う」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「なんで」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「分かんない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「分かんないのに？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「なんとなく」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "姉ちゃんの「なんとなく」は、だいたい説明になっていない。\nでも、時々当たる。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「ねえ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「何」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「私たち以外にもいるのかな」"
+        },
+        {
+          "type": "directive",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「いたんじゃない？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「今も？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「それは分からない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「会ってみたい？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「……ちょっとだけ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「私も」"
+        },
+        {
+          "type": "directive",
+          "kind": "画面表示",
+          "text": "夕暮れの住宅街を背景に、菜緒と真生の立ち絵を表示する。"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
+    },
+    {
+      "number": 49.2,
+      "title": "椅子――秘密を守るということ",
+      "id": "s049p_the_chair",
+      "background": "bg_residential",
+      "bgm": "第一話メインテーマ。穏やかだが未知を感じさせる。",
+      "se": "足音、遠くの車、鳥",
+      "cast": [
+        "真生",
+        "菜緒"
+      ],
+      "next": "s050_first_story_end",
+      "events": [
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "守るためなら嘘でもいい、と答えた。\nそして今、俺たち自身が冬馬さんに秘密を知られかけている。\n誰かを守る嘘と、自分を守る嘘は同じなのだろうか。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「どう思う？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「冬馬さん？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「写真」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「玩具かもしれない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「そう思う？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「思いたい」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「私は違うと思う」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「なんで」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「分かんない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「分かんないのに？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「なんとなく」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "姉ちゃんの「なんとなく」は、だいたい説明になっていない。\nでも、時々当たる。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「ねえ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「何」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「私たち以外にもいるのかな」"
+        },
+        {
+          "type": "directive",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「いたんじゃない？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「今も？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「それは分からない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「会ってみたい？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「……ちょっとだけ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「私も」"
+        },
+        {
+          "type": "directive",
+          "kind": "画面表示",
+          "text": "夕暮れの住宅街を背景に、菜緒と真生の立ち絵を表示する。"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
+    },
+    {
+      "number": 49.3,
+      "title": "椅子――答えのないまま",
+      "id": "s049u_the_chair",
+      "background": "bg_residential",
+      "bgm": "第一話メインテーマ。穏やかだが未知を感じさせる。",
+      "se": "足音、遠くの車、鳥",
+      "cast": [
+        "真生",
+        "菜緒"
+      ],
+      "next": "s050_first_story_end",
+      "events": [
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "分からない、と答えた。\nその答えを持ったまま、今度は俺たち自身の秘密へつながる写真が現れた。\nたぶん、まだ答えを急ぐ必要はない。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「どう思う？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「冬馬さん？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「写真」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「玩具かもしれない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「そう思う？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「思いたい」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「私は違うと思う」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「なんで」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「分かんない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「分かんないのに？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「なんとなく」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "姉ちゃんの「なんとなく」は、だいたい説明になっていない。\nでも、時々当たる。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「ねえ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「何」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「私たち以外にもいるのかな」"
+        },
+        {
+          "type": "directive",
+          "kind": "間。",
+          "text": ""
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「いたんじゃない？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「今も？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「それは分からない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「会ってみたい？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「……ちょっとだけ」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「私も」"
+        },
+        {
+          "type": "directive",
+          "kind": "画面表示",
+          "text": "夕暮れの住宅街を背景に、菜緒と真生の立ち絵を表示する。"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
     },
     {
       "id": "s049_the_chair",

@@ -1090,38 +1090,6 @@
         {
           "type": "narration",
           "text": "一冊の日記に残された空白。\nその空白を埋めようとして、三枝さんは脅迫状を書いた。\n水野さんは父の遺品から疑った。\n宗一郎さんは弟を呼び戻した。\n二十年前に閉じたはずの出来事が、別々の場所から少しずつ開いていった。"
-        },
-        {
-          "type": "choice",
-          "id": "choice_05_truth_answer",
-          "prompt": "誰かを守るためについた嘘でも、真実に戻すべきだと思うか？",
-          "persistent": true,
-          "options": [
-            {
-              "text": "真実に戻すべきだと思う",
-              "set": {
-                "variables": {
-                  "truth_answer": "truth"
-                }
-              }
-            },
-            {
-              "text": "誰かを守れるなら、嘘でもいい",
-              "set": {
-                "variables": {
-                  "truth_answer": "protect"
-                }
-              }
-            },
-            {
-              "text": "分からない",
-              "set": {
-                "variables": {
-                  "truth_answer": "uncertain"
-                }
-              }
-            }
-          ]
         }
       ],
       "next": "s043_who_was_wrong"
@@ -1303,108 +1271,399 @@
         {
           "type": "dialogue",
           "speaker": "圭介",
+          "style": "圭介",
           "text": "「君なら、どうする？」"
         },
         {
           "type": "dialogue",
           "speaker": "真生",
+          "style": "真生",
           "text": "「何をですか」"
         },
         {
           "type": "dialogue",
           "speaker": "圭介",
+          "style": "圭介",
           "text": "「誰かを守るためについた嘘でも、真実に戻すべきだと思うか？」"
         },
         {
           "type": "narration",
-          "text": "すぐには答えられなかった。\n圭介さんの嘘は、宗一郎さんと雪乃さんを守った。\nでも同時に、水野さんから父親の最後を奪った。\n三枝さんの父親にも、二十年間沈黙させた。\nそして圭介さん自身からも、二十年を奪った。"
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "圭介さんの嘘は、誰かを守った。\n同時に、別の誰かから真実を奪った。\n簡単な正解はない。だからこそ、俺自身の答えが必要だった。"
         },
+        {
+          "type": "choice",
+          "id": "choice_05_truth_answer",
+          "prompt": "誰かを守るためについた嘘でも、真実に戻すべきだと思うか？",
+          "persistent": true,
+          "options": [
+            {
+              "text": "真実に戻すべきだと思う",
+              "set": {
+                "variables": {
+                  "truth_answer": "truth"
+                }
+              },
+              "jump": "s044t_truth"
+            },
+            {
+              "text": "誰かを守れるなら、嘘でもいい",
+              "set": {
+                "variables": {
+                  "truth_answer": "protect"
+                }
+              },
+              "jump": "s044p_protect"
+            },
+            {
+              "text": "分からない",
+              "set": {
+                "variables": {
+                  "truth_answer": "uncertain"
+                }
+              },
+              "jump": "s044u_uncertain"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 44.1,
+      "title": "真実に戻す",
+      "id": "s044t_truth",
+      "background": "bg_lounge",
+      "bgm": "第一話のテーマを静かに変奏",
+      "se": "弱い風、遠い除雪車",
+      "cast": [
+        "真生",
+        "圭介",
+        "菜緒"
+      ],
+      "next": "s045_snow_stops",
+      "events": [
         {
           "type": "dialogue",
           "speaker": "真生",
-          "text": "「分かりません」"
+          "style": "真生",
+          "text": "「真実に戻すべきだと思います」"
         },
         {
           "type": "dialogue",
           "speaker": "圭介",
-          "text": "「そうか」"
+          "style": "圭介",
+          "text": "「誰かが傷ついても？」"
         },
         {
           "type": "dialogue",
           "speaker": "真生",
-          "text": "「でも」"
+          "style": "真生",
+          "text": "「傷つかない保証はないです。でも、嘘の中に閉じ込めたままにするのも、守ることとは違う気がする」"
         },
         {
           "type": "dialogue",
           "speaker": "圭介",
-          "text": "「ん？」"
+          "style": "圭介",
+          "text": "「……そうか」"
         },
         {
-          "type": "dialogue",
+          "type": "narration",
           "speaker": "真生",
-          "text": "「嘘をついた時と、二十年後じゃ、守ってるものが同じとは限らないと思います」"
-        },
-        {
-          "type": "stage_direction",
-          "kind": "間。",
-          "text": ""
-        },
-        {
-          "type": "dialogue",
-          "speaker": "圭介",
-          "text": "「……なるほどな」"
+          "style": "真生・地の文",
+          "text": "自信があるわけじゃない。\nただ、今の俺はそう答えた。"
         },
         {
           "type": "dialogue",
           "speaker": "菜緒",
+          "style": "菜緒",
           "text": "「雪って便利だよな」"
         },
         {
           "type": "dialogue",
           "speaker": "真生",
+          "style": "真生",
           "text": "「いつからいたの」"
         },
         {
           "type": "dialogue",
           "speaker": "菜緒",
+          "style": "菜緒",
           "text": "「今」"
         },
         {
           "type": "dialogue",
           "speaker": "真生",
+          "style": "真生",
           "text": "「絶対嘘」"
         },
         {
           "type": "dialogue",
           "speaker": "菜緒",
+          "style": "菜緒",
           "text": "「全部隠してくれるじゃん」"
         },
         {
-          "type": "stage_direction",
+          "type": "directive",
           "kind": "演出",
           "text": "窓の外。雪に覆われた道路と山。"
         },
         {
           "type": "dialogue",
           "speaker": "菜緒",
+          "style": "菜緒",
           "text": "「足跡も、道も、何があったかも」"
         },
         {
           "type": "dialogue",
           "speaker": "真生",
+          "style": "真生",
           "text": "「うん」"
         },
         {
           "type": "dialogue",
           "speaker": "菜緒",
+          "style": "菜緒",
           "text": "「でも、いつか溶ける」"
         },
         {
           "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
           "text": "俺は姉ちゃんを見る。\n俺たちにも、雪の下に隠しているものがある。\n人には言えない力。\n使い方は知っている。\nでも、どうして俺たちにこんな力があるのかは知らない。\nいつか、それも溶ける日が来るのだろうか。"
         }
       ],
-      "next": "s045_snow_stops"
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
+    },
+    {
+      "number": 44.2,
+      "title": "守るための嘘",
+      "id": "s044p_protect",
+      "background": "bg_lounge",
+      "bgm": "第一話のテーマを静かに変奏",
+      "se": "弱い風、遠い除雪車",
+      "cast": [
+        "真生",
+        "圭介",
+        "菜緒"
+      ],
+      "next": "s045_snow_stops",
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「誰かを本当に守れるなら、嘘でもいいと思います」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "style": "圭介",
+          "text": "「本当に、か」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「はい。ただ、その嘘で別の誰かが傷つくなら……ずっと同じままではいられないと思う」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "style": "圭介",
+          "text": "「……難しいな」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "答えたあとで、自分の言葉の条件の多さに気づいた。\nそれでも今は、それが一番近かった。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「雪って便利だよな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「いつからいたの」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「今」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「絶対嘘」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「全部隠してくれるじゃん」"
+        },
+        {
+          "type": "directive",
+          "kind": "演出",
+          "text": "窓の外。雪に覆われた道路と山。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「足跡も、道も、何があったかも」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「うん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「でも、いつか溶ける」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "俺は姉ちゃんを見る。\n俺たちにも、雪の下に隠しているものがある。\n人には言えない力。\n使い方は知っている。\nでも、どうして俺たちにこんな力があるのかは知らない。\nいつか、それも溶ける日が来るのだろうか。"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
+    },
+    {
+      "number": 44.3,
+      "title": "まだ答えられない",
+      "id": "s044u_uncertain",
+      "background": "bg_lounge",
+      "bgm": "第一話のテーマを静かに変奏",
+      "se": "弱い風、遠い除雪車",
+      "cast": [
+        "真生",
+        "圭介",
+        "菜緒"
+      ],
+      "next": "s045_snow_stops",
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「分かりません」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "style": "圭介",
+          "text": "「そうか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「どっちを選んでも、誰かが傷つく気がして」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "圭介",
+          "style": "圭介",
+          "text": "「それも答えだ」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "決められなかった。\nでも、決められない理由だけは前より分かっていた。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「雪って便利だよな」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「いつからいたの」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「今」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「絶対嘘」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「全部隠してくれるじゃん」"
+        },
+        {
+          "type": "directive",
+          "kind": "演出",
+          "text": "窓の外。雪に覆われた道路と山。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「足跡も、道も、何があったかも」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「うん」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「でも、いつか溶ける」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "俺は姉ちゃんを見る。\n俺たちにも、雪の下に隠しているものがある。\n人には言えない力。\n使い方は知っている。\nでも、どうして俺たちにこんな力があるのかは知らない。\nいつか、それも溶ける日が来るのだろうか。"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
     },
     {
       "id": "s045_snow_stops",

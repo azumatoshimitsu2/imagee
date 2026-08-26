@@ -4,7 +4,6 @@ export default class SiteFooter extends HTMLElement {
     const template = `<style>
     footer {
       background: linear-gradient(to right,#0a111b,#0a101e);
-      margin-top: 1.6rem;
       padding: 1rem .4rem;
       text-align: center;
       color:#fff

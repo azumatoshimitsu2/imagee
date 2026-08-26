@@ -91,6 +91,7 @@ async function main() {
   } catch (_) {}
 
   document.querySelector("#message-box").addEventListener("click", () => engine.next());
+  document.querySelector("#chapter-title").addEventListener("click", () => engine.next());
   startButton.addEventListener("click", startGame);
   continueButton.addEventListener("click", continueGame);
   document.addEventListener("keydown", e => {

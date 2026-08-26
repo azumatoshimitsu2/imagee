@@ -5,7 +5,8 @@
     "asked_souichiro": false,
     "asked_haruka": false,
     "asked_saegusa": false,
-    "deduction_three_intentions": false
+    "deduction_three_intentions": false,
+    "checked_plan_gap": false
   },
   "variables": {
     "first_footprint_target": null,

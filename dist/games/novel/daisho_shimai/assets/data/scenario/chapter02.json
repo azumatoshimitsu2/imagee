@@ -19,8 +19,19 @@
       },
       "events": [
         {
-          "type": "narration",
-          "text": "始まりの謎は解けた。\n榊原さんは、空から降りてきた。\n正確には、索道で。\nでも終わりは、そのままだった。"
+          "type": "conditional_narration",
+          "speaker": "真生",
+          "cases": [
+            {
+              "if": {
+                "variables": {
+                  "first_footprint_target": "end"
+                }
+              },
+              "text": "最初にここを見た時は、四角い違和感の意味が分からなかった。\nでも今は「空から来た」という半分の答えを持っている。"
+            }
+          ],
+          "default": "始まりの謎は解けた。\n今度は、足跡が消えた場所を調べる。"
         },
         {
           "type": "dialogue",
@@ -254,9 +265,11 @@
               "text": "見取り図と現場の食い違いを追う",
               "set": {
                 "flags": {
-                  "asked_souichiro": true
+                  "asked_souichiro": true,
+                  "checked_plan_gap": true
                 }
-              }
+              },
+              "jump": "s018a_trace_plan"
             },
             {
               "text": "館の人の証言をもう一度整理する",
@@ -264,12 +277,137 @@
                 "flags": {
                   "asked_souichiro": false
                 }
-              }
+              },
+              "jump": "s018b_ask_souichiro"
             }
           ]
         }
       ],
       "next": "s019_work_tag"
+    },
+    {
+      "number": 18.1,
+      "title": "図面の食い違い",
+      "id": "s018a_trace_plan",
+      "background": "bg_lounge",
+      "bgm": "静かな推理曲",
+      "se": "紙をめくる音",
+      "cast": [
+        "真生",
+        "菜緒",
+        "雪乃"
+      ],
+      "next": "s019_work_tag",
+      "events": [
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "俺は見取り図をもう一度、現在の館内図と重ねた。\n地下倉庫は消えている。でも、昔の搬入経路まで消えたとは限らない。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「外から地下へ入れてたなら、外側にも記録があるはず」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "雪乃",
+          "style": "雪乃",
+          "text": "「旧物置とか？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「じゃあ札とか工具とか残ってるかも」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "人の記憶より先に、物が残した痕跡を確かめることにした。"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
+    },
+    {
+      "number": 18.2,
+      "title": "宗一郎の沈黙",
+      "id": "s018b_ask_souichiro",
+      "background": "bg_lounge",
+      "bgm": "低い緊張音",
+      "se": "時計、風",
+      "cast": [
+        "真生",
+        "菜緒",
+        "宗一郎"
+      ],
+      "next": "s019_work_tag",
+      "events": [
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「昔、雪の時は外から地下へ荷物を入れてたんですよね」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "宗一郎さんの視線が、一瞬だけ止まった。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "style": "宗一郎",
+          "text": "「……昔の設備だ。もう使っていない」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「入口はどこですか？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "宗一郎",
+          "style": "宗一郎",
+          "text": "「今は分からない」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "「知らない」ではなく「今は分からない」。\n設備の存在そのものは知っている。けれど、何かを言い切ることを避けている。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「旧物置をもう一度見てきます」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "宗一郎さんは止めなかった。\nそれが肯定に近く聞こえた。"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
     },
     {
       "id": "s019_work_tag",

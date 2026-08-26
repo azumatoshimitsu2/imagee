@@ -11,6 +11,8 @@ export class Engine {
     this.sceneId = null;
     this.eventIndex = 0;
     this.locked = false;
+    this.awaitingTitle = false;
+    this.keepTitle = false;
   }
 
   loadScenarioFiles(chapters) {
@@ -32,6 +34,8 @@ export class Engine {
     this.scene = scene;
     this.sceneId = sceneId;
     this.eventIndex = eventIndex;
+    this.awaitingTitle = false;
+    this.keepTitle = false;
     if (!this.state.visitedScenes.includes(sceneId)) this.state.visitedScenes.push(sceneId);
     if (scene.background) this.ui.setBackground(scene.background);
     if (scene.characters) this.ui.setCharacters(scene.characters);
@@ -40,6 +44,13 @@ export class Engine {
 
   async next() {
     if (this.locked || !this.scene) return;
+    if (this.awaitingTitle) {
+      this.awaitingTitle = false;
+      if (!this.keepTitle) this.ui.hideTitle();
+      this.keepTitle = false;
+      return this.next();
+    }
+
     const events = this.scene.events ?? [];
     if (this.eventIndex >= events.length) {
       if (this.scene.next) this.gotoScene(this.scene.next, 0);
@@ -57,6 +68,15 @@ export class Engine {
         this.pushLog(null, event.text);
         this.ui.showText("", event.text);
         return;
+
+      case "conditional_narration": {
+        const matched = (event.cases ?? []).find(item => !item.if || this.state.test(item.if));
+        const text = matched?.text ?? event.default ?? "";
+        const speaker = event.speaker ?? null;
+        this.pushLog(speaker, text);
+        this.ui.showText(speaker ?? "", text);
+        return;
+      }
 
       case "dialogue": {
         const char = this.characters[event.speaker];
@@ -94,10 +114,10 @@ export class Engine {
         return this.next();
 
       case "title":
-        this.locked = true;
-        await this.ui.title(event.text, event.duration, {keep: !this.scene.next && this.eventIndex >= events.length});
-        this.locked = false;
-        return this.next();
+        this.keepTitle = !this.scene.next && this.eventIndex >= events.length;
+        this.awaitingTitle = true;
+        this.ui.showTitle(event.text);
+        return;
 
       case "set_flag":
         this.state.setFlag(event.flag, event.value ?? true);
@@ -114,6 +134,14 @@ export class Engine {
           this.next();
         }
         return;
+
+      case "branch": {
+        const matched = (event.cases ?? []).find(item => !item.if || this.state.test(item.if));
+        const target = matched?.jump ?? event.default;
+        if (target) this.gotoScene(target, 0);
+        else this.next();
+        return;
+      }
 
       case "choice": {
         const visible = (event.options ?? []).filter(opt => !opt.show_if || this.state.test(opt.show_if));

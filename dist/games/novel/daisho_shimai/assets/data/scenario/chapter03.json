@@ -575,7 +575,8 @@
                 "variables": {
                   "haruka_interpretation": "revenge"
                 }
-              }
+              },
+              "jump": "s028r_haruka_revenge"
             },
             {
               "text": "二十年前の真相を確かめるため",
@@ -586,7 +587,8 @@
                 "variables": {
                   "haruka_interpretation": "truth"
                 }
-              }
+              },
+              "jump": "s028t_haruka_truth"
             },
             {
               "text": "まだ判断できない",
@@ -597,12 +599,208 @@
                 "variables": {
                   "haruka_interpretation": "uncertain"
                 }
-              }
+              },
+              "jump": "s028u_haruka_uncertain"
             }
           ]
         }
       ],
       "next": "s029_harukas_doubt"
+    },
+    {
+      "number": 28.1,
+      "title": "復讐という見方",
+      "id": "s028r_haruka_revenge",
+      "background": "bg_dining",
+      "bgm": "静かな緊張曲",
+      "se": "風",
+      "cast": [
+        "真生",
+        "菜緒",
+        "遥"
+      ],
+      "next": "s029_harukas_doubt",
+      "events": [
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "父を死なせたとされる男を追って、この山まで来た。\nそう考えるのが一番分かりやすかった。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「圭介さんに、責任を取らせたかったんですか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "style": "遥",
+          "text": "「……昔なら、そう思ったかもしれない」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "否定された。\nでも、完全に否定されたわけでもない。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "style": "遥",
+          "text": "「でも、一つだけずっと分からなかった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「何が？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "style": "遥",
+          "text": "「父の遺品に、圭介さんの防寒具があった」"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
+    },
+    {
+      "number": 28.2,
+      "title": "真相を確かめる人",
+      "id": "s028t_haruka_truth",
+      "background": "bg_dining",
+      "bgm": "静かな緊張曲",
+      "se": "風",
+      "cast": [
+        "真生",
+        "菜緒",
+        "遥"
+      ],
+      "next": "s029_harukas_doubt",
+      "events": [
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "復讐する人の目というより、確かめたい人の目に見えた。\n自分が信じてきた話が、本当に正しいのか。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「圭介さんを責めるためじゃなく、話を確かめに来た？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "style": "遥",
+          "text": "「……そう。少なくとも今は」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "水野さんは初めて、はっきり肯定した。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "style": "遥",
+          "text": "「でも、一つだけずっと分からなかった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「何が？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "style": "遥",
+          "text": "「父の遺品に、圭介さんの防寒具があった」"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
+    },
+    {
+      "number": 28.3,
+      "title": "まだ決めない",
+      "id": "s028u_haruka_uncertain",
+      "background": "bg_dining",
+      "bgm": "静かな緊張曲",
+      "se": "風",
+      "cast": [
+        "真生",
+        "菜緒",
+        "遥"
+      ],
+      "next": "s029_harukas_doubt",
+      "events": [
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "ここで決めつけるのは早い。\n恨みも疑いも、二十年あれば一つの言葉には収まらない。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「まだ、あなたが何を考えてるのか分かりません」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "style": "遥",
+          "text": "「その方がいいと思う」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "水野さんは、少しだけ息を吐いた。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "style": "遥",
+          "text": "「でも、一つだけずっと分からなかった」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「何が？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "遥",
+          "style": "遥",
+          "text": "「父の遺品に、圭介さんの防寒具があった」"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
     },
     {
       "id": "s029_harukas_doubt",

@@ -1162,7 +1162,8 @@
                 "variables": {
                   "first_footprint_target": "start"
                 }
-              }
+              },
+              "jump": "s012_start_point"
             },
             {
               "text": "足跡が消えた場所",
@@ -1173,12 +1174,128 @@
                 "variables": {
                   "first_footprint_target": "end"
                 }
-              }
+              },
+              "jump": "s011c_end_first"
             }
           ]
         }
       ],
       "next": "s012_start_point"
+    },
+    {
+      "number": 11.1,
+      "title": "先に、消えた場所へ",
+      "id": "s011c_end_first",
+      "background": "bg_snowfield",
+      "bgm": "低いミステリー曲を継続",
+      "se": "風、雪を踏む音",
+      "cast": [
+        "真生",
+        "菜緒"
+      ],
+      "next": "s011c_square_hint",
+      "events": [
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "俺たちは先に、足跡が消えた場所へ向かった。\n最後の一歩。その先には雪しかない。\n崖まではまだ距離がある。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「やっぱり飛んだ？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「それを確かめるために来たんでしょ」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "足跡の先を歩き回る。\n飛び移った跡も、引きずった跡もない。\n消えたというより、ここから雪の上を歩いていない。そんな感じがした。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「地面の下……とか」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「埋まった？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「まだ分からない」"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
+    },
+    {
+      "number": 11.2,
+      "title": "雪面の違和感",
+      "id": "s011c_square_hint",
+      "background": "bg_snowfield",
+      "bgm": "低いミステリー曲を継続",
+      "se": "風",
+      "cast": [
+        "真生",
+        "菜緒"
+      ],
+      "next": "s012_start_point",
+      "events": [
+        {
+          "type": "directive",
+          "kind": "画面表示",
+          "text": "雪面を広く見渡す。C付近に、ごく浅い四角い違和感がある。"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "少し離れると、雪面の一部だけ形が違って見えた。\n四角い。けれど、雪を掘るにはまだ理由が足りない。"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "菜緒",
+          "style": "菜緒",
+          "text": "「掘る？」"
+        },
+        {
+          "type": "dialogue",
+          "speaker": "真生",
+          "style": "真生",
+          "text": "「先に始まりの方も見よう。両方見てから」"
+        },
+        {
+          "type": "narration",
+          "speaker": "真生",
+          "style": "真生・地の文",
+          "text": "消えた場所には、何かある。\nその感覚だけを覚えて、俺たちは足跡の始点へ戻った。"
+        }
+      ],
+      "characters": [],
+      "production": {
+        "background_label": "分岐シーン",
+        "bgm_note": "前シーンを継続",
+        "se_note": "",
+        "cast": []
+      }
     },
     {
       "id": "s012_start_point",

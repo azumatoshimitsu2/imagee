@@ -149,11 +149,12 @@ export class UI {
     }
   }
 
-  async title(text, duration=1200, {keep=false} = {}) {
+  showTitle(text) {
     this.chapterTitle.textContent = text;
     this.chapterTitle.classList.remove("hidden");
-    await new Promise(r => setTimeout(r, duration));
-    if (keep) return;
+  }
+
+  hideTitle() {
     this.chapterTitle.classList.add("hidden");
   }
 
