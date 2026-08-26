@@ -30,6 +30,9 @@
   }
 
   .home-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     a {
       display: grid;
       align-items: center;

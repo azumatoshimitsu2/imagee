@@ -1,11 +1,10 @@
 
 import { GameState } from "./state.js";
 import { SaveManager } from "./save.js";
-import { AudioManager } from "./audio.js";
 import { UI } from "./ui.js";
 import { Engine } from "./engine.js";
 
-const DEBUG_MODE = true;
+const DEBUG_MODE = false;
 
 async function loadJson(path) {
   const res = await fetch(path);
@@ -36,13 +35,12 @@ function getDebugStartScene(chapters) {
 }
 
 async function main() {
-  const [game, flagSpec, characters, backgrounds, evidence, audioSpec] = await Promise.all([
+  const [game, flagSpec, characters, backgrounds, evidence] = await Promise.all([
     loadJson("assets/data/game.json"),
     loadJson("assets/data/flags.json"),
     loadJson("assets/data/characters.json"),
     loadJson("assets/data/backgrounds.json"),
-    loadJson("assets/data/evidence.json"),
-    loadJson("assets/data/audio.json")
+    loadJson("assets/data/evidence.json")
   ]);
 
   const chapters = [];
@@ -52,35 +50,53 @@ async function main() {
 
   const state = new GameState(flagSpec);
   const ui = new UI({characters, backgrounds, evidence});
-  const audio = new AudioManager(audioSpec);
   const saveManager = new SaveManager(game, flagSpec);
-  const engine = new Engine({game, state, ui, audio, saveManager, characters});
+  const engine = new Engine({game, state, ui, saveManager, characters});
   engine.loadScenarioFiles(chapters);
 
   const gameRoot = document.querySelector("#game");
   const startScreen = document.querySelector("#start-screen");
   const startButton = document.querySelector("#start-btn");
+  const continueButton = document.querySelector("#continue-btn");
   const startScene = getDebugStartScene(chapters) ?? game.start_scene;
   const isEvidenceOpen = () => !ui.evidenceLayer.classList.contains("hidden");
   let started = false;
 
-  const startGame = () => {
-    if (started) return;
+  const openGame = () => {
+    if (started) return false;
     started = true;
     gameRoot.classList.add("is-started");
     startScreen.classList.add("hidden");
+    return true;
+  };
+
+  const startGame = () => {
+    if (!openGame()) return;
     engine.start(startScene);
   };
 
+  const continueGame = () => {
+    try {
+      const data = saveManager.load();
+      if (!data) return;
+      if (!openGame()) return;
+      engine.load(data);
+    } catch (err) {
+      alert(err.message);
+    }
+  };
+
+  try {
+    if (saveManager.load()) continueButton.classList.remove("hidden");
+  } catch (_) {}
+
   document.querySelector("#message-box").addEventListener("click", () => engine.next());
   startButton.addEventListener("click", startGame);
+  continueButton.addEventListener("click", continueGame);
   document.addEventListener("keydown", e => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
-      if (!started) {
-        startGame();
-        return;
-      }
+      if (!started) return;
       if (isEvidenceOpen()) return;
       engine.next();
     }
@@ -102,11 +118,6 @@ async function main() {
   };
 
   document.querySelector("#log-btn").onclick = () => ui.showLog(state.history);
-  document.querySelector("#back-btn").onclick = () => engine.back();
-  document.querySelector("#mute-btn").onclick = e => {
-    const muted = audio.toggleMute();
-    e.currentTarget.textContent = muted ? "UNMUTE" : "MUTE";
-  };
 }
 
 main().catch(err => {

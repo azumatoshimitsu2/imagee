@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WBKSRMTK');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no">
+  <title>大小姉弟奇譚</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="/assets/js/main.js" type="module"></script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBKSRMTK"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <site-header>
+    <imagee-btn-help class="js-show-modal-btn" data-target="js-modal-help">？</imagee-btn-help>
+  </site-header>
+  <imagee-modal id="js-modal-help" open="true">
+    <h2>ゲームの遊び方</h2>
+    <p>ファンタジー・ミステリー 『大小姉弟奇譚』。</p>
+    <p>『大小姉弟奇譚』は、文章を読み進めながら事件の真相に近づいていくノベルゲームです。</p>
+    <p>画面上部のメッセージ欄をタップ、または Enter / Space キーで次の文章へ進みます。</p>
+    <p>下部の操作ボタンから、ひとつ前の文章確認、会話の履歴表示、保存、続きから再開ができます。</p>
+    <p>選択肢や推理画面が表示された時は、内容を選んで物語を進めてください。</p>
+    <h2>ストーリー</h2>
+    <p>冬休み、山奥のペンション「白梟館」を訪れた双子の高校生、大小菜緒と大小真生。</p>
+    <p>吹雪と雪崩によって外界から孤立した館で、一人の宿泊客が忽然と姿を消す。</p>
+    <p>雪原に残されていたのは、<br>途中から始まり、途中で消えている足跡。</p>
+    <p>閉ざされた館。二十年前の遭難事故。届いた脅迫状。<br>そして、一枚の古い写真に写る奇妙なもの。</p>
+    <p>姉には、身体を巨大化させる力がある。<br>弟には、身体を小さくする力がある。</p>
+    <p>けれど、その力が見つけられるのは、真実への入口にすぎない。</p>
+    <p>なぜ、人は消えたのか。<br>そして――真実は、明らかにするべきものなのか。</p>
+    <p>選択によって姉弟が知る事実と、その順序が変わっていく、ファンタジー・ミステリー 『大小姉弟奇譚』。</p>
+  </imagee-modal>
+  <main id="game" class="game">
+    <section id="stage" class="stage" aria-live="polite">
+      <div id="bg" class="bg"></div>
+
+      <section id="start-screen" class="start-screen">
+        <div class="start-content">
+          <h1>大小姉弟奇譚</h1>
+          <p>雪原に消えた人</p>
+          <div class="start-actions">
+            <button id="start-btn" type="button">START</button>
+            <button id="continue-btn" class="hidden" type="button">CONTINUE</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="portrait-left" class="portrait portrait-left"></div>
+      <div id="portrait-center" class="portrait portrait-center"></div>
+      <div id="portrait-right" class="portrait portrait-right"></div>
+
+      <div id="evidence-layer" class="evidence-layer hidden">
+        <button id="evidence-close" class="ui-button evidence-close" type="button">閉じる</button>
+        <img id="evidence-image" alt="">
+        <div id="evidence-placeholder" class="placeholder"></div>
+      </div>
+
+      <section id="message-box" class="message-box">
+        <div id="speaker" class="speaker"></div>
+        <div id="text" class="text"></div>
+        <div id="continue-mark" class="continue-mark">▼</div>
+      </section>
+
+      <section id="choice-box" class="choice-box hidden"></section>
+      <section id="deduction-box" class="choice-box hidden"></section>
+
+      <div id="chapter-title" class="chapter-title hidden"></div>
+      <div id="fade" class="fade-layer"></div>
+    </section>
+
+    <nav class="controls" aria-label="ゲーム操作">
+      <button id="log-btn" type="button">履歴</button>
+      <button id="save-btn" type="button">保存</button>
+      <button id="load-btn" type="button">続きから</button>
+    </nav>
+
+    <dialog id="log-dialog">
+      <h2>会話の履歴</h2>
+      <div id="log-content"></div>
+      <button id="log-close" class="ui-button dialog-close" type="button">閉じる</button>
+    </dialog>
+  </main>
+  <site-footer></site-footer>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

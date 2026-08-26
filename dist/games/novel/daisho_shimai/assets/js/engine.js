@@ -1,10 +1,9 @@
 
 export class Engine {
-  constructor({game, state, ui, audio, saveManager, characters}) {
+  constructor({game, state, ui, saveManager, characters}) {
     this.game = game;
     this.state = state;
     this.ui = ui;
-    this.audio = audio;
     this.saveManager = saveManager;
     this.characters = characters;
     this.sceneMap = new Map();
@@ -36,7 +35,6 @@ export class Engine {
     if (!this.state.visitedScenes.includes(sceneId)) this.state.visitedScenes.push(sceneId);
     if (scene.background) this.ui.setBackground(scene.background);
     if (scene.characters) this.ui.setCharacters(scene.characters);
-    if (scene.bgm) this.audio.playBgm(scene.bgm);
     this.next();
   }
 
@@ -79,18 +77,6 @@ export class Engine {
 
       case "hide_character":
         this.ui.hideCharacter(event.position);
-        return this.next();
-
-      case "bgm":
-        await this.audio.playBgm(event.id);
-        return this.next();
-
-      case "stop_bgm":
-        this.audio.stopBgm();
-        return this.next();
-
-      case "se":
-        this.audio.playSe(event.id);
         return this.next();
 
       case "image":

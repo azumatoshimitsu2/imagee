@@ -9,7 +9,7 @@ export default class SiteFooter extends HTMLElement {
       text-align: center;
       color:#fff
     }
-    </style><footer><small>&copy; delft</small></footer>`;
+    </style><footer><small>&copy; DELFT</small></footer>`;
     this.attachShadow({'mode': 'open'});
     this.shadowRoot.innerHTML = template;
   }
