@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "axes": [
+    {
+      "id": "principle_outcome",
+      "negativeLabel": "原則",
+      "positiveLabel": "結果",
+      "range": [
+        -1,
+        1
+      ]
+    },
+    {
+      "id": "individual_collective",
+      "negativeLabel": "個人",
+      "positiveLabel": "集団",
+      "range": [
+        -1,
+        1
+      ]
+    },
+    {
+      "id": "fairness_relationship",
+      "negativeLabel": "公平",
+      "positiveLabel": "関係",
+      "range": [
+        -1,
+        1
+      ]
+    },
+    {
+      "id": "stability_change",
+      "negativeLabel": "安定",
+      "positiveLabel": "変化",
+      "range": [
+        -1,
+        1
+      ]
+    },
+    {
+      "id": "freedom_security",
+      "negativeLabel": "自由",
+      "positiveLabel": "安全",
+      "range": [
+        -1,
+        1
+      ]
+    },
+    {
+      "id": "equality_efficiency",
+      "negativeLabel": "平等",
+      "positiveLabel": "効率",
+      "range": [
+        -1,
+        1
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "relationship",
+      "label": "関係"
+    },
+    {
+      "id": "life",
+      "label": "生命"
+    },
+    {
+      "id": "work",
+      "label": "仕事"
+    },
+    {
+      "id": "society",
+      "label": "社会"
+    },
+    {
+      "id": "personal",
+      "label": "暮らし"
+    },
+    {
+      "id": "family",
+      "label": "家族"
+    },
+    {
+      "id": "community",
+      "label": "地域"
+    },
+    {
+      "id": "meta",
+      "label": "振り返り"
+    }
+  ]
+}

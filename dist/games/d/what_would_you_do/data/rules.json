@@ -1,0 +1,634 @@
+{
+  "schemaVersion": 1,
+  "rules": [
+    {
+      "id": "rel_003_024_same",
+      "version": 2,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 10,
+      "relationId": "rel_003_024",
+      "axis": "principle_outcome",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "procedure_context_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "安全と費用を一定にした手順の例外。会社と地域の違いは問い返しに明示し、人格の矛盾と断定しない。 2026-09-17：選択の一致を同じ理由とは断定せず、具体的な文脈差を示す。"
+    },
+    {
+      "id": "rel_003_024_different",
+      "version": 2,
+      "type": "TENSION",
+      "enabled": true,
+      "priority": 70,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 10,
+      "relationId": "rel_003_024",
+      "axis": "principle_outcome",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "procedure_context_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "安全と費用を一定にした手順の例外。会社と地域の違いは問い返しに明示し、人格の矛盾と断定しない。 2026-09-17：選択の一致を同じ理由とは断定せず、具体的な文脈差を示す。"
+    },
+    {
+      "id": "rel_015_023_same",
+      "version": 2,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_015_023",
+      "axis": "equality_efficiency",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "allocation_context_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "地域の制作予算と職場の賞与。機会と報酬の違いを含むため、文脈差の候補としてのみ扱う。 2026-09-17：配分の目的や判断する立場が違うことを具体的に示し、同じ理由・価値観とは断定しない。"
+    },
+    {
+      "id": "rel_015_023_different",
+      "version": 2,
+      "type": "CONTEXT_SHIFT",
+      "enabled": true,
+      "priority": 60,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_015_023",
+      "axis": "equality_efficiency",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "allocation_context_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "地域の制作予算と職場の賞与。機会と報酬の違いを含むため、文脈差の候補としてのみ扱う。 2026-09-17：配分の目的や判断する立場が違うことを具体的に示し、同じ理由・価値観とは断定しない。"
+    },
+    {
+      "id": "rel_017_022_same",
+      "version": 2,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_017_022",
+      "axis": "freedom_security",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "advice_context_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "公共の開催判断と友人への助言という立場の違いを比較する。 2026-09-17：配分の目的や判断する立場が違うことを具体的に示し、同じ理由・価値観とは断定しない。"
+    },
+    {
+      "id": "rel_017_022_different",
+      "version": 2,
+      "type": "CONTEXT_SHIFT",
+      "enabled": true,
+      "priority": 60,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_017_022",
+      "axis": "freedom_security",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "advice_context_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "公共の開催判断と友人への助言という立場の違いを比較する。 2026-09-17：配分の目的や判断する立場が違うことを具体的に示し、同じ理由・価値観とは断定しない。"
+    },
+    {
+      "id": "rel_001_016_same",
+      "version": 2,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 10,
+      "relationId": "rel_001_016",
+      "axis": "principle_outcome",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "promise_context_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "先の約束と影響の比較。秘密と予定の違いを含む限定的な緊張の問い返し。 2026-09-17：選択の一致を同じ理由とは断定せず、具体的な文脈差を示す。"
+    },
+    {
+      "id": "rel_001_016_different",
+      "version": 2,
+      "type": "TENSION",
+      "enabled": true,
+      "priority": 70,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 10,
+      "relationId": "rel_001_016",
+      "axis": "principle_outcome",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "promise_context_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "先の約束と影響の比較。秘密と予定の違いを含む限定的な緊張の問い返し。 2026-09-17：選択の一致を同じ理由とは断定せず、具体的な文脈差を示す。"
+    },
+    {
+      "id": "boundary_friend_count",
+      "version": 2,
+      "type": "BOUNDARY",
+      "enabled": true,
+      "priority": 80,
+      "detector": "series_decision_change",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_friend_count",
+      "axis": "fairness_relationship",
+      "when": {
+        "seriesId": "rescue_friend_count",
+        "variable": "strangerCount",
+        "requireIdenticalConstants": true,
+        "requireDistinctValues": true,
+        "excludeDecisionIds": [
+          "unsure"
+        ],
+        "report": "observed_interval_only"
+      },
+      "templateId": "boundary",
+      "evidencePolicy": "latest_comparable_answers"
+    },
+    {
+      "id": "time_shift",
+      "version": 1,
+      "type": "TIME_SHIFT",
+      "enabled": false,
+      "pendingDecision": "TODO-01",
+      "priority": 90,
+      "detector": "profile_time_change",
+      "when": {
+        "metric": "changeOverTime",
+        "operator": "absolute_gte",
+        "threshold": 0.35,
+        "minimumAnswers": 20,
+        "minimumTimeSpanDays": 30,
+        "requireComparableVersions": true
+      },
+      "templateId": "time_shift",
+      "evidencePolicy": "comparable_periods"
+    },
+    {
+      "id": "reflection_return",
+      "version": 1,
+      "type": "REFLECTION_RETURN",
+      "enabled": false,
+      "pendingDecision": "TODO-01",
+      "priority": 100,
+      "detector": "reflection_due",
+      "when": {
+        "any": [
+          {
+            "elapsedDays": 30
+          },
+          {
+            "additionalDistinctQuestions": 10
+          }
+        ],
+        "excludeAlreadyResponded": true
+      },
+      "templateId": "reflection_return",
+      "followUpId": "fu_reflection_response",
+      "evidencePolicy": "stored_text_only"
+    },
+    {
+      "id": "boundary_help_delay_5_30",
+      "version": 1,
+      "type": "BOUNDARY",
+      "enabled": true,
+      "priority": 80,
+      "detector": "series_decision_change",
+      "minimumDistinctQuestions": 2,
+      "relationId": "rel_help_delay_5_30",
+      "axis": "individual_collective",
+      "when": {
+        "seriesId": "help_delay",
+        "variable": "delayMinutes",
+        "requireIdenticalConstants": true,
+        "requireDistinctValues": true,
+        "excludeDecisionIds": [
+          "unsure"
+        ],
+        "report": "observed_interval_only"
+      },
+      "templateId": "boundary_delay",
+      "evidencePolicy": "latest_comparable_answers"
+    },
+    {
+      "id": "boundary_help_delay_5_120",
+      "version": 1,
+      "type": "BOUNDARY",
+      "enabled": true,
+      "priority": 80,
+      "detector": "series_decision_change",
+      "minimumDistinctQuestions": 2,
+      "relationId": "rel_help_delay_5_120",
+      "axis": "individual_collective",
+      "when": {
+        "seriesId": "help_delay",
+        "variable": "delayMinutes",
+        "requireIdenticalConstants": true,
+        "requireDistinctValues": true,
+        "excludeDecisionIds": [
+          "unsure"
+        ],
+        "report": "observed_interval_only"
+      },
+      "templateId": "boundary_delay",
+      "evidencePolicy": "latest_comparable_answers"
+    },
+    {
+      "id": "boundary_help_delay_30_120",
+      "version": 1,
+      "type": "BOUNDARY",
+      "enabled": true,
+      "priority": 80,
+      "detector": "series_decision_change",
+      "minimumDistinctQuestions": 2,
+      "relationId": "rel_help_delay_30_120",
+      "axis": "individual_collective",
+      "when": {
+        "seriesId": "help_delay",
+        "variable": "delayMinutes",
+        "requireIdenticalConstants": true,
+        "requireDistinctValues": true,
+        "excludeDecisionIds": [
+          "unsure"
+        ],
+        "report": "observed_interval_only"
+      },
+      "templateId": "boundary_delay",
+      "evidencePolicy": "latest_comparable_answers"
+    },
+    {
+      "id": "rel_034_035_same",
+      "version": 1,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_034_035",
+      "axis": "individual_collective",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "rel_034_035_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "自分の時間と活動費を問い返す。複数条件が異なるため境界・矛盾とは判定しない。"
+    },
+    {
+      "id": "rel_034_035_different",
+      "version": 1,
+      "type": "CONTEXT_SHIFT",
+      "enabled": true,
+      "priority": 60,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_034_035",
+      "axis": "individual_collective",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "rel_034_035_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "自分の時間と活動費を問い返す。複数条件が異なるため境界・矛盾とは判定しない。"
+    },
+    {
+      "id": "rel_036_037_same",
+      "version": 1,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_036_037",
+      "axis": "fairness_relationship",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "rel_036_037_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "私的な贈与と主催者としての選定を問い返す。複数条件が異なるため境界・矛盾とは判定しない。"
+    },
+    {
+      "id": "rel_036_037_different",
+      "version": 1,
+      "type": "CONTEXT_SHIFT",
+      "enabled": true,
+      "priority": 60,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_036_037",
+      "axis": "fairness_relationship",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "rel_036_037_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "私的な贈与と主催者としての選定を問い返す。複数条件が異なるため境界・矛盾とは判定しない。"
+    },
+    {
+      "id": "rel_038_039_same",
+      "version": 1,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_038_039",
+      "axis": "stability_change",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "rel_038_039_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "自分の方法と共同活動の方法を問い返す。複数条件が異なるため境界・矛盾とは判定しない。"
+    },
+    {
+      "id": "rel_038_039_different",
+      "version": 1,
+      "type": "CONTEXT_SHIFT",
+      "enabled": true,
+      "priority": 60,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_038_039",
+      "axis": "stability_change",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "rel_038_039_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "自分の方法と共同活動の方法を問い返す。複数条件が異なるため境界・矛盾とは判定しない。"
+    },
+    {
+      "id": "rel_040_041_same",
+      "version": 1,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_040_041",
+      "axis": "freedom_security",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "rel_040_041_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "利用時間と利用できる道、また、けがの条件を問い返す。複数条件が異なるため境界・矛盾とは判定しない。"
+    },
+    {
+      "id": "rel_040_041_different",
+      "version": 1,
+      "type": "CONTEXT_SHIFT",
+      "enabled": true,
+      "priority": 60,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_040_041",
+      "axis": "freedom_security",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "rel_040_041_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "利用時間と利用できる道、また、けがの条件を問い返す。複数条件が異なるため境界・矛盾とは判定しない。"
+    },
+    {
+      "id": "rel_042_043_same",
+      "version": 1,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_042_043",
+      "axis": "equality_efficiency",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "rel_042_043_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "操作経験と作品紹介の機会を問い返す。複数条件が異なるため境界・矛盾とは判定しない。"
+    },
+    {
+      "id": "rel_042_043_different",
+      "version": 1,
+      "type": "CONTEXT_SHIFT",
+      "enabled": true,
+      "priority": 60,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_042_043",
+      "axis": "equality_efficiency",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "rel_042_043_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "操作経験と作品紹介の機会を問い返す。複数条件が異なるため境界・矛盾とは判定しない。"
+    }
+  ],
+  "templates": {
+    "consistency": "「{previousTitle}」では「{previousAnswer}」、今回は「{currentAnswer}」を選びました。この二つでは、似た考えを大切にしましたか？",
+    "tension": "「{previousTitle}」では「{previousAnswer}」、今回は「{currentTitle}」で「{currentAnswer}」を選びました。この二つはあなたの中では矛盾していますか？ 条件の違いも振り返ってみてください。",
+    "context_shift": "「{previousCategory}」の問いでは「{previousAnswer}」、「{currentCategory}」では「{currentAnswer}」を選びました。状況や立場の違いが判断に関わりましたか？",
+    "boundary": "今回の同じ救助条件では、面識のない相手が{lowerValue}人のときと{upperValue}人のときに、選ぶ側が変わりました。この二つの条件で、何を重く考えましたか？ 正確な切り替わりの人数や、別の場面でも同じかは、この回答だけでは分かりません。",
+    "time_shift": "{axisLabel}に関する以前の回答と最近の回答に違いが見られます。考えが変わったのか、問われた状況が違ったのか、どう感じますか？",
+    "reflection_return": "以前のあなたは「{previousText}」と書きました。今も同じように考えますか？",
+    "boundary_delay": "今回の回答では、予定の遅れが{lowerValue}分の条件と{upperValue}分の条件で、選んだ行動が変わりました。この間のどこで変わるかや、別の日にも同じになるかは、まだ分かりません。何を重く考えましたか。",
+    "procedure_context_same": "「{previousTitle}」では「{previousAnswer}」、「{currentTitle}」では「{currentAnswer}」を選びました。会社と地域では、手順や例外を判断する立場も違います。この二つで似た考えを大切にしましたか？ それとも理由は別でしたか？",
+    "procedure_context_different": "「{previousTitle}」では「{previousAnswer}」、「{currentTitle}」では「{currentAnswer}」を選びました。会社と地域では、手順や例外を判断する立場も違います。この二つはあなたの中では矛盾していますか？ 場面の違いが関わったのでしょうか。",
+    "promise_context_same": "「{previousTitle}」では「{previousAnswer}」、「{currentTitle}」では「{currentAnswer}」を選びました。秘密を預かることと、手伝う予定を約束することには違いがあります。この二つで似た考えを大切にしましたか？ それとも理由は別でしたか？",
+    "promise_context_different": "「{previousTitle}」では「{previousAnswer}」、「{currentTitle}」では「{currentAnswer}」を選びました。秘密を預かることと、手伝う予定を約束することには違いがあります。この二つはあなたの中では矛盾していますか？ どの条件を重く考えましたか？",
+    "allocation_context_same": "「{previousTitle}」では「{previousAnswer}」、「{currentTitle}」では「{currentAnswer}」を選びました。これからの制作機会への予算と、過去の貢献に対する賞与では、配分の目的が異なります。この二つで似た考えを大切にしましたか？ それとも理由は別でしたか？",
+    "allocation_context_different": "「{previousTitle}」では「{previousAnswer}」、「{currentTitle}」では「{currentAnswer}」を選びました。これからの制作機会への予算と、過去の貢献に対する賞与では、配分の目的が異なります。この違いには、状況や立場、目的が関わりましたか？ あなたはどう捉えますか？",
+    "advice_context_same": "「{previousTitle}」では「{previousAnswer}」、「{currentTitle}」では「{currentAnswer}」を選びました。大会の開催を決める立場と、友人に助言する立場は異なります。危険の内容や大きさが同じとも限りません。この二つで似た考えを大切にしましたか？ それとも理由は別でしたか？",
+    "advice_context_different": "「{previousTitle}」では「{previousAnswer}」、「{currentTitle}」では「{currentAnswer}」を選びました。大会の開催を決める立場と、友人に助言する立場は異なります。危険の内容や大きさが同じとも限りません。この違いには、状況や立場、目的が関わりましたか？ あなたはどう捉えますか？",
+    "rel_034_035_same": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。自分の時間と活動費で、似た理由を重く見ましたか。それとも別の理由でしたか？",
+    "rel_034_035_different": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。自分の時間と活動費では、考え方に違いがありましたか。この二つの判断を、あなたはどう捉えますか？",
+    "rel_036_037_same": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。私的な贈与と主催者としての選定で、似た理由を重く見ましたか。それとも別の理由でしたか？",
+    "rel_036_037_different": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。私的な贈与と主催者としての選定では、考え方に違いがありましたか。この二つの判断を、あなたはどう捉えますか？",
+    "rel_038_039_same": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。自分の方法と共同活動の方法で、似た理由を重く見ましたか。それとも別の理由でしたか？",
+    "rel_038_039_different": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。自分の方法と共同活動の方法では、考え方に違いがありましたか。この二つの判断を、あなたはどう捉えますか？",
+    "rel_040_041_same": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。利用時間と利用できる道、また、けがの条件で、似た理由を重く見ましたか。それとも別の理由でしたか？",
+    "rel_040_041_different": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。利用時間と利用できる道、また、けがの条件では、考え方に違いがありましたか。この二つの判断を、あなたはどう捉えますか？",
+    "rel_042_043_same": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。操作経験と作品紹介の機会で、似た理由を重く見ましたか。それとも別の理由でしたか？",
+    "rel_042_043_different": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。操作経験と作品紹介の機会では、考え方に違いがありましたか。この二つの判断を、あなたはどう捉えますか？"
+  }
+}

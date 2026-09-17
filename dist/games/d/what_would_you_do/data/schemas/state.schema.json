@@ -1,0 +1,758 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "answers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "questionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "questionVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "optionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "answeredAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "localDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "source": {
+            "enum": [
+              "daily",
+              "archive",
+              "history_revision",
+              "reevaluation",
+              "boundary"
+            ]
+          },
+          "supersedesAnswerId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "snapshot": {
+            "$ref": "questions.schema.json#/$defs/question"
+          },
+          "weight": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "derivedWeights": {
+            "type": "object",
+            "propertyNames": {
+              "enum": [
+                "principle_outcome",
+                "individual_collective",
+                "fairness_relationship",
+                "stability_change",
+                "freedom_security",
+                "equality_efficiency"
+              ]
+            },
+            "additionalProperties": {
+              "type": "number",
+              "minimum": -1,
+              "maximum": 1
+            }
+          },
+          "followUps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "version": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "optionId": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "answeredAt": {
+                  "type": "string",
+                  "format": "date-time"
+                },
+                "snapshot": {
+                  "type": "object"
+                }
+              },
+              "required": [
+                "id",
+                "version",
+                "optionId",
+                "answeredAt",
+                "snapshot"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "questionId",
+          "questionVersion",
+          "optionId",
+          "answeredAt",
+          "localDate",
+          "source",
+          "supersedesAnswerId",
+          "snapshot",
+          "weight",
+          "derivedWeights",
+          "followUps"
+        ]
+      }
+    },
+    "reflections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "followUpId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "followUpVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "sourceAnswerId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "promptSnapshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "distinctQuestionsAtCreation": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "parentReflectionId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "returnPolicyId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "followUpId",
+          "followUpVersion",
+          "sourceAnswerId",
+          "promptSnapshot",
+          "text",
+          "createdAt",
+          "distinctQuestionsAtCreation",
+          "parentReflectionId",
+          "returnPolicyId"
+        ]
+      }
+    },
+    "discoveries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ruleId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ruleVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "type": {
+            "enum": [
+              "CONSISTENCY",
+              "TENSION",
+              "CONTEXT_SHIFT",
+              "BOUNDARY",
+              "TIME_SHIFT",
+              "REFLECTION_RETURN"
+            ]
+          },
+          "priority": {
+            "type": "number"
+          },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "answerIds": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "reflectionIds": {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "answerIds",
+              "reflectionIds"
+            ]
+          },
+          "templateData": {
+            "type": "object",
+            "additionalProperties": {
+              "type": [
+                "string",
+                "number"
+              ]
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "shownAt": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "ruleId",
+          "ruleVersion",
+          "type",
+          "priority",
+          "evidence",
+          "templateData",
+          "createdAt",
+          "shownAt"
+        ]
+      }
+    },
+    "dailyAssignments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "localDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "questionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "questionVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "completedAnswerId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "localDate",
+          "questionId",
+          "questionVersion",
+          "completedAnswerId"
+        ]
+      }
+    },
+    "analysisCache": {
+      "type": "null",
+      "description": "計算式が未確定のためv1草案ではnull。履歴が原本。"
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "firstVisit": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastVisit": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "firstVisit",
+        "lastVisit"
+      ]
+    },
+    "dialogues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceType": {
+            "enum": [
+              "answer",
+              "reflection"
+            ]
+          },
+          "sourceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "definitionVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "stanceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stanceLabelSnapshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "promptSnapshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "sourceType",
+          "sourceId",
+          "definitionVersion",
+          "stanceId",
+          "stanceLabelSnapshot",
+          "promptSnapshot",
+          "text",
+          "createdAt"
+        ]
+      }
+    },
+    "comparisons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "comparison": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "ruleId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "ruleVersion": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "type": {
+                "enum": [
+                  "CONSISTENCY",
+                  "TENSION",
+                  "CONTEXT_SHIFT",
+                  "BOUNDARY"
+                ]
+              },
+              "answerIds": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "comment": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "ruleId",
+              "ruleVersion",
+              "type",
+              "answerIds",
+              "comment"
+            ]
+          },
+          "definitionVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "promptSnapshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stanceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stanceLabelSnapshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "comparison",
+          "definitionVersion",
+          "promptSnapshot",
+          "stanceId",
+          "stanceLabelSnapshot",
+          "text",
+          "createdAt"
+        ]
+      }
+    },
+    "reevaluations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "previousAnswerId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "answerId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "reasonPromptSnapshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "previousAnswerId",
+          "answerId",
+          "reason",
+          "reasonPromptSnapshot",
+          "createdAt"
+        ]
+      }
+    },
+    "reevaluationNotes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reevaluationId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "definitionVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "stanceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stanceLabelSnapshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "promptSnapshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 2000
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "reevaluationId",
+          "definitionVersion",
+          "stanceId",
+          "stanceLabelSnapshot",
+          "promptSnapshot",
+          "text",
+          "createdAt"
+        ]
+      }
+    },
+    "wordEntries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceReflectionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "definitionVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "promptSnapshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stanceId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stanceLabelSnapshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "sourceReflectionId",
+          "definitionVersion",
+          "promptSnapshot",
+          "stanceId",
+          "stanceLabelSnapshot",
+          "text",
+          "createdAt"
+        ]
+      }
+    },
+    "dailyReflections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "localDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "kind": {
+            "enum": [
+              "comparison",
+              "words",
+              "reevaluation"
+            ]
+          },
+          "targetId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recordedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "answerIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "reflectionIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "localDate",
+          "kind",
+          "targetId",
+          "key",
+          "title",
+          "recordedAt",
+          "answerIds",
+          "reflectionIds",
+          "createdAt"
+        ]
+      }
+    },
+    "dailyReflectionActions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "suggestionId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "action": {
+            "enum": [
+              "opened",
+              "dismissed"
+            ]
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "suggestionId",
+          "action",
+          "createdAt"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "answers",
+    "reflections",
+    "discoveries",
+    "dailyAssignments",
+    "analysisCache",
+    "meta"
+  ]
+}

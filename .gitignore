@@ -1,1 +1,13 @@
 src/**/
+# Keep the self-dialogue development/test setup reproducible.
+!src/what_would_you_do/
+src/what_would_you_do/*
+!src/what_would_you_do/.gitignore
+!src/what_would_you_do/README.md
+!src/what_would_you_do/package.json
+!src/what_would_you_do/package-lock.json
+!src/what_would_you_do/playwright.config.js
+!src/what_would_you_do/tests/
+src/what_would_you_do/tests/*
+!src/what_would_you_do/tests/browser/
+!src/what_would_you_do/tests/browser/*.spec.js

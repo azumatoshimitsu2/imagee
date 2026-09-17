@@ -1,0 +1,749 @@
+{
+  "schemaVersion": 1,
+  "followUps": [
+    {
+      "id": "fu_reason_conditions",
+      "version": 1,
+      "kind": "reason",
+      "title": "判断の理由",
+      "body": "なぜ、その選択に近いと感じましたか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "impact",
+          "label": "起こりそうな結果を重く見た",
+          "weights": {}
+        },
+        {
+          "id": "promise",
+          "label": "約束や手続きを重く見た",
+          "weights": {}
+        },
+        {
+          "id": "relationship",
+          "label": "相手との関係を重く見た",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "自分でも分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_reason_rescue",
+      "version": 1,
+      "kind": "reason",
+      "title": "救助の判断の理由",
+      "body": "なぜ、その選択に近いと感じましたか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "close",
+          "label": "身近な相手への責任を重く見た",
+          "weights": {}
+        },
+        {
+          "id": "number",
+          "label": "助けられる人数を重く見た",
+          "weights": {}
+        },
+        {
+          "id": "equal",
+          "label": "面識によって扱いを変えたくなかった",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "自分でも分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_reason_autonomy",
+      "version": 1,
+      "kind": "reason",
+      "title": "選択を支える理由",
+      "body": "なぜ、その選択に近いと感じましたか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "experience",
+          "label": "本人が選ぶ経験を重く見た",
+          "weights": {}
+        },
+        {
+          "id": "harm",
+          "label": "失敗や危険を減らしたかった",
+          "weights": {}
+        },
+        {
+          "id": "responsibility",
+          "label": "支える側の責任を重く見た",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "自分でも分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_friend_boundary",
+      "version": 2,
+      "kind": "deferred_question",
+      "title": "人数が変わったら",
+      "optional": true,
+      "trigger": {
+        "event": "later_day",
+        "minimumDistinctQuestions": 20,
+        "requiresAnswered": [
+          "q007"
+        ],
+        "schedulePolicy": "boundary"
+      },
+      "targetQuestionId": "q011",
+      "targetQuestionVersion": 2,
+      "scoringMode": "target_question"
+    },
+    {
+      "id": "fu_self_definition",
+      "version": 1,
+      "kind": "free_text",
+      "title": "あなたの言葉で",
+      "body": "あなたにとって自由とは何ですか？",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "minimumDistinctQuestions": 20,
+        "schedulePolicy": "free_text"
+      },
+      "maxLength": 2000,
+      "scoringMode": "none",
+      "returnPolicyId": "reflection_return",
+      "privacyCopyId": "free_text_privacy"
+    },
+    {
+      "id": "fu_reconsider",
+      "version": 1,
+      "kind": "reevaluation",
+      "title": "今ならどう答えますか",
+      "body": "以前は「{previousAnswer}」と答えました。今なら同じ答えを選びますか？",
+      "optional": true,
+      "trigger": {
+        "event": "history_action"
+      },
+      "scoringMode": "replace_by_new_event",
+      "answerSource": "question_snapshot",
+      "changePolicy": "append_event"
+    },
+    {
+      "id": "fu_reflection_response",
+      "version": 1,
+      "kind": "free_text",
+      "title": "以前の言葉への返事",
+      "body": "今もそう思いますか？ 変わった点や、変わらない点があれば書いてみてください。",
+      "optional": true,
+      "trigger": {
+        "event": "reflection_return"
+      },
+      "maxLength": 2000,
+      "scoringMode": "none",
+      "returnPolicyId": null,
+      "privacyCopyId": "free_text_privacy"
+    },
+    {
+      "id": "fu_reason_q034",
+      "version": 1,
+      "kind": "reason",
+      "title": "判断の理由",
+      "body": "今回の判断で重く見たものは何ですか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "reason_1",
+          "label": "自分で決めた時間",
+          "weights": {}
+        },
+        {
+          "id": "reason_2",
+          "label": "共同で使う場所",
+          "weights": {}
+        },
+        {
+          "id": "reason_3",
+          "label": "作業や読書そのものへの好み",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "まだ分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_reason_q035",
+      "version": 1,
+      "kind": "reason",
+      "title": "判断の理由",
+      "body": "今回の判断で重く見たものは何ですか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "reason_1",
+          "label": "自分の制作",
+          "weights": {}
+        },
+        {
+          "id": "reason_2",
+          "label": "共同で使えること",
+          "weights": {}
+        },
+        {
+          "id": "reason_3",
+          "label": "道具の実用性",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "まだ分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_reason_q036",
+      "version": 1,
+      "kind": "reason",
+      "title": "判断の理由",
+      "body": "今回の判断で重く見たものは何ですか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "reason_1",
+          "label": "同じ機会にすること",
+          "weights": {}
+        },
+        {
+          "id": "reason_2",
+          "label": "これまでの付き合い",
+          "weights": {}
+        },
+        {
+          "id": "reason_3",
+          "label": "自分が譲りたい相手",
+          "weights": {}
+        },
+        {
+          "id": "reason_4",
+          "label": "決めやすさ",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "まだ分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_reason_q037",
+      "version": 1,
+      "kind": "reason",
+      "title": "判断の理由",
+      "body": "今回の判断で重く見たものは何ですか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "reason_1",
+          "label": "応募者の同じ機会",
+          "weights": {}
+        },
+        {
+          "id": "reason_2",
+          "label": "親しい人との参加",
+          "weights": {}
+        },
+        {
+          "id": "reason_3",
+          "label": "主催者としての役割",
+          "weights": {}
+        },
+        {
+          "id": "reason_4",
+          "label": "運営への安心感",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "まだ分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_reason_q038",
+      "version": 1,
+      "kind": "reason",
+      "title": "判断の理由",
+      "body": "今回の判断で重く見たものは何ですか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "reason_1",
+          "label": "慣れていること",
+          "weights": {}
+        },
+        {
+          "id": "reason_2",
+          "label": "試してみたい気持ち",
+          "weights": {}
+        },
+        {
+          "id": "reason_3",
+          "label": "変更する必要の有無",
+          "weights": {}
+        },
+        {
+          "id": "reason_4",
+          "label": "書式の好み",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "まだ分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_reason_q039",
+      "version": 1,
+      "kind": "reason",
+      "title": "判断の理由",
+      "body": "今回の判断で重く見たものは何ですか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "reason_1",
+          "label": "慣れた進行",
+          "weights": {}
+        },
+        {
+          "id": "reason_2",
+          "label": "別の方法への関心",
+          "weights": {}
+        },
+        {
+          "id": "reason_3",
+          "label": "進行役の責任",
+          "weights": {}
+        },
+        {
+          "id": "reason_4",
+          "label": "話し方への好み",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "まだ分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_reason_q040",
+      "version": 1,
+      "kind": "reason",
+      "title": "判断の理由",
+      "body": "今回の判断で重く見たものは何ですか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "reason_1",
+          "label": "本人が時間を選べること",
+          "weights": {}
+        },
+        {
+          "id": "reason_2",
+          "label": "けがを減らすこと",
+          "weights": {}
+        },
+        {
+          "id": "reason_3",
+          "label": "工房を運営する責任",
+          "weights": {}
+        },
+        {
+          "id": "reason_4",
+          "label": "示された想定への疑問",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "まだ分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_reason_q041",
+      "version": 1,
+      "kind": "reason",
+      "title": "判断の理由",
+      "body": "今回の判断で重く見たものは何ですか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "reason_1",
+          "label": "本人が道を選べること",
+          "weights": {}
+        },
+        {
+          "id": "reason_2",
+          "label": "けがを減らすこと",
+          "weights": {}
+        },
+        {
+          "id": "reason_3",
+          "label": "施設管理の責任",
+          "weights": {}
+        },
+        {
+          "id": "reason_4",
+          "label": "景色を見られること",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "まだ分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_reason_q042",
+      "version": 1,
+      "kind": "reason",
+      "title": "判断の理由",
+      "body": "今回の判断で重く見たものは何ですか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "reason_1",
+          "label": "全員の操作機会",
+          "weights": {}
+        },
+        {
+          "id": "reason_2",
+          "label": "今回保存できる枚数",
+          "weights": {}
+        },
+        {
+          "id": "reason_3",
+          "label": "将来の習熟",
+          "weights": {}
+        },
+        {
+          "id": "reason_4",
+          "label": "役割分担",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "まだ分からない",
+          "weights": {}
+        }
+      ]
+    },
+    {
+      "id": "fu_reason_q043",
+      "version": 1,
+      "kind": "reason",
+      "title": "判断の理由",
+      "body": "今回の判断で重く見たものは何ですか。",
+      "optional": true,
+      "trigger": {
+        "event": "after_answer",
+        "excludeOptionIds": [
+          "unsure"
+        ],
+        "schedulePolicy": "reason"
+      },
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "reason_1",
+          "label": "同じ紹介機会",
+          "weights": {}
+        },
+        {
+          "id": "reason_2",
+          "label": "展示全体の来場者数",
+          "weights": {}
+        },
+        {
+          "id": "reason_3",
+          "label": "均等に分ける収入",
+          "weights": {}
+        },
+        {
+          "id": "reason_4",
+          "label": "見込みへの疑問",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由",
+          "weights": {}
+        },
+        {
+          "id": "unknown",
+          "label": "まだ分からない",
+          "weights": {}
+        }
+      ]
+    }
+  ],
+  "manualDialogue": {
+    "version": 1,
+    "prompt": "以前のあなたは、こう答えました。今はどう思いますか？",
+    "maxLength": 2000,
+    "options": [
+      {
+        "id": "same",
+        "label": "今もそう思う"
+      },
+      {
+        "id": "changed",
+        "label": "少し変わった"
+      },
+      {
+        "id": "unsure",
+        "label": "まだ分からない"
+      }
+    ]
+  },
+  "comparisonDialogue": {
+    "version": 2,
+    "prompt": "この二つの判断を、今のあなたはどう捉えますか？",
+    "maxLength": 2000,
+    "options": [
+      {
+        "id": "context",
+        "label": "状況が違う"
+      },
+      {
+        "id": "changed",
+        "label": "考えが変わった"
+      },
+      {
+        "id": "compatible",
+        "label": "矛盾とは感じない"
+      },
+      {
+        "id": "tension",
+        "label": "自分の中でも矛盾を感じる"
+      },
+      {
+        "id": "unsure",
+        "label": "まだ分からない"
+      }
+    ],
+    "promptsByType": {
+      "BOUNDARY": "この条件の違いで、何を重く考えましたか？"
+    }
+  },
+  "reevaluationDialogue": {
+    "version": 1,
+    "prompt": "以前と今回の答えを見て、何か変わりましたか？",
+    "reasonPrompt": "今、この答えを選んだ理由（任意）",
+    "maxLength": 2000,
+    "options": [
+      {
+        "id": "same",
+        "label": "大切にしていることは変わらない"
+      },
+      {
+        "id": "reason_changed",
+        "label": "答えは同じでも、理由は変わった"
+      },
+      {
+        "id": "changed",
+        "label": "考えや状況が変わった"
+      },
+      {
+        "id": "unsure",
+        "label": "まだ分からない"
+      }
+    ]
+  },
+  "wordDialogue": {
+    "version": 1,
+    "prompt": "この問いについて、今はどんな言葉で表しますか？",
+    "maxLength": 2000,
+    "options": [
+      {
+        "id": "same",
+        "label": "今もそう思う"
+      },
+      {
+        "id": "add",
+        "label": "付け加えたい"
+      },
+      {
+        "id": "changed",
+        "label": "今は違う"
+      },
+      {
+        "id": "unsure",
+        "label": "まだ分からない"
+      }
+    ]
+  }
+}

@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 1,
+  "artDirection": {
+    "style": "写実寄りで映画的な日本の風景",
+    "referenceLandscapeId": "landscape_01",
+    "principles": [
+      "AI生成特有の過剰な幻想感、極端な彩度、不自然なディテールを避ける",
+      "人物と文字は原則として描かない",
+      "日常的で実在しそうな場所を基礎に、一つだけ象徴的な構造や違和感を置く",
+      "価値軸のどちらかを善・悪として表現しない",
+      "全画像で自然な光、落ち着いた色調、映画的な現実感を維持する"
+    ]
+  },
+  "selection": {
+    "fallbackLandscapeId": "landscape_01",
+    "minimumAxisAnswers": 3,
+    "axisMatch": "all",
+    "baseStrategy": "mean_absolute_score",
+    "tieBreak": "priority_then_id",
+    "specialFirst": true,
+    "note": "閾値は編集上の暫定値。profileの表示条件を満たした軸だけを用い、confidenceを確率として扱わない。"
+  },
+  "landscapes": [
+    {
+      "id": "landscape_01",
+      "name": "分岐路",
+      "slug": "fork",
+      "image": "img/landscape_01_fork.webp",
+      "type": "base",
+      "meaning": "価値判断がまだ特定方向に偏っていない状態",
+      "visualConcept": "夕方の住宅地。道が二方向へ分かれ、どちらの先も見えない。写実寄りで映画的、自然な光と現実的な生活感を保つ。人物・文字なし。",
+      "resultText": "まだ、どちらの道もあなたの前に残っています。",
+      "conditions": {
+        "mode": "fallback_balanced"
+      },
+      "priority": 10,
+      "alt": "海を望む住宅地で、左右に分かれる坂道。",
+      "enabled": true
+    },
+    {
+      "id": "landscape_02",
+      "name": "開いた門",
+      "slug": "open_gate",
+      "image": "img/landscape_02_open_gate.webp",
+      "type": "base",
+      "meaning": "自由や変化を比較的重視する状態",
+      "visualConcept": "古い門が自然に開き、その先に広い土地がある。ただし明確な道はない。開放感は出すが理想郷のように美化しない。人物・文字なし。",
+      "resultText": "道がないことは、進めないこととは限りません。",
+      "conditions": {
+        "axisHints": {
+          "freedom_security": {
+            "max": -0.25
+          },
+          "stability_change": {
+            "min": 0.2
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "その先へ続く空間に向かって開いた門。",
+      "enabled": true
+    },
+    {
+      "id": "landscape_03",
+      "name": "灯りのある窓",
+      "slug": "lit_window",
+      "image": "img/landscape_03_lit_window.webp",
+      "type": "base",
+      "meaning": "安全や安定を比較的重視する状態",
+      "visualConcept": "雨上がりの静かな住宅地。複数の家の中で一つの窓に穏やかな灯りが見える。安心を肯定しすぎず、閉塞感にも寄せない。人物・文字なし。",
+      "resultText": "戻れる場所があることも、ひとつの選択です。",
+      "conditions": {
+        "axisHints": {
+          "freedom_security": {
+            "min": 0.25
+          },
+          "stability_change": {
+            "max": -0.2
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "静かな住宅地で灯りのともる窓。",
+      "enabled": true
+    },
+    {
+      "id": "landscape_04",
+      "name": "まっすぐな橋",
+      "slug": "straight_bridge",
+      "image": "img/landscape_04_straight_bridge.webp",
+      "type": "base",
+      "meaning": "原則や一貫性を比較的重視する状態",
+      "visualConcept": "深い谷または川を越える一本の細い橋。対岸までほぼ直線に続く。強さや正しさの象徴になりすぎない自然な風景。人物・文字なし。",
+      "resultText": "途中で形を変えずに渡る橋。その先に、何が見えるでしょう。",
+      "conditions": {
+        "axisHints": {
+          "principle_outcome": {
+            "max": -0.3
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "山あいの谷をまっすぐ渡る橋。",
+      "enabled": true
+    },
+    {
+      "id": "landscape_05",
+      "name": "曲がる川",
+      "slug": "winding_river",
+      "image": "img/landscape_05_winding_river.webp",
+      "type": "base",
+      "meaning": "結果や状況への適応を比較的重視する状態",
+      "visualConcept": "地形や岩を避けながら自然に蛇行する川が遠くへ続く。目的地を強調しすぎず、現実の河川景観として描く。人物・文字なし。",
+      "resultText": "曲がることと、目的を失うことは同じではありません。",
+      "conditions": {
+        "axisHints": {
+          "principle_outcome": {
+            "min": 0.3
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "地形に沿って曲がりながら続く川。",
+      "enabled": true
+    },
+    {
+      "id": "landscape_06",
+      "name": "同じ高さの灯り",
+      "slug": "equal_lights",
+      "image": "img/landscape_06_equal_lights.webp",
+      "type": "base",
+      "meaning": "公平や平等を比較的重視する状態",
+      "visualConcept": "形や高さの異なる家々が並ぶ夜の街。その窓の灯りが構図上ほぼ同じ高さに並んで見える。露骨な幾何学表現にしない。人物・文字なし。",
+      "resultText": "違うものを、どこまで同じように扱うのでしょう。",
+      "conditions": {
+        "axisHints": {
+          "fairness_relationship": {
+            "max": -0.3
+          },
+          "equality_efficiency": {
+            "max": -0.2
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "街の家々に並ぶ窓の灯り。",
+      "enabled": true
+    },
+    {
+      "id": "landscape_07",
+      "name": "一本だけ近い星",
+      "slug": "near_star",
+      "image": "img/landscape_07_near_star.webp",
+      "type": "base",
+      "meaning": "関係性や身近な相手への責任を比較的重視する状態",
+      "visualConcept": "静かな夜の町と自然な星空。一つの星だけが構図上わずかに近く強く感じられるが、超常現象には見せない。人物・文字なし。",
+      "resultText": "距離は、価値の重さを変えることがあります。",
+      "conditions": {
+        "axisHints": {
+          "fairness_relationship": {
+            "min": 0.3
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "夜の町の上に広がる星空。",
+      "enabled": true
+    },
+    {
+      "id": "landscape_08",
+      "name": "大きな広場",
+      "slug": "square",
+      "image": "img/landscape_08_square.webp",
+      "type": "base",
+      "meaning": "共同体や集団全体を比較的重視する状態",
+      "visualConcept": "住宅地や街から来る複数の細い道が一つの静かな広場へ集まり、再び別方向へ延びる。群衆は描かない。人物・文字なし。",
+      "resultText": "多くの道が交わる場所では、一人だけでは決められないことがあります。",
+      "conditions": {
+        "axisHints": {
+          "individual_collective": {
+            "min": 0.3
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "いくつもの道が集まる広場。",
+      "enabled": true
+    },
+    {
+      "id": "landscape_09",
+      "name": "海へ続く階段",
+      "slug": "sea_stairs",
+      "image": "img/landscape_09_sea_stairs.webp",
+      "type": "base",
+      "meaning": "個人の選択や自己決定を比較的重視する状態",
+      "visualConcept": "住宅地の長い階段を下りた先に静かな海が開ける。観光地的な絶景にしすぎず、日常の延長に海がある風景。人物・文字なし。",
+      "resultText": "最後の一歩を決めるのは、誰でしょう。",
+      "conditions": {
+        "axisHints": {
+          "individual_collective": {
+            "max": -0.3
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "家々の間を通り、海へ続く階段。",
+      "enabled": true
+    },
+    {
+      "id": "landscape_10",
+      "name": "動き続ける街",
+      "slug": "flowing_city",
+      "image": "img/landscape_10_flowing_city.webp",
+      "type": "base",
+      "meaning": "効率や総合的な成果を比較的重視する状態",
+      "visualConcept": "高架道路、鉄道、水路、一般道が複雑ながら無理なく交差し、それぞれ流れている都市。未来都市にはしない。人物は識別できる形で描かない。文字なし。",
+      "resultText": "多くのものを動かす判断には、別の価値が隠れることがあります。",
+      "conditions": {
+        "axisHints": {
+          "equality_efficiency": {
+            "min": 0.3
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "道路や鉄道が交わる街。",
+      "enabled": true
+    },
+    {
+      "id": "landscape_11",
+      "name": "古い木と新しい芽",
+      "slug": "old_tree_new_sprout",
+      "image": "img/landscape_11_old_tree_new_sprout.webp",
+      "type": "base",
+      "meaning": "安定と変化を対立させず共存させる傾向",
+      "visualConcept": "長くそこにある古木の根元に若い芽や小さな若木が育つ。双方を同じ自然光の中で描き、新旧の優劣を付けない。人物・文字なし。",
+      "resultText": "残すことと変えることは、いつも反対とは限りません。",
+      "conditions": {
+        "mode": "stability_change_coexistence"
+      },
+      "priority": 25,
+      "alt": "古い木のそばで育つ新しい芽。",
+      "enabled": false,
+      "pendingReason": "安定と変化の共存を、平均の相殺だけで判定しないための条件が未確定。"
+    },
+    {
+      "id": "landscape_12",
+      "name": "二つの天気",
+      "slug": "two_weathers",
+      "image": "img/landscape_12_two_weathers.webp",
+      "type": "special",
+      "meaning": "文脈によって重視する価値が大きく変化する状態",
+      "visualConcept": "一本の生活道路を中心に、片側では小雨、もう片側では日が差している。実際に起こり得る局地的な天候差として自然に描き、合成画像のように二分しない。人物・文字なし。",
+      "resultText": "同じあなたでも、場所が変われば大切にするものが変わるようです。",
+      "conditions": {
+        "metric": "contextDependency",
+        "operator": "gte",
+        "threshold": 0.55,
+        "minimumEvidence": 6
+      },
+      "priority": 80,
+      "alt": "雨と日差しが同じ道の上に見える風景。",
+      "enabled": false,
+      "pendingReason": "contextDependencyはdraftで非表示。カテゴリ重複と十分な証拠の基準が未確定。"
+    },
+    {
+      "id": "landscape_13",
+      "name": "重なる二本の道",
+      "slug": "overlapping_roads",
+      "image": "img/landscape_13_overlapping_roads.webp",
+      "type": "special",
+      "meaning": "相反する二つの価値をどちらも繰り返し選ぶ状態",
+      "visualConcept": "別方向から来た二本の道が地形の都合で短い区間だけ一本になり、その先で再び分かれる。現実にありそうな道路構造として描く。人物・文字なし。",
+      "resultText": "二つの考えは、矛盾したまま同じ場所を通ることがあります。",
+      "conditions": {
+        "event": "TENSION",
+        "minimumCount": 2,
+        "requireRepeatedBothSides": true
+      },
+      "priority": 85,
+      "alt": "一度重なり、その先で分かれる二本の道。",
+      "enabled": false,
+      "pendingReason": "明示的なTENSIONに加えて両価値の反復を確認する方法が未確定。"
+    },
+    {
+      "id": "landscape_14",
+      "name": "潮の境界",
+      "slug": "tide_boundary",
+      "image": "img/landscape_14_tide_boundary.webp",
+      "type": "special",
+      "meaning": "判断が切り替わる境界が回答から見つかった状態",
+      "visualConcept": "静かな海岸。満ち引きで生まれた濡れた砂と乾いた砂の境界が自然ながら印象的に続く。人工的な直線にはしない。人物・文字なし。",
+      "resultText": "選び方が変わった、その間には何があったのでしょう。",
+      "conditions": {
+        "event": "BOUNDARY",
+        "minimumCount": 1,
+        "minimumEvidenceAnswers": 2
+      },
+      "priority": 90,
+      "alt": "波打ち際で濡れた砂と乾いた砂が接する海岸。",
+      "enabled": true,
+      "selectionNote": "確率として定義されていないminimumConfidence=0.65を採用せず、Comment Engineが有効な関連・version・同一条件から検出した現在の証拠のみを利用する。"
+    },
+    {
+      "id": "landscape_15",
+      "name": "季節の途中",
+      "slug": "season_transition",
+      "image": "img/landscape_15_season_transition.webp",
+      "type": "special",
+      "meaning": "時間経過とともに判断傾向の変化が確認された状態",
+      "visualConcept": "一本の並木道。手前から奥へ進むにつれて緑から秋色へごく自然に移る。左右で季節を分割せず、現実にありそうな季節の移行として描く。人物・文字なし。",
+      "resultText": "以前と今のあなたは、同じ道の少し違う場所にいます。",
+      "conditions": {
+        "metric": "changeOverTime",
+        "operator": "gte",
+        "threshold": 0.35,
+        "minimumAnswers": 20,
+        "minimumTimeSpanDays": 30
+      },
+      "priority": 95,
+      "alt": "緑と秋色の葉が連なる並木道。",
+      "enabled": false,
+      "pendingReason": "時間比較の期間指定・公開基準が未確定。TIME_SHIFTは無効のまま。"
+    },
+    {
+      "id": "landscape_16",
+      "name": "鏡のない水面",
+      "slug": "missing_reflection",
+      "image": "img/landscape_16_missing_reflection.webp",
+      "type": "special",
+      "meaning": "重要な回答間の緊張が繰り返し残り、単純な文脈差では説明しきれない状態",
+      "visualConcept": "静かな湖または池。空や岸辺は自然に反射しているが、岸に立つ一本の木の反射だけが弱く、途中で消えかけている。違和感は気づくか気づかないか程度。人物・文字なし。",
+      "resultText": "うまく重ならない二つの答えが、ここに残っています。",
+      "conditions": {
+        "event": "TENSION",
+        "minimumCount": 3,
+        "excludeIfExplainedBy": [
+          "CONTEXT_SHIFT",
+          "BOUNDARY"
+        ],
+        "minimumConfidence": 0.7
+      },
+      "priority": 100,
+      "alt": "岸辺の木々と空を映す静かな水面。",
+      "enabled": false,
+      "pendingReason": "文脈差で説明できないという判定と、確率ではないconfidenceの扱いが未確定。"
+    }
+  ],
+  "contentVersion": 1,
+  "copy": {
+    "intro": "今までの答えを、一枚の風景に重ねて眺めます。あなたの人格や気持ちを決めるものではありません。",
+    "insufficient": "まだ、風景を選ぶための回答が十分に集まっていません。今は、考え始める余白としてこの景色を置いています。",
+    "unmatched": "今の回答に合う風景を一つに絞らず、この景色を置いています。判断が中立、または一貫しているという意味ではありません。",
+    "base": "表示できる軸の現在の回答から、この風景を選びました。別の場面での判断や、選んだ理由までは表していません。",
+    "special": "条件を変えた関連する問いで、選択が切り替わった組み合わせが見つかりました。観察した条件の間を表す風景です。",
+    "provisional": "まだ少ない回答から選んだ、暫定の風景です。",
+    "method": "条件に合う風景が複数ある場合は、対象軸の平均値の絶対値を平均して選びます。風景の選び方も仮のもので、心の状態を測定するものではありません。"
+  }
+}

@@ -1,0 +1,2741 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 5,
+  "status": "editorial_draft",
+  "questions": [
+    {
+      "id": "q001",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "友人の秘密",
+      "body": "友人から、共同制作を途中で辞めるつもりだと打ち明けられました。公表は来週まで待ってほしいと頼まれ、あなたは待つと約束しました。今日伝えれば仲間は余分な準備を避けられますが、友人は自分で説明する機会を失います。あなたならどうしますか。",
+      "category": [
+        "relationship"
+      ],
+      "axes": [
+        "principle_outcome"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "来週まで秘密を守り、本人からの説明を待つ",
+          "weights": {
+            "principle_outcome": -0.7
+          }
+        },
+        {
+          "id": "B",
+          "label": "準備への影響に限って、今日仲間に伝える",
+          "weights": {
+            "principle_outcome": 0.7
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "秘密を守る約束と、周囲への影響を減らす判断が重なっています。",
+        "perspectives": [
+          "本人が説明する機会にも価値があります。",
+          "早く情報を共有すると、周囲の負担を減らせます。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 編集レビュー：公表を待つ約束を明示。公平↔関係の推測的な二重採点を外す。"
+        ]
+      }
+    },
+    {
+      "id": "q002",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "最後の薬",
+      "body": "架空の救助拠点で、薬が一人分しかありません。専門家の見立てでは、同じ緊急度の二人のうち、一人は助かる確率が高く、もう一人は低めですが幼い家族を一人で支えています。追加の薬は間に合いません。配分の考え方として、どちらに近いですか。",
+      "category": [
+        "life"
+      ],
+      "axes": [
+        "equality_efficiency"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "助かる確率が高い人を優先する",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "家族を支えている人を優先する",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "助かる見込みと、その人が支える家族への影響を比べる架空の問いです。選んだ相手から、公平さや人の命の価値についての考えを決めることはできません。",
+        "perspectives": [
+          "限られた資源で助かる見込みを重視する考えがあります。",
+          "残される人の生活まで考える配分もあります。"
+        ],
+        "question": "助かる見込みと家族への影響のうち、どの事情を重く考えましたか。ほかに必要だと思う条件はありますか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "家族背景を自分との親しさと同一視しないため、公平↔関係は採点しない。",
+          "2026-09-17 編集レビュー：家族への影響を平等と同一視できないため軸採点を行わない。"
+        ]
+      }
+    },
+    {
+      "id": "q003",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "会社のルール",
+      "body": "職場の申請手順を省くと、今日中に顧客の困りごとを解決できます。安全や費用は変わりませんが、例外を認めると担当者によって対応が違ってしまいます。正式な変更には一週間かかります。",
+      "category": [
+        "work"
+      ],
+      "axes": [
+        "principle_outcome"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "今回は例外で対応し、あとで手順の変更を提案する",
+          "weights": {
+            "principle_outcome": 0.7
+          }
+        },
+        {
+          "id": "B",
+          "label": "今回は正式な手順を守り、次回に向けて改善する",
+          "weights": {
+            "principle_outcome": -0.7
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "目の前の改善と、誰に対しても同じ手順を使うことの比較です。",
+        "perspectives": [
+          "例外があれば、今困っている人に早く対応できます。",
+          "手順が一定なら、担当者による扱いの差を減らせます。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 編集レビュー：両案とも改善を提案するため安定↔変化の採点を外す。"
+        ]
+      }
+    },
+    {
+      "id": "q004",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "拾った一万円",
+      "body": "落とし主を示すものがない一万円を拾い、届け出ました。架空の制度では、保管期間が終わると受け取るか、公的な支援基金へ回すかを選べます。どちらも正式に認められています。あなたならどうしますか。",
+      "category": [
+        "personal"
+      ],
+      "axes": [
+        "principle_outcome"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "認められた受取人として受け取る",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "受け取らず、支援基金へ回す",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "どちらも制度上認められた使い道です。選んだ配分だけでは、何を大切にしたかは分かりません。",
+        "perspectives": [
+          "自分の暮らしや使い道を考えて、受け取る判断があります。",
+          "基金の使い道や支援への思いから、回す判断もあります。"
+        ],
+        "question": "このお金をどう使いたいと思いましたか。制度上の権利や、自分・周囲の事情は関わりましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "持ち去りを模範解答と対比しないため、届け出後の配分を問う。原題からの変更は公開前レビュー対象。",
+          "2026-09-17 編集レビュー：両案とも制度上認められ、原則重視と結果重視に分けられないため採点しない。"
+        ]
+      }
+    },
+    {
+      "id": "q005",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "9人と1人",
+      "body": "十人で使う施設の開館時間を変更すると、九人は使いやすくなりますが、一人は利用できなくなります。予算上、時間の延長や代替サービスはできません。現在の時間なら十人とも利用できますが、九人には負担があります。",
+      "category": [
+        "society"
+      ],
+      "axes": [
+        "individual_collective"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "一人も利用できなくならないよう、現在の時間を保つ",
+          "weights": {
+            "individual_collective": -0.8
+          }
+        },
+        {
+          "id": "B",
+          "label": "九人の負担を減らすため、時間を変更する",
+          "weights": {
+            "individual_collective": 0.8
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "多くの人の改善と、一人が利用を失うことを比べます。",
+        "perspectives": [
+          "少数の人にも利用できる状態を残す考えがあります。",
+          "日々の負担を人数も含めて考える立場があります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 編集レビュー：利用目的と九人の負担の程度が未指定。条件を具体化した版の追加は実プレイで確認してから検討する。"
+        ]
+      }
+    },
+    {
+      "id": "q006",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "創作に使う一年",
+      "body": "以前から取り組みたい創作の仕事があります。安定した仕事を続けるか、一年間だけ創作の仕事に挑戦するか選べます。生活費の蓄えは一年分ありますが、成功は保証されず、元の職場には戻れません。どちらを選びますか。",
+      "category": [
+        "personal"
+      ],
+      "axes": [
+        "stability_change"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "一年間、創作の仕事に挑戦する",
+          "weights": {
+            "stability_change": 0.8
+          }
+        },
+        {
+          "id": "B",
+          "label": "今の仕事を続け、余暇で創作する",
+          "weights": {
+            "stability_change": -0.8
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "挑戦の機会と、続けられる生活の形を比べます。",
+        "perspectives": [
+          "期限を決めた挑戦でしか分からないことがあります。",
+          "生活を保つことで、長く創作を続けられる場合もあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 編集レビュー：題名を中立化し、創作に取り組みたい本人の意思を前提として明示する。"
+        ]
+      }
+    },
+    {
+      "id": "q007",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "親友と他人",
+      "body": "架空の救助場面です。親友一人のいる側と、面識のない人一人のいる側があり、片側だけを救助できます。どちらも全員を確実に助けられ、年齢・危険度・所要時間は同じです。あなたはどちらを選びますか。",
+      "category": [
+        "life"
+      ],
+      "axes": [
+        "fairness_relationship"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "親友のいる側を助ける",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "面識のない人のいる側を助ける",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "同じ条件の命を前に、関係が選択にどう関わるかを考えます。",
+        "perspectives": [
+          "共に過ごした相手に特別な責任を感じることがあります。",
+          "面識の有無を優先の根拠にしない考えもあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_rescue",
+        "fu_friend_boundary"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "他人を選ぶ理由を公平と断定しない。理由追問と併読しweightは暫定。",
+          "2026-09-17 編集レビュー：選択だけで公平さや関係重視を特定しない。理由と人数条件の違いを読む。"
+        ]
+      },
+      "scenario": {
+        "seriesId": "rescue_friend_count",
+        "variable": "strangerCount",
+        "value": 1,
+        "unit": "人",
+        "constants": {
+          "closePerson": "friend",
+          "closeCount": 1,
+          "certainty": 1,
+          "equalAgeRiskTime": true
+        },
+        "decisionMap": {
+          "A": "close",
+          "B": "strangers"
+        }
+      }
+    },
+    {
+      "id": "q008",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "街の防犯と移動の記録",
+      "body": "街に、通行人を識別する防犯システムを導入する案があります。事件の発見は早まりますが、無関係な人の移動記録も一か月保存されます。目的外利用を禁じる監査はありますが、情報流出を完全には防げません。",
+      "category": [
+        "society"
+      ],
+      "axes": [
+        "freedom_security"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "識別記録を残さず、今の防犯方法を続ける",
+          "weights": {
+            "freedom_security": -0.8
+          }
+        },
+        {
+          "id": "B",
+          "label": "監査と保存期限を条件に導入する",
+          "weights": {
+            "freedom_security": 0.8
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "防犯上の利益と、記録されずに暮らす余地を比べます。",
+        "perspectives": [
+          "記録が役立つ場面でも、集めない自由を考えられます。",
+          "利用条件を制限して安全を高める考えもあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 編集レビュー：題名の便利・監視社会による誘導を除く。改善とリスクの大きさの具体化は未検証。"
+        ]
+      }
+    },
+    {
+      "id": "q009",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "功績を訂正する時期",
+      "body": "チームの成果が、発表者だった自分一人の功績として社内で紹介されました。表彰はすでに決まり、訂正するとチーム全員への追加予算も延期されます。仲間は事情を知っています。",
+      "category": [
+        "work"
+      ],
+      "axes": [
+        "principle_outcome"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "今すぐ功績の紹介を訂正してもらう",
+          "weights": {
+            "principle_outcome": -0.7
+          }
+        },
+        {
+          "id": "B",
+          "label": "予算確定後に、全員の貢献を正式に紹介してもらう",
+          "weights": {
+            "principle_outcome": 0.6
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "功績を正確に扱う時点と、チームに届く利益の時点がずれています。",
+        "perspectives": [
+          "早い訂正は、評価の前提を揃えます。",
+          "訂正の時期を調整して利益も残す考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 編集レビュー：即時訂正が正解と見える題名を中立化。延期期間の具体化は未検証。"
+        ]
+      }
+    },
+    {
+      "id": "q010",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "感想を伝えるタイミング",
+      "body": "友人の初めての作品を読み、良い点も改善点も見つけました。友人は落ち込んでいて「率直な感想がほしい」と言っています。締切はなく、後日話すこともできます。",
+      "category": [
+        "relationship"
+      ],
+      "axes": [
+        "principle_outcome"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "今日は良い点を伝え、改善点は後日にする",
+          "weights": {
+            "principle_outcome": 0.6
+          }
+        },
+        {
+          "id": "B",
+          "label": "今日は良い点と改善点の両方を率直に伝える",
+          "weights": {
+            "principle_outcome": -0.6
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "求められた率直さと、伝える時期への配慮を比べます。",
+        "perspectives": [
+          "伝え方や時期によって、同じ情報の受け取られ方が変わります。",
+          "率直な感想を求めた相手の意思を尊重する考えもあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 編集レビュー：どちらも嘘ではないため、伝える時期を示す題名に変更。"
+        ]
+      }
+    },
+    {
+      "id": "q011",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "親友1人と他人2人",
+      "body": "架空の救助場面です。親友一人のいる側と、面識のない人二人のいる側があり、片側だけを救助できます。どちらも全員を確実に助けられ、年齢・危険度・所要時間は同じです。あなたはどちらを選びますか。",
+      "category": [
+        "life"
+      ],
+      "axes": [
+        "fairness_relationship",
+        "equality_efficiency"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "面識のない二人のいる側を助ける",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "親友のいる側を助ける",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "相手の人数が増えたとき、関係の重みがどう変わるかを考えます。",
+        "perspectives": [
+          "助けられる人数を増やす判断があります。",
+          "人数が変わっても、特定の相手への責任が残ることがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [
+        {
+          "id": "rel_friend_count",
+          "questionId": "q007",
+          "sourceVersions": [
+            1,
+            2
+          ],
+          "targetVersions": [
+            1,
+            2
+          ],
+          "type": "boundary",
+          "axis": "fairness_relationship",
+          "ruleIds": [
+            "boundary_friend_count"
+          ],
+          "comparisonNote": "同じ救助条件で面識のない人数だけが1人から2人へ変わる。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_rescue"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 編集レビュー：親友側を平等、他人側を公平と決めつけない。採点せず人数条件の違いを読む。"
+        ]
+      },
+      "scenario": {
+        "seriesId": "rescue_friend_count",
+        "variable": "strangerCount",
+        "value": 2,
+        "unit": "人",
+        "constants": {
+          "closePerson": "friend",
+          "closeCount": 1,
+          "certainty": 1,
+          "equalAgeRiskTime": true
+        },
+        "decisionMap": {
+          "A": "strangers",
+          "B": "close"
+        }
+      }
+    },
+    {
+      "id": "q012",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "説明の欠落を調べる窓口",
+      "body": "架空の職場で、顧客向けの説明に重要な欠落を見つけました。社内窓口は一か月後に審査します。外部の独立窓口なら今調べられますが、調査中は問題のない部署の仕事も止まります。どちらの窓口も匿名で資料を受け付けます。",
+      "category": [
+        "work"
+      ],
+      "axes": [
+        "principle_outcome"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "匿名で独立窓口へ知らせ、早い調査を求める",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "社内窓口へ資料を渡し、審査を待つ",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "早く調べることと、調査中に他の部署へ生じる影響を比べます。",
+        "perspectives": [
+          "外から調べることで、早く問題が分かる場合があります。",
+          "手順を踏むことで、無関係な人への影響を抑えられる場合もあります。"
+        ],
+        "question": "調査の速さ、無関係な人への影響、窓口への信頼のうち、何を重く考えましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：調査速度と影響はどちらも結果であり、窓口から原則志向を特定しない。"
+        ]
+      }
+    },
+    {
+      "id": "q013",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "工作への手助け",
+      "body": "子どもが、自分には少し難しい工作を一人で作りたいと言っています。けがの危険はありませんが、材料は一回分で、失敗すると発表には間に合いません。助ければ完成できます。",
+      "category": [
+        "family"
+      ],
+      "axes": [
+        "freedom_security"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "本人に相談したうえで手を貸し、一緒に完成させる",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "失敗する可能性も伝え、一人で取り組ませる",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "完成を支えることと、自分で試す経験を守ることを比べます。",
+        "perspectives": [
+          "手を貸して、完成した作品を発表する機会を支える考えがあります。",
+          "完成しない可能性も含めて、本人が一人で試す機会を残す考えもあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_autonomy"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：身体危険のない工作の完成を安全志向と採点しない。手助けにも本人への相談を明示する。"
+        ]
+      }
+    },
+    {
+      "id": "q014",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "災害後の水の購入",
+      "body": "災害後の店で、次の入荷日は未定です。水は一世帯二箱まで買えます。一箱あれば家族は三日過ごせますが、二箱買うと後ろの世帯まで行き渡らない可能性があります。家族に特別な医療上の事情はありません。",
+      "category": [
+        "family"
+      ],
+      "axes": [
+        "fairness_relationship"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "一箱にして、後ろの世帯の分を残す",
+          "weights": {
+            "fairness_relationship": -0.7
+          }
+        },
+        {
+          "id": "B",
+          "label": "上限の二箱を買い、家族の備えを確保する",
+          "weights": {
+            "fairness_relationship": 0.7
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "家族への備えと、まだ知らない世帯への配慮を比べます。",
+        "perspectives": [
+          "担当する家族の生活を確保する責任があります。",
+          "同じ不確実さにいる他の世帯も考えられます。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：上限内の購入を買い占めと呼ばない。世帯への配分と家族の備えを場面内の暫定手がかりとして維持。備蓄等の不足条件は実プレイで確認する。"
+        ]
+      }
+    },
+    {
+      "id": "q015",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "制作講座の予算配分",
+      "body": "地域の制作講座で、四人に同じ予算を配るか、完成の見込みが高い一人に多く配るか決めます。多く配ると展示作品は増えますが、他の三人の練習機会は減ります。",
+      "category": [
+        "community"
+      ],
+      "axes": [
+        "equality_efficiency"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "完成の見込みが高い人へ多く配る",
+          "weights": {
+            "equality_efficiency": 0.8
+          }
+        },
+        {
+          "id": "B",
+          "label": "四人に同額を配る",
+          "weights": {
+            "equality_efficiency": -0.8
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "全体の成果と、参加の機会を比べます。",
+        "perspectives": [
+          "展示する作品を増やすため、予算を集中する考えがあります。",
+          "四人それぞれの練習機会に、同じ額の予算を使う考えもあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：才能という固定的な評価を避け、予算配分と練習機会の二案を中立に示す。"
+        ]
+      }
+    },
+    {
+      "id": "q016",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "約束と緊急事態",
+      "body": "友人の引っ越しを手伝う約束の日、別の友人から急な水漏れの片付けを頼まれました。けがの危険はありません。引っ越しは二人でも遅れながら進み、水漏れは一人だと被害が広がります。両方には行けません。",
+      "category": [
+        "relationship"
+      ],
+      "axes": [
+        "principle_outcome"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "先に約束した引っ越しへ行く",
+          "weights": {
+            "principle_outcome": -0.7
+          }
+        },
+        {
+          "id": "B",
+          "label": "事情を説明し、水漏れの片付けへ行く",
+          "weights": {
+            "principle_outcome": 0.7
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "先に交わした約束と、今起きている損失を比べます。",
+        "perspectives": [
+          "約束を頼りに準備した相手の期待があります。",
+          "緊急度の違いを判断に入れることもできます。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [
+        {
+          "id": "rel_001_016",
+          "questionId": "q001",
+          "sourceVersions": [
+            2
+          ],
+          "targetVersions": [
+            1,
+            2
+          ],
+          "type": "value_conflict",
+          "axis": "principle_outcome",
+          "ruleIds": [
+            "rel_001_016_same",
+            "rel_001_016_different"
+          ],
+          "comparisonNote": "先の約束と影響の比較。秘密と予定の違いを含む限定的な緊張の問い返し。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 編集レビュー：秘密と予定変更の文脈差を明示した関連コメントを使う。"
+        ]
+      }
+    },
+    {
+      "id": "q017",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "登山大会の開催判断",
+      "body": "成人向けの登山大会について、装備確認と救助の備えをしても一定の事故リスクが残ります。参加者は説明を受け、費用も負担します。地域では開催を認めるか検討しています。",
+      "category": [
+        "society"
+      ],
+      "axes": [
+        "freedom_security"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "説明と備えを条件に開催を認める",
+          "weights": {
+            "freedom_security": -0.8
+          }
+        },
+        {
+          "id": "B",
+          "label": "事故リスクを理由に開催を認めない",
+          "weights": {
+            "freedom_security": 0.8
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "本人が引き受ける危険と、開催側が守る安全を比べます。",
+        "perspectives": [
+          "危険のある活動を選ぶ余地を認める考えがあります。",
+          "同意があっても防ぐべき危険があるという考えもあります。"
+        ],
+        "question": "開催を判断する立場で、何を重く考えましたか。危険の程度など、さらに必要な情報はありますか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_autonomy"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：題名を中立化。危険の程度は未指定であり、回答の根拠に必要な情報も尋ねる。"
+        ]
+      }
+    },
+    {
+      "id": "q018",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "古い町並みの再開発",
+      "body": "古い商店街を残して修繕するか、建て替えて通行しやすくするかを選びます。どちらも安全基準を満たし、費用は同程度です。修繕では狭い通路が残り、建て替えでは昔の景観が失われます。",
+      "category": [
+        "community"
+      ],
+      "axes": [
+        "stability_change"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "修繕して、昔の景観を残す",
+          "weights": {
+            "stability_change": -0.7
+          }
+        },
+        {
+          "id": "B",
+          "label": "建て替えて、通行しやすくする",
+          "weights": {
+            "stability_change": 0.7
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "受け継いだ場所と、新しい使いやすさを比べます。",
+        "perspectives": [
+          "修繕して、景観に結び付いた地域の記憶を受け継ぐ考えがあります。",
+          "建て替えて、通行しやすい環境を作る考えもあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：景観を同じ形でしか残せないという絶対化を除く。保存と変更の場面内の手がかりを維持。"
+        ]
+      }
+    },
+    {
+      "id": "q019",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "抽選の応募超過への対応",
+      "body": "家族が地域の抽選で応募回数を超えて申し込んだと分かりました。まだ抽選前です。運営に知らせると規定どおり失格になり、本人に任せると余分な応募を撤回できますが、撤回したかは確認できません。",
+      "category": [
+        "family"
+      ],
+      "axes": [
+        "fairness_relationship"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "本人に撤回を求め、対応を任せる",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "運営に知らせ、共通の手続きに任せる",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "身近な相手に修正を任せることと、同じ手続きを適用することを比べます。",
+        "perspectives": [
+          "本人が自分で修正する機会を残せます。",
+          "外から確認できる手続きで、扱いを揃えられます。"
+        ],
+        "question": "修正を確認できること、本人に対応を任せること、相手との関係は、それぞれ判断にどう関わりましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：どちらも修正の行動であり、確認方法や信頼を公平・関係の選好と同一視しない。"
+        ]
+      }
+    },
+    {
+      "id": "q020",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "採用で事情を聞く時間",
+      "body": "架空の採用選考で、自動評価を使えば、全員の同じ項目を短時間に確認できます。ただし経歴が特殊な人の事情は拾いきれません。個別面談なら事情を聞けますが、全員の審査に時間がかかります。",
+      "category": [
+        "work"
+      ],
+      "axes": [
+        "equality_efficiency"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "個別面談を行い、事情を聞く機会を揃える",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "自動評価を中心にして、選考を早く進める",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "個別の事情を聞く機会と、選考全体の速さを比べます。",
+        "perspectives": [
+          "同じ尺度で扱うことと、同じ機会を作ることは違う場合があります。",
+          "速い選考が応募者の待ち時間を減らす場合もあります。"
+        ],
+        "question": "同じ項目で見ることと、個別の事情を聞くことをどう考えましたか。選考の速さも判断に関わりましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：共通基準と事情を聞く機会の両方が公平の考え方になり得るため採点しない。検証済みとの保証表現を外す。"
+        ]
+      }
+    },
+    {
+      "id": "q021",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "家族1人と他人5人",
+      "body": "架空の救助場面です。家族一人のいる側と、面識のない人五人のいる側があり、片側だけを救助できます。どちらも全員を確実に助けられ、年齢・危険度・所要時間は同じです。あなたはどちらを選びますか。",
+      "category": [
+        "life"
+      ],
+      "axes": [
+        "fairness_relationship",
+        "equality_efficiency"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "家族のいる側を助ける",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "面識のない五人のいる側を助ける",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "家族への責任と、助けられる人数を比べる架空の問いです。選んだ側だけで、理由や公平さを特定することはできません。",
+        "perspectives": [
+          "特定の相手に感じる責任は関係によって異なるかもしれません。",
+          "人数の違いが判断の重さを変えることもあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_rescue"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "親友系列とは人数と関係の二変数が違うためBOUNDARYに接続しない。家族系列の追加はTODO。",
+          "2026-09-17 残りの質問の編集レビュー：親友系列と同様、関係と人数への選択を平等・公平さと断定して採点しない。"
+        ]
+      }
+    },
+    {
+      "id": "q022",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "友人の旅行への助言",
+      "body": "成人の友人が、天候の変わりやすい地域への旅行を計画しています。通常の交通手段と保険はあり、本人は危険の説明を理解しています。それでも事故の可能性は残ります。助言としてどちらに近いですか。",
+      "category": [
+        "personal"
+      ],
+      "axes": [
+        "freedom_security"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "危険が残るので、今回は延期を勧める",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "準備を確認したうえで、本人の決定を支持する",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "友人への助言として、延期を勧めるか準備を確認して支持するかを比べます。どちらを選んでも、本人が決めることへの考え方は別に確かめる必要があります。",
+        "perspectives": [
+          "延期すれば避けられる危険があります。",
+          "危険を知ったうえで選ぶ経験を尊重する考えもあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [
+        {
+          "id": "rel_017_022",
+          "questionId": "q017",
+          "sourceVersions": [
+            1,
+            2
+          ],
+          "targetVersions": [
+            1,
+            2
+          ],
+          "type": "context",
+          "axis": "freedom_security",
+          "ruleIds": [
+            "rel_017_022_same",
+            "rel_017_022_different"
+          ],
+          "comparisonNote": "公共の開催判断と友人への助言という立場の違いを比較する。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_autonomy"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：延期を勧めることは決定権を奪うことではないため自由↔安全の採点を外す。"
+        ]
+      }
+    },
+    {
+      "id": "q023",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "賞与の配り方",
+      "body": "同じ時間働いたチームに賞与を配ります。成果の差は確認できますが、成果の少ない人も裏方の仕事を支えました。今回は同額か、成果に比例した配分のどちらかを選びます。",
+      "category": [
+        "work"
+      ],
+      "axes": [
+        "equality_efficiency"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "成果に比例して配る",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "全員に同額を配る",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "見える成果と、共に参加したことをどう配分に反映するかを考えます。",
+        "perspectives": [
+          "成果に応じた配分が納得につながる人もいます。",
+          "数えにくい支えも含めて同額にする考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [
+        {
+          "id": "rel_015_023",
+          "questionId": "q015",
+          "sourceVersions": [
+            1,
+            2
+          ],
+          "targetVersions": [
+            1,
+            2
+          ],
+          "type": "context",
+          "axis": "equality_efficiency",
+          "ruleIds": [
+            "rel_015_023_same",
+            "rel_015_023_different"
+          ],
+          "comparisonNote": "地域の制作予算と職場の賞与。機会と報酬の違いを含むため、文脈差の候補としてのみ扱う。"
+        }
+      ],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：成果に応じた賞与は効率の効果を示さないため採点しない。機会の配分と報酬の配分を比較文で区別。"
+        ]
+      }
+    },
+    {
+      "id": "q024",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "閉館後の集会室",
+      "body": "地域の集会室は閉館後の利用を認めていません。突然の雨で、帰りの迎えを待つ人たちがいます。屋根のある待合所は遠く、集会室を開けても安全や費用は変わりませんが、担当者が独断で例外を作ることになります。",
+      "category": [
+        "community"
+      ],
+      "axes": [
+        "principle_outcome"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "今回は開けず、認められた待合所を案内する",
+          "weights": {
+            "principle_outcome": -0.7
+          }
+        },
+        {
+          "id": "B",
+          "label": "今回は集会室を開け、後で運営へ報告する",
+          "weights": {
+            "principle_outcome": 0.7
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "共通の利用規則と、その場の不便を減らすことを比べます。",
+        "perspectives": [
+          "共通の規則に沿って、別の待合所を案内する考えがあります。",
+          "その場の不便を減らすため、例外を認める考えもあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [
+        {
+          "id": "rel_003_024",
+          "questionId": "q003",
+          "sourceVersions": [
+            1,
+            2
+          ],
+          "targetVersions": [
+            1,
+            2
+          ],
+          "type": "value_conflict",
+          "axis": "principle_outcome",
+          "ruleIds": [
+            "rel_003_024_same",
+            "rel_003_024_different"
+          ],
+          "comparisonNote": "安全と費用を一定にした手順の例外。会社と地域の違いは問い返しに明示し、人格の矛盾と断定しない。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 編集レビュー：善行という先取り評価と、例外を選ばない側を責める解説を除く。"
+        ]
+      }
+    },
+    {
+      "id": "q025",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "ごみ処理施設の候補地",
+      "body": "市全体のごみ処理を改善する施設の候補地が、あなたの地域です。健康への影響は基準内ですが、運搬車の往来が増えます。地域への補助はあるものの、別の場所には当面建てられません。",
+      "category": [
+        "community"
+      ],
+      "axes": [
+        "individual_collective"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "市全体の改善を考え、条件付きで受け入れる",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "地域に負担が集中するため、計画の見直しを求める",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "広い範囲の利益と、一つの地域に集まる負担を比べます。",
+        "perspectives": [
+          "全体で必要な仕事を分担する考えがあります。",
+          "利益を受ける人と負担する人の違いも考えられます。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：地域も市全体も集団であり、個人↔集団に結び付けない。題名の先取り評価を除く。"
+        ]
+      }
+    },
+    {
+      "id": "q026",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "代表候補の考えの変化",
+      "body": "企画の代表候補が、昔は今の企画と反対の意見を公に述べていました。本人は理由を説明して撤回し、その後数年は企画を支えてきました。過去の発言による未解決の被害は確認されていません。代表の仕事に必要な能力は、候補者同士で同程度とします。",
+      "category": [
+        "society"
+      ],
+      "axes": [
+        "stability_change"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "最近の行動を重視し、代表として任せる",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "過去との違いを慎重に見て、今回は別の人に任せる",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "過去からの意見の変化、その説明、最近の行動をどう判断材料にするかを考えます。",
+        "perspectives": [
+          "考え直した過程も、今の判断材料になります。",
+          "時間をかけて確かめることで得られる信頼もあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：候補者の意見変更への評価から回答者の安定・変化志向を特定しない。職務能力は同程度とする。"
+        ]
+      }
+    },
+    {
+      "id": "q027",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "親の期待する進路",
+      "body": "親が勧める進路と、自分が望む進路が違います。費用、卒業後の収入、安全性は同程度で、親の介護などの事情もありません。親は自分の希望を継いでほしいと話しています。",
+      "category": [
+        "family"
+      ],
+      "axes": [
+        "fairness_relationship"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "自分の望む進路を選ぶ",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "親の勧める進路を選ぶ",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "自分の希望と、身近な人の期待をどう扱うかを比べます。",
+        "perspectives": [
+          "自分で選ぶことで引き受けられる責任があります。",
+          "関係の中で受け継ぐ希望を大切にする考えもあります。"
+        ],
+        "question": "自分の希望と親の希望を、どのように考えましたか。選んだ進路だけでは表しきれない気持ちはありますか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "自由と安全の対立ではないため自由↔安全には加点しない。",
+          "2026-09-17 残りの質問の編集レビュー：自分の希望を公平と特定しない。選択肢に親への思いを付け足さない。"
+        ]
+      }
+    },
+    {
+      "id": "q028",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "無料サービスと個人データ",
+      "body": "便利なサービスを無料で使う代わりに、利用履歴を広告の調整に使う契約があります。履歴の用途は明示され、いつでも停止できます。有料版なら履歴は使われませんが、毎月の負担が増えます。無料版と有料版で使える機能は同じです。",
+      "category": [
+        "personal"
+      ],
+      "axes": [
+        "principle_outcome"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "用途を確認し、無料版を使う",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "料金を払い、履歴を広告に使わない有料版を使う",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "料金の負担と、利用履歴の使われ方を比べます。選んだ版だけでは、以前からの方針があったかは分かりません。",
+        "perspectives": [
+          "条件を確かめて交換を受け入れる判断があります。",
+          "費用を払ってでも保ちたい線引きがあるかもしれません。"
+        ],
+        "question": "料金、履歴の用途、契約への信頼のうち、何を重く考えましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "v1では原則↔結果を暫定採点していたが、v2では理由を特定できないため除外した。",
+          "2026-09-17 残りの質問の編集レビュー：有料版の選択から以前からの方針や原則志向を推定しない。両版の機能を揃える。"
+        ]
+      }
+    },
+    {
+      "id": "q029",
+      "version": 2,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "次の企画を任せる人",
+      "body": "前回の企画で失敗した仲間が、原因を説明し、改善案を持って再び担当を希望しています。改善案は筋が通っていますが実績はまだありません。経験豊かな別の人なら完成の見込みは高まります。",
+      "category": [
+        "work"
+      ],
+      "axes": [
+        "stability_change"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "経験豊かな別の人に任せる",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "改善案を持つ仲間にもう一度任せる",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "完成の見込みと、前回の経験を生かして再び担当する機会を比べます。担当者の選び方だけから、安定や変化への考えを決めることはできません。",
+        "perspectives": [
+          "安定して完成することを待つ人への責任があります。",
+          "経験を次へつなぐ機会を残す考えもあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "2026-09-17 残りの質問の編集レビュー：人員の継続と変更の解釈も可能であり、安定・変化の方向を決めない。"
+        ]
+      }
+    },
+    {
+      "id": "q030",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "自分の価値を一つ守るなら",
+      "body": "ここまでの問いを振り返って、判断に迷ったときに忘れたくないことを一つ選ぶなら、今はどれでしょう。実際の回答と同じでなくても構いません。",
+      "category": [
+        "meta"
+      ],
+      "axes": [
+        "principle_outcome",
+        "individual_collective",
+        "fairness_relationship",
+        "stability_change",
+        "freedom_security",
+        "equality_efficiency"
+      ],
+      "importance": 1,
+      "scoringMode": "self_report_only",
+      "options": [
+        {
+          "id": "axis_0_negative",
+          "label": "原則を大切にすること",
+          "weights": {
+            "principle_outcome": -1
+          }
+        },
+        {
+          "id": "axis_0_positive",
+          "label": "結果を大切にすること",
+          "weights": {
+            "principle_outcome": 1
+          }
+        },
+        {
+          "id": "axis_1_negative",
+          "label": "個人を大切にすること",
+          "weights": {
+            "individual_collective": -1
+          }
+        },
+        {
+          "id": "axis_1_positive",
+          "label": "集団を大切にすること",
+          "weights": {
+            "individual_collective": 1
+          }
+        },
+        {
+          "id": "axis_2_negative",
+          "label": "公平を大切にすること",
+          "weights": {
+            "fairness_relationship": -1
+          }
+        },
+        {
+          "id": "axis_2_positive",
+          "label": "関係を大切にすること",
+          "weights": {
+            "fairness_relationship": 1
+          }
+        },
+        {
+          "id": "axis_3_negative",
+          "label": "安定を大切にすること",
+          "weights": {
+            "stability_change": -1
+          }
+        },
+        {
+          "id": "axis_3_positive",
+          "label": "変化を大切にすること",
+          "weights": {
+            "stability_change": 1
+          }
+        },
+        {
+          "id": "axis_4_negative",
+          "label": "自由を大切にすること",
+          "weights": {
+            "freedom_security": -1
+          }
+        },
+        {
+          "id": "axis_4_positive",
+          "label": "安全を大切にすること",
+          "weights": {
+            "freedom_security": 1
+          }
+        },
+        {
+          "id": "axis_5_negative",
+          "label": "平等を大切にすること",
+          "weights": {
+            "equality_efficiency": -1
+          }
+        },
+        {
+          "id": "axis_5_positive",
+          "label": "効率を大切にすること",
+          "weights": {
+            "equality_efficiency": 1
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "今は一つに絞れない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "ここで選ぶ言葉は、過去の判断を採点し直すものではありません。",
+        "perspectives": [
+          "大切にしたい価値と実際の選択が重なることがあります。",
+          "違っている場合も、置かれた条件を考える材料になります。"
+        ],
+        "question": "この言葉が大切になった場面を思い出せますか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_self_definition"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "自己申告は行動スコア・confidenceへ加算しない。",
+          "2026-09-17 残りの質問の編集レビュー：自己申告のまま維持。行動のスコアやconfidenceへ加算しない。"
+        ]
+      }
+    },
+    {
+      "id": "q031",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "手伝いと、5分の遅れ",
+      "body": "休日、面識のない人が荷物の片付けを手伝ってほしいと頼んでいます。危険や緊急性はなく、あなたが断れば、その人は一人で時間をかけて片付けられます。手伝うと、あなたが一人で過ごすために立てた予定が5分遅れます。誰かとの約束や金銭的な損失はありません。ほかの条件は同じです。あなたはどうしますか。",
+      "category": [
+        "personal"
+      ],
+      "axes": [
+        "individual_collective"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "手伝い、自分の予定を遅らせる",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "今回は断り、自分の予定を優先する",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "同じ場面で、自分の予定が遅れる時間だけを変えて考えます。",
+        "perspectives": [
+          "手伝うことを大切にする考えがあります。",
+          "自分のために確保した時間を大切にする考えもあります。"
+        ],
+        "question": "今回、どの条件を重く考えましたか。"
+      },
+      "relations": [],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "境界の観察専用。選択を分析軸の方向に結び付けないためweightsは空。",
+          "2026-09-17 残りの質問の編集レビュー：遅れ以外の条件と未採点を維持。負担感の想像は振り返りで扱う。"
+        ]
+      },
+      "scenario": {
+        "seriesId": "help_delay",
+        "variable": "delayMinutes",
+        "value": 5,
+        "unit": "分",
+        "constants": {
+          "person": "stranger",
+          "task": "carry_items",
+          "urgent": false,
+          "risk": false,
+          "appointment": false,
+          "financialLoss": false
+        },
+        "decisionMap": {
+          "A": "help",
+          "B": "decline"
+        }
+      }
+    },
+    {
+      "id": "q032",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "手伝いと、30分の遅れ",
+      "body": "休日、面識のない人が荷物の片付けを手伝ってほしいと頼んでいます。危険や緊急性はなく、あなたが断れば、その人は一人で時間をかけて片付けられます。手伝うと、あなたが一人で過ごすために立てた予定が30分遅れます。誰かとの約束や金銭的な損失はありません。ほかの条件は同じです。あなたはどうしますか。",
+      "category": [
+        "personal"
+      ],
+      "axes": [
+        "individual_collective"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "手伝い、自分の予定を遅らせる",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "今回は断り、自分の予定を優先する",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "同じ場面で、自分の予定が遅れる時間だけを変えて考えます。",
+        "perspectives": [
+          "手伝うことを大切にする考えがあります。",
+          "自分のために確保した時間を大切にする考えもあります。"
+        ],
+        "question": "今回、どの条件を重く考えましたか。"
+      },
+      "relations": [
+        {
+          "id": "rel_help_delay_5_30",
+          "questionId": "q031",
+          "sourceVersions": [
+            1
+          ],
+          "targetVersions": [
+            1
+          ],
+          "type": "boundary",
+          "axis": "individual_collective",
+          "ruleIds": [
+            "boundary_help_delay_5_30"
+          ],
+          "comparisonNote": "予定が遅れる時間だけを変えて比較する。"
+        }
+      ],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "境界の観察専用。選択を分析軸の方向に結び付けないためweightsは空。",
+          "2026-09-17 残りの質問の編集レビュー：遅れ以外の条件と未採点を維持。進行中の記録を保つ。"
+        ]
+      },
+      "scenario": {
+        "seriesId": "help_delay",
+        "variable": "delayMinutes",
+        "value": 30,
+        "unit": "分",
+        "constants": {
+          "person": "stranger",
+          "task": "carry_items",
+          "urgent": false,
+          "risk": false,
+          "appointment": false,
+          "financialLoss": false
+        },
+        "decisionMap": {
+          "A": "help",
+          "B": "decline"
+        }
+      }
+    },
+    {
+      "id": "q033",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "手伝いと、120分の遅れ",
+      "body": "休日、面識のない人が荷物の片付けを手伝ってほしいと頼んでいます。危険や緊急性はなく、あなたが断れば、その人は一人で時間をかけて片付けられます。手伝うと、あなたが一人で過ごすために立てた予定が120分遅れます。誰かとの約束や金銭的な損失はありません。ほかの条件は同じです。あなたはどうしますか。",
+      "category": [
+        "personal"
+      ],
+      "axes": [
+        "individual_collective"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "手伝い、自分の予定を遅らせる",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "今回は断り、自分の予定を優先する",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "同じ場面で、自分の予定が遅れる時間だけを変えて考えます。",
+        "perspectives": [
+          "手伝うことを大切にする考えがあります。",
+          "自分のために確保した時間を大切にする考えもあります。"
+        ],
+        "question": "今回、どの条件を重く考えましたか。"
+      },
+      "relations": [
+        {
+          "id": "rel_help_delay_5_120",
+          "questionId": "q031",
+          "sourceVersions": [
+            1
+          ],
+          "targetVersions": [
+            1
+          ],
+          "type": "boundary",
+          "axis": "individual_collective",
+          "ruleIds": [
+            "boundary_help_delay_5_120"
+          ],
+          "comparisonNote": "予定が遅れる時間だけを変えて比較する。"
+        },
+        {
+          "id": "rel_help_delay_30_120",
+          "questionId": "q032",
+          "sourceVersions": [
+            1
+          ],
+          "targetVersions": [
+            1
+          ],
+          "type": "boundary",
+          "axis": "individual_collective",
+          "ruleIds": [
+            "boundary_help_delay_30_120"
+          ],
+          "comparisonNote": "予定が遅れる時間だけを変えて比較する。"
+        }
+      ],
+      "followUps": [],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "境界の観察専用。選択を分析軸の方向に結び付けないためweightsは空。",
+          "2026-09-17 残りの質問の編集レビュー：遅れ以外の条件と未採点を維持。正確な閾値とは扱わない。"
+        ]
+      },
+      "scenario": {
+        "seriesId": "help_delay",
+        "variable": "delayMinutes",
+        "value": 120,
+        "unit": "分",
+        "constants": {
+          "person": "stranger",
+          "task": "carry_items",
+          "urgent": false,
+          "risk": false,
+          "appointment": false,
+          "financialLoss": false
+        },
+        "decisionMap": {
+          "A": "help",
+          "B": "decline"
+        }
+      }
+    },
+    {
+      "id": "q034",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "自由に使える午後",
+      "body": "休日の午後、2時間を自分で決めた読書に使う予定です。参加している読書会から、共同の本棚を整理する任意の作業に誘われました。あなたが参加すると、皆が次回から本を探しやすくなります。不参加でも会への参加条件や人間関係は変わらず、参加の約束もしていません。整理は急ぎではありません。今回、この2時間をどう使いますか。",
+      "category": [
+        "personal",
+        "community"
+      ],
+      "axes": [
+        "individual_collective"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "自分の読書に使う",
+          "weights": {
+            "individual_collective": -0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "共同の本棚の整理に使う",
+          "weights": {
+            "individual_collective": 0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "読書に使う時間と、皆で使う場所を整える時間が並んでいます。今回どちらを選んだかだけでは、日ごろの他者への関わり方までは分かりません。",
+        "perspectives": [
+          "自分で決めた時間を確保する考えがあります。",
+          "共同で使う場所を整えることを重く見る考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。ほかに必要だと思う条件はありますか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_q034"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "編集草案。±0.5は実証的な尺度ではなく、場面内の選択方向を表す暫定値。",
+          "同じ2時間を、自分で決めた活動と共同の利用環境の整備のどちらへ配分したかを記録できる。約束の履行、緊急救援、不参加への制裁を主な理由にしない条件を置いた。",
+          "整理作業が好きだから参加する場合もある。好みの差が判断の中心だという回答が多ければ、この問は未採点にするか題材を再検討する。"
+        ]
+      }
+    },
+    {
+      "id": "q035",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "活動費の使い道",
+      "body": "参加している趣味の会で、あなたに3,000円分の活動費が割り当てられました。自分専用の材料に使うことも、会で皆が使う道具の購入費に回すことも認められています。どちらも会の活動に使われ、どちらを選んでも今後の割り当ては変わりません。自分専用の材料には欲しいものがあり、共同の道具にも皆の使い道があります。今回はどちらに使いますか。",
+      "category": [
+        "community"
+      ],
+      "axes": [
+        "individual_collective"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "皆が使う道具の購入費に回す",
+          "weights": {
+            "individual_collective": 0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "自分専用の材料に使う",
+          "weights": {
+            "individual_collective": -0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "専用の材料を選ぶことも、共同の道具を選ぶことも、認められた使い道です。共同の道具はあなた自身にも役立つため、選択から自己犠牲の有無は決められません。",
+        "perspectives": [
+          "自分の制作に必要な材料を選ぶ考えがあります。",
+          "自分も含め、皆が使える道具に充てる考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。ほかに必要だと思う条件はありますか。"
+      },
+      "relations": [
+        {
+          "id": "rel_034_035",
+          "questionId": "q034",
+          "sourceVersions": [
+            1
+          ],
+          "targetVersions": [
+            1
+          ],
+          "type": "context",
+          "axis": "individual_collective",
+          "ruleIds": [
+            "rel_034_035_same",
+            "rel_034_035_different"
+          ],
+          "comparisonNote": "自分の時間と活動費の比較。選択だけから理由や人格を断定しない。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_q035"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "編集草案。±0.5は実証的な尺度ではなく、場面内の選択方向を表す暫定値。",
+          "本人に配分された同額の資源を、専用と共同のどちらの利用に充てたかが明確。誰がより困っているか、誰に受給資格があるかの判断を採点しているわけではない。",
+          "本人への実益も含む集団利益。道具の便益をどの程度想像したかを聞く。q034と「個人の楽しみを諦めるべき」という道徳的圧力にならないか確認する。"
+        ]
+      }
+    },
+    {
+      "id": "q036",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "一枚の招待券",
+      "body": "譲ってよい招待券が一枚あります。長年の友人と、最近知り合った人が、どちらも同じくらい行きたがっています。二人とも自分では券を入手できず、あなたはどちらにも譲る約束をしていません。お礼や今後の付き合いへの影響は考えなくてよいものとします。二人に同じ確率の抽選をしてもらうか、長年の友人に譲るか、今回はどちらにしますか。",
+      "category": [
+        "relationship"
+      ],
+      "axes": [
+        "fairness_relationship"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "二人に同じ確率の抽選をしてもらう",
+          "weights": {
+            "fairness_relationship": -0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "長年の友人に譲る",
+          "weights": {
+            "fairness_relationship": 0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "同じ確率にする方法と、これまでの付き合いを配分に含める方法があります。あなたにとって、この券を誰に譲るかはどのような判断でしたか。",
+        "perspectives": [
+          "同じ希望を持つ二人に同じ機会を設ける考えがあります。",
+          "これまでの付き合いを贈り物の相手選びに含める考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。ほかに必要だと思う条件はありますか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_q036"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "編集草案。±0.5は実証的な尺度ではなく、場面内の選択方向を表す暫定値。",
+          "希望・入手可能性・約束を揃え、同確率の手続きと特定の関係への優先配分を比較する。抽選が道徳的に正しいと結論付けない。",
+          "抽選は判断回避かもしれず、友人への配分は私有物の自由な処分かもしれない。その理由を軸の名称で上書きしない。"
+        ]
+      }
+    },
+    {
+      "id": "q037",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "イベントの追加参加枠",
+      "body": "あなたが募集する小さな交流イベントに、追加の参加枠が一人分できました。参加条件を満たす二人が同時に申し込みました。一人はあなたの親しい知人、もう一人は面識のない人です。参加経験や必要な配慮に差はなく、選び方は事前に決めていません。あなたには、抽選にするか一人を指名するかを決める裁量があります。今回はどうしますか。",
+      "category": [
+        "work",
+        "relationship"
+      ],
+      "axes": [
+        "fairness_relationship"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "親しい知人を指名する",
+          "weights": {
+            "fairness_relationship": 0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "二人に同じ確率の抽選をしてもらう",
+          "weights": {
+            "fairness_relationship": -0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "自分が主催する場でも、個人的な関係をどこまで選定に含めるかには考える余地があります。主催者という立場は、今回の判断に関わりましたか。",
+        "perspectives": [
+          "主催者の裁量に、個人的な関係も含める考えがあります。",
+          "同条件の応募者には同じ選定手続きを使う考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。ほかに必要だと思う条件はありますか。"
+      },
+      "relations": [
+        {
+          "id": "rel_036_037",
+          "questionId": "q036",
+          "sourceVersions": [
+            1
+          ],
+          "targetVersions": [
+            1
+          ],
+          "type": "context",
+          "axis": "fairness_relationship",
+          "ruleIds": [
+            "rel_036_037_same",
+            "rel_036_037_different"
+          ],
+          "comparisonNote": "私的な贈与と主催者としての選定の比較。選択だけから理由や人格を断定しない。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_q037"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "編集草案。±0.5は実証的な尺度ではなく、場面内の選択方向を表す暫定値。",
+          "参加条件が同じ応募者への同確率の配分と、関係のある応募者への優先配分を比較する。既存規則への違反と遵守の比較にしないため、選定方法は未定とした。",
+          "相手を知っている安心感は関係そのものの重視とは限らない。抽選側が明らかな正解に読まれるなら、採点前に題材を見直す。"
+        ]
+      }
+    },
+    {
+      "id": "q038",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "来月のノート",
+      "body": "日々の記録に、慣れたノートの書式を使っています。来月の一か月だけ、別の書式を試すこともできます。どちらも必要なことを記録でき、費用と記入時間は同じです。過去の記録はそのまま残り、翌月には元の書式に戻せます。今の書式に特に不満はありません。来月はどうしますか。",
+      "category": [
+        "personal"
+      ],
+      "axes": [
+        "stability_change"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "別の書式を一か月試す",
+          "weights": {
+            "stability_change": 0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "今の書式を続ける",
+          "weights": {
+            "stability_change": -0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "慣れた方法を続けることと、戻せる範囲で別の方法を試すことが並んでいます。この小さな変更への答えが、大きな人生の変更にも当てはまるとは限りません。",
+        "perspectives": [
+          "戻せる範囲で別の方法を試す考えがあります。",
+          "今の方法に不満がなければ続ける考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。ほかに必要だと思う条件はありますか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_q038"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "編集草案。±0.5は実証的な尺度ではなく、場面内の選択方向を表す暫定値。",
+          "金銭・記入時間・データ消失の差を除き、満足している方法の継続と可逆的な試行のどちらを選ぶかを扱う。",
+          "好みが具体化されていない。書式の想像だけで答えが変わるなら、対等な例を提示して再レビューする。未知の方法の学習負担をゼロと断定しない。"
+        ]
+      }
+    },
+    {
+      "id": "q039",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "読書会の進め方",
+      "body": "毎月の読書会では、順番に感想を話しています。次回だけ、二人組で話してから全体で共有する方式を試す案が出ました。参加者はどちらでも構わないと言っており、開催時間と準備の負担は同じです。今の方式で困っている人はおらず、次々回は元に戻せます。進行を任されたあなたは、次回どうしますか。",
+      "category": [
+        "community"
+      ],
+      "axes": [
+        "stability_change"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "これまでの方式で進める",
+          "weights": {
+            "stability_change": -0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "二人組で話す方式を一度試す",
+          "weights": {
+            "stability_change": 0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "今の進め方が機能していても、別の進め方を試す余地はあります。皆の場を進行する立場は、試すか続けるかの判断にどう関わりましたか。",
+        "perspectives": [
+          "機能している進め方を継続する考えがあります。",
+          "共同活動でも別の方法を試してみる考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。ほかに必要だと思う条件はありますか。"
+      },
+      "relations": [
+        {
+          "id": "rel_038_039",
+          "questionId": "q038",
+          "sourceVersions": [
+            1
+          ],
+          "targetVersions": [
+            1
+          ],
+          "type": "context",
+          "axis": "stability_change",
+          "ruleIds": [
+            "rel_038_039_same",
+            "rel_038_039_different"
+          ],
+          "comparisonNote": "自分の方法と共同活動の方法の比較。選択だけから理由や人格を断定しない。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_q039"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "編集草案。±0.5は実証的な尺度ではなく、場面内の選択方向を表す暫定値。",
+          "現状の障害解消や費用削減とは切り離し、継続と可逆的な変更を比べる。q038の自分用の方法と、共同活動の方法という文脈を分ける。",
+          "二人で話す方が好きという回答は、変化の好みとは別。追問で見分けても自動で採点を補正せず、設問の適否のレビュー材料にする。"
+        ]
+      }
+    },
+    {
+      "id": "q040",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "工房の作業時間",
+      "body": "成人向けの共同工房で、講習を修了した人の工具利用について決めます。スタッフがいる時間だけに制限する方法と、注意事項を確認した人には不在の時間も認める方法があります。後者は好きな時間に作業できますが、利用者100人が一か月使った場合、手当てが必要な軽いけがが平均2件起きる想定です。時間を制限すると平均1件になる想定です。この場面では他人へのけがや追加費用の差はなく、利用者はこの条件を理解しています。どちらの利用方法にしますか。",
+      "category": [
+        "community"
+      ],
+      "axes": [
+        "freedom_security"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "スタッフがいる時間だけに制限する",
+          "weights": {
+            "freedom_security": 0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "講習と注意事項の確認を条件に、不在の時間も認める",
+          "weights": {
+            "freedom_security": -0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "制限すると減るけががあり、制限しなければ選べる時間が増えます。今回の判断には、けがの程度、頻度、本人の理解のうち何が関わりましたか。",
+        "perspectives": [
+          "利用時間を制限し、けがを減らす考えがあります。",
+          "説明を理解した本人が作業時間を選べることを重く見る考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。ほかに必要だと思う条件はありますか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_q040"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "編集草案。±0.5は実証的な尺度ではなく、場面内の選択方向を表す暫定値。",
+          "本人が選べる作業時間と、明示された身体的なけがの減少を直接比べる。単なる完成の確実さを安全と呼ばない。",
+          "数字の読み違い、運営責任や架空の前提を信じられるかが交絡する。現実の工房の安全基準・運営方法の助言として使わない。"
+        ]
+      }
+    },
+    {
+      "id": "q041",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "周遊路の選択",
+      "body": "成人だけで利用する架空の散策施設に、平坦な道と足元が不規則な道があります。後者では一回の利用者1,000人あたり平均2人が足をひねり、数日休む想定です。平坦な道だけなら平均1人になる想定です。この場面では、それ以外の危険や他人への費用負担の差はありません。不規則な道にはそこだけの景色があり、両方の道の所要時間は同じです。利用者は説明を理解して選べます。管理を任されたあなたは、どちらにしますか。",
+      "category": [
+        "personal"
+      ],
+      "axes": [
+        "freedom_security"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "説明をしたうえで、どちらの道も選べるようにする",
+          "weights": {
+            "freedom_security": -0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "利用できる道を平坦な道だけにする",
+          "weights": {
+            "freedom_security": 0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "説明を受けて選ぶことを認めるか、けがの少ない道に限定するかを考える場面です。景色の価値や管理する立場によっても、答えは変わり得ます。",
+        "perspectives": [
+          "条件を理解した本人が道を選べることを重く見る考えがあります。",
+          "利用できる道を限定し、けがを減らす考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。ほかに必要だと思う条件はありますか。"
+      },
+      "relations": [
+        {
+          "id": "rel_040_041",
+          "questionId": "q040",
+          "sourceVersions": [
+            1
+          ],
+          "targetVersions": [
+            1
+          ],
+          "type": "context",
+          "axis": "freedom_security",
+          "ruleIds": [
+            "rel_040_041_same",
+            "rel_040_041_different"
+          ],
+          "comparisonNote": "利用時間と利用できる道、また、けがの条件の比較。選択だけから理由や人格を断定しない。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_q041"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "編集草案。±0.5は実証的な尺度ではなく、場面内の選択方向を表す暫定値。",
+          "説明を受けた成人の利用選択と、利用制限による具体的なけがの減少を比較する。景色を見る自由を、けがが起きないという結果と同一視しない。",
+          "既存q017と屋外活動という点が近い。独立した十分な材料とみなさず、実プレイで似すぎると感じられた場合は題材を差し替える。q040とは分母・期間・けがが異なるので、危険の数値によるBOUNDARYには使わない。"
+        ]
+      }
+    },
+    {
+      "id": "q042",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "スキャン機の利用時間",
+      "body": "四人で地域の写真をデジタル化します。機械を使える時間は合計4時間です。全員が機械を操作する経験を得たいと思っており、作業への参加時間とこれまでの負担は同じです。一人ずつ1時間使うと合計160枚を保存できます。操作に慣れた二人が2時間ずつ使い、残る二人が写真の整理を担当すると240枚を保存できます。写真に優先順位はなく、残りは後日に保存できます。今回はどう割り当てますか。",
+      "category": [
+        "community"
+      ],
+      "axes": [
+        "equality_efficiency"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "四人に1時間ずつ機械を割り当てる",
+          "weights": {
+            "equality_efficiency": -0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "慣れた二人に2時間ずつ機械を割り当てる",
+          "weights": {
+            "equality_efficiency": 0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "操作の機会を同じにすることと、今回多くの写真を保存することは、この条件では同時に最大にはできません。将来の習熟を考えて選んだ可能性もあります。",
+        "perspectives": [
+          "全員が同じ時間、操作を経験できることを重く見る考えがあります。",
+          "同じ機械利用時間で、今回多くの写真を保存する考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。ほかに必要だと思う条件はありますか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_q042"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "編集草案。±0.5は実証的な尺度ではなく、場面内の選択方向を表す暫定値。",
+          "同じ機械利用時間のもとで、等しい操作機会と今回保存できる枚数を比較する。多く作業した人への報酬の配分ではない。",
+          "均等配分を長期的な効率のために選ぶことがある。採点は今回の機会配分と短期成果の比較に限り、「効率を気にしない」とは解釈しない。"
+        ]
+      }
+    },
+    {
+      "id": "q043",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "展示紹介の広告枠",
+      "body": "四人の出展者の作品を紹介する広告に、同じ費用で掲載できる8枠があります。出展料と参加条件は全員同じで、全員が自分の作品の広告を希望しています。一人2枠ずつなら、広告から展示全体へ来る人数は合計40人の見込みです。反応の多い二人に3枠ずつ、ほかの二人に1枠ずつなら合計60人の見込みです。この問いでは見込みは同じ確かさで、来場者増による展示全体の収入は均等に分けるものとします。今回はどう配分しますか。",
+      "category": [
+        "work"
+      ],
+      "axes": [
+        "equality_efficiency"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "二人に3枠ずつ、ほかの二人に1枠ずつ配分する",
+          "weights": {
+            "equality_efficiency": 0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "全員に2枠ずつ配分する",
+          "weights": {
+            "equality_efficiency": -0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "紹介の機会を同じにすることと、展示全体への来場者を増やすことが並んでいます。収入は均等でも、自分の作品が紹介される機会をどう考えるかは別に残ります。",
+        "perspectives": [
+          "同じ費用で展示全体への来場者を増やす考えがあります。",
+          "全員に同じ紹介機会を割り当てる考えがあります。"
+        ],
+        "question": "今回、どの条件が判断を左右しましたか。ほかに必要だと思う条件はありますか。"
+      },
+      "relations": [
+        {
+          "id": "rel_042_043",
+          "questionId": "q042",
+          "sourceVersions": [
+            1
+          ],
+          "targetVersions": [
+            1
+          ],
+          "type": "context",
+          "axis": "equality_efficiency",
+          "ruleIds": [
+            "rel_042_043_same",
+            "rel_042_043_different"
+          ],
+          "comparisonNote": "操作経験と作品紹介の機会の比較。選択だけから理由や人格を断定しない。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_q043"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "編集草案。±0.5は実証的な尺度ではなく、場面内の選択方向を表す暫定値。",
+          "同じ広告費での均等な紹介機会と、見込まれる展示全体の来場者数を比べる。成果が多い人に報酬を与えることと区別する。",
+          "予測への信頼や、広告の将来的な効果の想像が入り得る。実際の広告効果を保証する数値ではない。q042と同じ配分を選んでも理由まで同じとは断定しない。"
+        ]
+      }
+    }
+  ]
+}

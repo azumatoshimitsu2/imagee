@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "status": "draft",
+  "storage": {
+    "key": "selfDialogueGame:v1",
+    "schemaVersion": 1,
+    "fallback": "memory",
+    "importMode": "validated_replace"
+  },
+  "scoring": {
+    "method": "weighted_mean",
+    "questionImportanceDefault": 1,
+    "currentAnswerPolicy": "latest_per_question",
+    "ignoreModes": [
+      "self_report_only",
+      "none"
+    ],
+    "missingWeight": "unmeasured",
+    "minimumAxisAnswers": 3,
+    "provisionalBelow": 6,
+    "middleAbsoluteBelow": 0.2,
+    "confidenceMeaning": "effective_answer_count"
+  },
+  "progression": {
+    "countPolicy": "distinct_answered_question_ids_excluding_non_answers",
+    "profileFrom": 5,
+    "relationsFrom": 10,
+    "contextAndBoundaryFrom": 20,
+    "freeTextFrom": 20,
+    "timeAndReflectionReturnFrom": null,
+    "pendingDecision": "TODO-01"
+  },
+  "scheduling": {
+    "initialQuestionIds": [
+      "q001",
+      "q003",
+      "q006",
+      "q002",
+      "q008",
+      "q010",
+      "q005",
+      "q004",
+      "q007",
+      "q009"
+    ],
+    "dailyPolicy": "persist_local_date_assignment",
+    "priorityWeights": {
+      "axisInformationNeed": 3,
+      "relationOpportunity": 4,
+      "categoryNovelty": 2,
+      "recentSimilarityPenalty": -3,
+      "followUpFatiguePenalty": -4
+    },
+    "avoidConsecutiveCategories": [
+      "life"
+    ],
+    "reason": {
+      "targetRate": 0.25,
+      "optional": true,
+      "minimumAnswerGap": 2
+    },
+    "boundary": {
+      "minimumDayGap": 0
+    },
+    "free_text": {
+      "minimumDistinctQuestionGap": 10,
+      "optional": true
+    },
+    "answerFlow": [
+      "selection",
+      "optional_followup",
+      "explanation",
+      "past_dialogue"
+    ]
+  },
+  "analysisDraft": {
+    "consistency": "matched_consistency_pairs / eligible_explicit_pairs; no evidence => null",
+    "contextDependency": "range of category axis means / 2; only sufficiently sampled categories",
+    "changeOverTime": "recent comparable mean minus earlier comparable mean; insufficient evidence => null",
+    "minimumCategorySamples": 3,
+    "pendingDecision": "TODO-03"
+  },
+  "commentSelection": {
+    "maximumVisible": 1,
+    "order": [
+      "priority_desc",
+      "rule_id_asc"
+    ],
+    "deduplicateBy": [
+      "ruleId",
+      "ruleVersion",
+      "evidenceAnswerIds"
+    ],
+    "skipDisabled": true
+  },
+  "boundaryJourneys": [
+    {
+      "id": "help_delay",
+      "title": "手伝う時間と、自分の予定",
+      "description": "同じ場面で、予定が遅れる時間だけを変えて考えます。三つの問いに、自分のペースで答えてください。",
+      "questionIds": [
+        "q031",
+        "q032",
+        "q033"
+      ],
+      "variableLabel": "自分の予定が遅れる時間",
+      "observationNote": "ここで分かるのは、今回答えた条件での違いだけです。あなたの限界や、正確な切り替わりの時間を決めるものではありません。"
+    }
+  ],
+  "dailyReflection": {
+    "enabled": true,
+    "minimumAgeDays": 7,
+    "limitPerDay": 1,
+    "repeatAfterDays": 7,
+    "typeOrder": [
+      "comparison",
+      "words",
+      "reevaluation"
+    ],
+    "labels": {
+      "comparison": {
+        "intro": "二つの場面を、今の目で見比べてみませんか。",
+        "action": "二つの答えを振り返る"
+      },
+      "words": {
+        "intro": "あのときの言葉に、今の言葉を重ねてみませんか。",
+        "action": "書いた言葉を読み返す"
+      },
+      "reevaluation": {
+        "intro": "以前の答えを開く前に、今ならどう考えるでしょう。",
+        "action": "今の考えで答える"
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "self-dialogue-browser-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:data": "node --test ../../dist/games/d/what_would_you_do/tests/data-contract.test.mjs",
+    "test:browser": "playwright test",
+    "test:browser:headed": "playwright test --headed",
+    "test": "npm run test:data && npm run test:logic && npm run test:browser",
+    "test:logic": "node --test ../../dist/games/d/what_would_you_do/tests/engines.test.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  }
+}

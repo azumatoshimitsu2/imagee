@@ -1,0 +1,335 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "contentVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "editorial_draft",
+        "reviewed"
+      ]
+    },
+    "questions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/question"
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "contentVersion",
+    "status",
+    "questions"
+  ],
+  "$defs": {
+    "question": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "status": {
+          "enum": [
+            "editorial_draft",
+            "reviewed"
+          ]
+        },
+        "kind": {
+          "const": "choice"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "body": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "axes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "importance": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "scoringMode": {
+          "enum": [
+            "behavior",
+            "self_report_only"
+          ]
+        },
+        "options": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "label": {
+                "type": "string",
+                "minLength": 1
+              },
+              "weights": {
+                "type": "object",
+                "propertyNames": {
+                  "enum": [
+                    "principle_outcome",
+                    "individual_collective",
+                    "fairness_relationship",
+                    "stability_change",
+                    "freedom_security",
+                    "equality_efficiency"
+                  ]
+                },
+                "additionalProperties": {
+                  "type": "number",
+                  "minimum": -1,
+                  "maximum": 1
+                }
+              },
+              "isNonAnswer": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "label",
+              "weights"
+            ]
+          }
+        },
+        "reflection": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "summary": {
+              "type": "string",
+              "minLength": 1
+            },
+            "perspectives": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "question": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "summary",
+            "perspectives",
+            "question"
+          ]
+        },
+        "relations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "questionId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sourceVersions": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "targetVersions": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "integer",
+                  "minimum": 1
+                }
+              },
+              "type": {
+                "enum": [
+                  "value_conflict",
+                  "context",
+                  "boundary"
+                ]
+              },
+              "axis": {
+                "type": "string",
+                "minLength": 1
+              },
+              "ruleIds": {
+                "type": "array",
+                "minItems": 1,
+                "uniqueItems": true,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "comparisonNote": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "id",
+              "questionId",
+              "sourceVersions",
+              "targetVersions",
+              "type",
+              "axis",
+              "ruleIds",
+              "comparisonNote"
+            ]
+          }
+        },
+        "followUps": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "review": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "humanReviewed": {
+              "type": "boolean"
+            },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "humanReviewed",
+            "notes"
+          ]
+        },
+        "scenario": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "seriesId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "variable": {
+              "type": "string",
+              "minLength": 1
+            },
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string",
+              "minLength": 1
+            },
+            "constants": {
+              "type": "object"
+            },
+            "decisionMap": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "seriesId",
+            "variable",
+            "value",
+            "unit",
+            "constants",
+            "decisionMap"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "version",
+        "status",
+        "kind",
+        "title",
+        "body",
+        "category",
+        "axes",
+        "importance",
+        "scoringMode",
+        "options",
+        "reflection",
+        "relations",
+        "followUps",
+        "review"
+      ]
+    },
+    "weights": {
+      "type": "object",
+      "propertyNames": {
+        "enum": [
+          "principle_outcome",
+          "individual_collective",
+          "fairness_relationship",
+          "stability_change",
+          "freedom_security",
+          "equality_efficiency"
+        ]
+      },
+      "additionalProperties": {
+        "type": "number",
+        "minimum": -1,
+        "maximum": 1
+      }
+    }
+  }
+}

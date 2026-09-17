@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "answers": [
+    {
+      "id": "answer-example-1",
+      "questionId": "q003",
+      "questionVersion": 1,
+      "optionId": "A",
+      "answeredAt": "2026-09-15T09:00:00+09:00",
+      "localDate": "2026-09-15",
+      "source": "daily",
+      "supersedesAnswerId": null,
+      "snapshot": {
+        "id": "q003",
+        "version": 1,
+        "status": "editorial_draft",
+        "kind": "choice",
+        "title": "会社のルール",
+        "body": "職場の申請手順を省くと、今日中に顧客の困りごとを解決できます。安全や費用は変わりませんが、例外を認めると担当者によって対応が違ってしまいます。正式な変更には一週間かかります。",
+        "category": [
+          "work"
+        ],
+        "axes": [
+          "principle_outcome",
+          "stability_change"
+        ],
+        "importance": 1,
+        "scoringMode": "behavior",
+        "options": [
+          {
+            "id": "A",
+            "label": "今回は例外で対応し、あとで手順の変更を提案する",
+            "weights": {
+              "principle_outcome": 0.7,
+              "stability_change": 0.4
+            }
+          },
+          {
+            "id": "B",
+            "label": "今回は正式な手順を守り、次回に向けて改善する",
+            "weights": {
+              "principle_outcome": -0.7,
+              "stability_change": -0.4
+            }
+          },
+          {
+            "id": "unsure",
+            "label": "この条件だけでは決められない",
+            "weights": {},
+            "isNonAnswer": true
+          }
+        ],
+        "reflection": {
+          "summary": "目の前の改善と、誰に対しても同じ手順を使うことの比較です。",
+          "perspectives": [
+            "例外があれば、今困っている人に早く対応できます。",
+            "手順が一定なら、担当者による扱いの差を減らせます。"
+          ],
+          "question": "今回、どの条件が判断を左右しましたか。"
+        },
+        "relations": [],
+        "followUps": [
+          "fu_reason_conditions"
+        ],
+        "review": {
+          "humanReviewed": false,
+          "notes": []
+        }
+      },
+      "weight": 1,
+      "derivedWeights": {
+        "principle_outcome": 0.7,
+        "stability_change": 0.4
+      },
+      "followUps": [
+        {
+          "id": "fu_reason_conditions",
+          "version": 1,
+          "optionId": "impact",
+          "answeredAt": "2026-09-15T09:00:00+09:00",
+          "snapshot": {
+            "id": "fu_reason_conditions",
+            "version": 1,
+            "kind": "reason",
+            "title": "判断の理由",
+            "body": "なぜ、その選択に近いと感じましたか。",
+            "optional": true,
+            "trigger": {
+              "event": "after_answer",
+              "excludeOptionIds": [
+                "unsure"
+              ],
+              "schedulePolicy": "reason"
+            },
+            "scoringMode": "none",
+            "options": [
+              {
+                "id": "impact",
+                "label": "起こりそうな結果を重く見た",
+                "weights": {}
+              },
+              {
+                "id": "promise",
+                "label": "約束や手続きを重く見た",
+                "weights": {}
+              },
+              {
+                "id": "relationship",
+                "label": "相手との関係を重く見た",
+                "weights": {}
+              },
+              {
+                "id": "unknown",
+                "label": "自分でも分からない",
+                "weights": {}
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "answer-example-2",
+      "questionId": "q003",
+      "questionVersion": 1,
+      "optionId": "B",
+      "answeredAt": "2026-10-16T09:00:00+09:00",
+      "localDate": "2026-10-16",
+      "source": "history_revision",
+      "supersedesAnswerId": "answer-example-1",
+      "snapshot": {
+        "id": "q003",
+        "version": 1,
+        "status": "editorial_draft",
+        "kind": "choice",
+        "title": "会社のルール",
+        "body": "職場の申請手順を省くと、今日中に顧客の困りごとを解決できます。安全や費用は変わりませんが、例外を認めると担当者によって対応が違ってしまいます。正式な変更には一週間かかります。",
+        "category": [
+          "work"
+        ],
+        "axes": [
+          "principle_outcome",
+          "stability_change"
+        ],
+        "importance": 1,
+        "scoringMode": "behavior",
+        "options": [
+          {
+            "id": "A",
+            "label": "今回は例外で対応し、あとで手順の変更を提案する",
+            "weights": {
+              "principle_outcome": 0.7,
+              "stability_change": 0.4
+            }
+          },
+          {
+            "id": "B",
+            "label": "今回は正式な手順を守り、次回に向けて改善する",
+            "weights": {
+              "principle_outcome": -0.7,
+              "stability_change": -0.4
+            }
+          },
+          {
+            "id": "unsure",
+            "label": "この条件だけでは決められない",
+            "weights": {},
+            "isNonAnswer": true
+          }
+        ],
+        "reflection": {
+          "summary": "目の前の改善と、誰に対しても同じ手順を使うことの比較です。",
+          "perspectives": [
+            "例外があれば、今困っている人に早く対応できます。",
+            "手順が一定なら、担当者による扱いの差を減らせます。"
+          ],
+          "question": "今回、どの条件が判断を左右しましたか。"
+        },
+        "relations": [],
+        "followUps": [
+          "fu_reason_conditions"
+        ],
+        "review": {
+          "humanReviewed": false,
+          "notes": []
+        }
+      },
+      "weight": 1,
+      "derivedWeights": {
+        "principle_outcome": -0.7,
+        "stability_change": -0.4
+      },
+      "followUps": []
+    }
+  ],
+  "reflections": [
+    {
+      "id": "reflection-example-1",
+      "followUpId": "fu_self_definition",
+      "followUpVersion": 1,
+      "sourceAnswerId": "answer-example-1",
+      "promptSnapshot": "あなたにとって自由とは何ですか？",
+      "text": "自分で選んだあとに、選び直せること。",
+      "createdAt": "2026-09-15T09:00:00+09:00",
+      "distinctQuestionsAtCreation": 1,
+      "parentReflectionId": null,
+      "returnPolicyId": "reflection_return"
+    }
+  ],
+  "discoveries": [],
+  "dailyAssignments": [
+    {
+      "localDate": "2026-09-15",
+      "questionId": "q003",
+      "questionVersion": 1,
+      "completedAnswerId": "answer-example-1"
+    }
+  ],
+  "analysisCache": null,
+  "meta": {
+    "firstVisit": "2026-09-15T09:00:00+09:00",
+    "lastVisit": "2026-10-16T09:00:00+09:00"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "note": "Comment Engineで実行する受入例。distinctQuestionsは省略した無関係回答を含むテスト前提。",
+  "cases": [
+    {
+      "name": "関連した例外判断が一致",
+      "answers": [
+        {
+          "questionId": "q003",
+          "questionVersion": 1,
+          "optionId": "A"
+        },
+        {
+          "questionId": "q024",
+          "questionVersion": 1,
+          "optionId": "B"
+        }
+      ],
+      "distinctQuestions": 10,
+      "expectedRuleIds": [
+        "rel_003_024_same"
+      ]
+    },
+    {
+      "name": "関連した例外判断の緊張",
+      "answers": [
+        {
+          "questionId": "q003",
+          "questionVersion": 1,
+          "optionId": "A"
+        },
+        {
+          "questionId": "q024",
+          "questionVersion": 1,
+          "optionId": "A"
+        }
+      ],
+      "distinctQuestions": 10,
+      "expectedRuleIds": [
+        "rel_003_024_different"
+      ]
+    },
+    {
+      "name": "無関係なら符号が違っても発見なし",
+      "answers": [
+        {
+          "questionId": "q004",
+          "questionVersion": 1,
+          "optionId": "A"
+        },
+        {
+          "questionId": "q028",
+          "questionVersion": 1,
+          "optionId": "A"
+        }
+      ],
+      "distinctQuestions": 20,
+      "expectedRuleIds": []
+    },
+    {
+      "name": "未対応versionは比較しない",
+      "answers": [
+        {
+          "questionId": "q003",
+          "questionVersion": 3,
+          "optionId": "A"
+        },
+        {
+          "questionId": "q024",
+          "questionVersion": 1,
+          "optionId": "A"
+        }
+      ],
+      "distinctQuestions": 20,
+      "expectedRuleIds": []
+    },
+    {
+      "name": "分からないを中立回答としない",
+      "answers": [
+        {
+          "questionId": "q003",
+          "questionVersion": 1,
+          "optionId": "unsure"
+        },
+        {
+          "questionId": "q024",
+          "questionVersion": 1,
+          "optionId": "A"
+        }
+      ],
+      "distinctQuestions": 20,
+      "expectedRuleIds": []
+    },
+    {
+      "name": "人数だけの変化で側を変更",
+      "answers": [
+        {
+          "questionId": "q007",
+          "questionVersion": 1,
+          "optionId": "A"
+        },
+        {
+          "questionId": "q011",
+          "questionVersion": 1,
+          "optionId": "A"
+        }
+      ],
+      "distinctQuestions": 20,
+      "expectedRuleIds": [
+        "boundary_friend_count"
+      ]
+    },
+    {
+      "name": "選択肢IDが変わっても同じ側なら境界なし",
+      "answers": [
+        {
+          "questionId": "q007",
+          "questionVersion": 1,
+          "optionId": "A"
+        },
+        {
+          "questionId": "q011",
+          "questionVersion": 1,
+          "optionId": "B"
+        }
+      ],
+      "distinctQuestions": 20,
+      "expectedRuleIds": []
+    },
+    {
+      "name": "家族の救助は同じ数量系列に入れない",
+      "answers": [
+        {
+          "questionId": "q007",
+          "questionVersion": 1,
+          "optionId": "A"
+        },
+        {
+          "questionId": "q021",
+          "questionVersion": 1,
+          "optionId": "B"
+        }
+      ],
+      "distinctQuestions": 20,
+      "expectedRuleIds": []
+    },
+    {
+      "name": "公開判断と個人への助言の差",
+      "answers": [
+        {
+          "questionId": "q017",
+          "questionVersion": 1,
+          "optionId": "A"
+        },
+        {
+          "questionId": "q022",
+          "questionVersion": 1,
+          "optionId": "A"
+        }
+      ],
+      "distinctQuestions": 20,
+      "expectedRuleIds": [
+        "rel_017_022_different"
+      ]
+    },
+    {
+      "name": "件数不足なら比較表示しない",
+      "answers": [
+        {
+          "questionId": "q003",
+          "questionVersion": 1,
+          "optionId": "A"
+        },
+        {
+          "questionId": "q024",
+          "questionVersion": 1,
+          "optionId": "A"
+        }
+      ],
+      "distinctQuestions": 9,
+      "expectedRuleIds": []
+    }
+  ]
+}
