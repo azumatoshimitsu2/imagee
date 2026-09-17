@@ -7,6 +7,7 @@ import { currentAnswers, distinctCount, localDate } from './answer-history.js';
 import { availableQuestions, eligibleFollowUps } from './question-engine.js';
 import { detectComments, selectComment, formatComment } from './comment-engine.js';
 import { dateLabel, answerLabel } from './ui/history-view.js';
+import { notebookSymbol } from './ui/notebook-symbol.js';
 import './ui/question-view.js';
 import './ui/profile-view.js';
 import './ui/past-view.js';
@@ -255,11 +256,11 @@ class SelfDialogueApp extends LitElement {
       <div class="home-intro"><p class="eyebrow">過去の自分と話す、小さなノート</p>
         <h1 tabindex="-1" data-page-heading>今の考えを、<br>未来の自分へ。</h1>
         <p class="intro">気になる問いに、自分のペースで答える。<br>以前の自分と、少し違う答えに出会う。<br>その間にあるものを、ゆっくり考えてみませんか。</p>
-        <div class="note-line"><span aria-hidden="true">✳</span><p>正解も、性格のタイプも決めません。<br>残していくのは、あなたの判断の足あとです。</p></div>
+        <div class="note-line"><span aria-hidden="true">${notebookSymbol}</span><p>正解も、性格のタイプも決めません。<br>残していくのは、あなたの判断の足あとです。</p></div>
         <p class="small muted record-count">${count ? `${count}の問いに、あなたの答えが残っています。` : 'まだ何も書かれていない、一冊から。'}</p>
       </div>
       <article class="paper daily-card"><div class="card-top"><p class="eyebrow">次の問い</p><span class="small muted">一問でも、続けてでも。</span></div>
-        ${question ? html`<span class="page-flower" aria-hidden="true">✳</span><h2>${question.title}</h2><p class="preview">${question.body}</p>
+        ${question ? html`<span class="page-flower" aria-hidden="true">${notebookSymbol}</span><h2>${question.title}</h2><p class="preview">${question.body}</p>
           <a class="button full" href=${`#question?id=${encodeURIComponent(question.id)}`}>この問いを読む <span aria-hidden="true">→</span></a>
           <p class="small muted card-caption">いつでもひと休みできます。</p>` : html`<h2>今読める問いを、読み終えました。</h2><p>以前の答えを読み返したり、今の考えで答え直したりできます。条件が整うと、別の問いが現れることもあります。</p><div class="card-btn-wrap"><a class="button" href="#past">過去の自分を訪ねる</a></div>`}
       </article>
@@ -314,7 +315,7 @@ class SelfDialogueApp extends LitElement {
   render() {
     if (!this.ready) return html`<div class="loading" role="status">${this.error || 'ノートを開いています…'}${this.error ? html`<p><button class="button" @click=${() => location.reload()}>もう一度開く</button></p>` : nothing}</div>`;
     const status = this.storage.getStatus();
-    return html`<div class="site-shell"><header class="site-header"><a class="brand" href="#home"><span class="brand-symbol" aria-hidden="true">✳</span><span>あなたなら、どうする？<small>判断のノート</small></span></a>
+    return html`<div class="site-shell"><header class="site-header"><a class="brand" href="#home"><span class="brand-symbol" aria-hidden="true">${notebookSymbol}</span><span>あなたなら、どうする？<small>判断のノート</small></span></a>
       <nav aria-label="主なページ"><a href="#home" aria-current=${this.page === 'home' ? 'page' : nothing}>ホーム</a><a href="#profile" aria-current=${this.page === 'profile' ? 'page' : nothing}>あなたの地図</a><a href="#past" aria-current=${['past', 'compare', 'boundary', 'revisit', 'words'].includes(this.page) ? 'page' : nothing}>過去の自分</a><a href="#history" aria-current=${this.page === 'history' ? 'page' : nothing}>回答の足あと</a></nav></header>
       ${status.mode === 'memory' ? html`<aside class="storage-warning" role="status">${status.issue === 'invalid_saved_data' ? '以前の記録を読み取れませんでした。元データは残したまま、このページ内で新しい記録を保持しています。' : this.catalog.copy.copy.memory_mode} <a href="#about">記録を書き出す</a></aside>` : nothing}
       ${this.error ? html`<aside class="error-message" role="alert">${this.error}${this.conflict ? html`<div class="data-actions"><button class="text-button" @click=${() => this.exportData()}>今の記録を書き出す</button><button class="text-button" @click=${() => this.perform(() => { this.storage.reload(); this.resetSession(); this.navigate('#home'); })}>最新の記録を読み直す</button></div>` : nothing}</aside>` : nothing}

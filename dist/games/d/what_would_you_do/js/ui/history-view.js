@@ -1,3 +1,4 @@
+import { notebookSymbol } from './notebook-symbol.js';
 import { LitElement, html, nothing } from '../vendor/lit.js';
 import { currentAnswers } from '../answer-history.js';
 import './plain-text.js';
@@ -35,7 +36,7 @@ class HistoryView extends LitElement {
           </details>
           <div class="history-actions"><a class="text-link" href="#revisit">以前の答えを隠して、もう一度考える</a><a class="text-link" href=${`#answer?id=${encodeURIComponent(latest.id)}&stage=read`}>解説を読み返す</a><button class="text-button" @click=${() => this.dispatchEvent(new CustomEvent('reconsider-answer', { bubbles: true, detail: { answerId: latest.id } }))}>今ならどう答えるか、考える <span aria-hidden="true">↗</span></button></div>
         </article>`;
-      })}</div>` : html`<div class="paper empty-state"><span class="empty-symbol" aria-hidden="true">✳</span><h2>まだ、白いページです。</h2><p>最初の問いに答えると、ここに足あとが残ります。</p><a class="button" href="#home">問いを読む</a></div>`}
+      })}</div>` : html`<div class="paper empty-state"><span class="empty-symbol" aria-hidden="true">${notebookSymbol}</span><h2>まだ、白いページです。</h2><p>最初の問いに答えると、ここに足あとが残ります。</p><a class="button" href="#home">問いを読む</a></div>`}
     </section>`;
   }
 }
