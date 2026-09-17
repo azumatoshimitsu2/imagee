@@ -9,7 +9,7 @@ import { appendDialogue } from './dialogue-engine.js';
 import { appendReflection } from './reflection-engine.js';
 import { detectComments, selectComment, recordShownComment, formatComment } from './comment-engine.js';
 import { analyzeProfile } from './profile-engine.js';
-import { assignToday, chooseQuestion, eligibleFollowUps, dailyProgress } from './question-engine.js';
+import { assignToday, chooseQuestion, eligibleFollowUps, dailyProgress, isQuestionActive } from './question-engine.js';
 import { check } from './validation.js';
 
 export function createGameService({ storage, catalog, clock = () => new Date().toISOString(), makeId = () => globalThis.crypto.randomUUID() }) {
@@ -25,7 +25,7 @@ export function createGameService({ storage, catalog, clock = () => new Date().t
     getState: () => storage.getState(),
     getProfile: options => analyzeProfile(storage.getState(),catalog,options),
     getHistory: () => storage.getState().answers,
-    getNextQuestion: () => chooseQuestion(storage.getState(), catalog, { date: localDate(clock()) }),
+    getNextQuestion: ({ axisId = null } = {}) => chooseQuestion(storage.getState(), catalog, { date: localDate(clock()), axisId }),
     getDailyProgress: () => dailyProgress(storage.getState(),localDate(clock())),
     getToday: options => {
       const result = assignToday(storage.getState(),catalog,{...options,date:localDate(clock())});
@@ -35,6 +35,7 @@ export function createGameService({ storage, catalog, clock = () => new Date().t
     answer: (questionId, optionId, {source = 'archive', expectedPreviousId} = {}) => {
       const now = clock(), id = makeId(), state = storage.getState();
       let q = question(questionId);
+      check(isQuestionActive(q, catalog), 'Question is retired; use the saved answer to revisit it');
       if (source === 'daily') {
         const assigned = assignToday(state,catalog,{date:localDate(now)});
         check(assigned.assignment?.questionId === questionId && assigned.question, 'Today’s question is unavailable');

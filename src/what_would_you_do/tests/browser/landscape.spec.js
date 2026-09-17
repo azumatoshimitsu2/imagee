@@ -117,3 +117,39 @@ test('landscape JSON failure is isolated and retry renders external text safely'
   await expect(page.locator('.landscape-words img')).toHaveCount(0);
   expect(await page.evaluate(() => window.landscapeXss)).toBeUndefined();
 });
+
+test('standalone direction becomes a combination and exposes only its matching evidence', async ({ page }) => {
+  await page.goto('./#home');
+  await expect(page.getByRole('link', { name: 'この問いを読む' })).toBeVisible();
+  const addDirections = async directions => page.evaluate(async directions => {
+    const [{ loadCatalog }, { createStorage }, { appendAnswer }] = await Promise.all([
+      import('./js/data-loader.js'), import('./js/storage.js'), import('./js/answer-history.js'),
+    ]);
+    const catalog = await loadCatalog(), storage = createStorage({ schemas: catalog.schemas });
+    let state = storage.getState();
+    for (const [axis, direction, ids] of directions) for (const id of ids) {
+      const question = catalog.questions.questions.find(q => q.id === id);
+      const option = question.options.find(o => o.weights[axis] * direction > 0);
+      state = appendAnswer(state, question, option.id);
+    }
+    storage.saveState(state);
+  }, directions);
+  await addDirections([['stability_change', 1, ['q038', 'q047', 'q053']]]);
+  await page.reload();
+  await expect(page.getByRole('link', { name: 'この問いを読む' })).toBeVisible();
+  await page.goto('./#profile');
+  const view = page.locator('landscape-view');
+  await expect(view.locator('.landscape-selection-reason')).toHaveText('変化寄りの回答を手がかりに、一つの軸の風景を選びました。');
+  await addDirections([
+    ['principle_outcome', 1, ['q001', 'q003', 'q009']],
+    ['freedom_security', -1, ['q040', 'q048', 'q054']],
+  ]);
+  await page.reload();
+  await expect(view.getByRole('heading', { name: '開いた門', exact: true })).toBeVisible();
+  await expect(view.locator('.landscape-selection-reason')).toHaveText('自由と変化寄りの回答を手がかりに、組み合わせの風景を選びました。');
+  await view.getByText('この風景につながった回答を読む（6件）').click();
+  await expect(view.locator('.map-evidence li')).toHaveCount(6);
+  await expect(view.locator('.map-evidence')).not.toContainText('会社のルール');
+  await page.reload();
+  await expect(view.locator('.landscape-selection-reason')).toContainText('組み合わせの風景');
+});

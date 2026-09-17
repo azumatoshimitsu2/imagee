@@ -84,7 +84,8 @@
         "scoringMode": {
           "enum": [
             "behavior",
-            "self_report_only"
+            "self_report_only",
+            "none"
           ]
         },
         "options": {

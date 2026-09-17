@@ -11,7 +11,7 @@ async function seed(page){
       state=appendAnswer(state,q,'A',{id:name,now:'2026-01-01T00:00:00Z'});
     }
     const f=catalog.followups.followUps.find(f=>f.id==='fu_reason_conditions');
-    state=appendReason(state,'q003',f,f.options[0].id,{id:'with-reason',now:'2026-01-02T00:00:00Z'});
+    state=appendReason(state,'q003',f,'impact',{id:'with-reason',now:'2026-01-02T00:00:00Z'});
     storage.saveState(state);
   });await page.reload();
 }
@@ -28,7 +28,7 @@ test('compare actual reasons, preserve a reply and reread after revision and imp
   await page.getByRole('link',{name:'二つの答えを見比べて、振り返る →'}).click();
   await expect(page.locator('.comparison-answer')).toHaveCount(2);
   await expect(page.locator('.comparison-pair')).toContainText('当時の理由');
-  await expect(page.locator('.comparison-pair')).toContainText('起こりそうな結果を重く見た');
+  await expect(page.locator('.comparison-pair')).toContainText('結果やその後への影響を考えた');
   const route=await page.evaluate(()=>location.hash);
   await page.getByRole('radio',{name:'状況が違う',exact:true}).focus();await page.keyboard.press('Space');
   const words='<img src=x onerror=alert(1)> 守ろうとした相手が違います。';

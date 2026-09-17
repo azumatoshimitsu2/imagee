@@ -602,6 +602,162 @@
       "templateId": "rel_042_043_different",
       "evidencePolicy": "latest_comparable_answers",
       "editorialRationale": "操作経験と作品紹介の機会を問い返す。複数条件が異なるため境界・矛盾とは判定しない。"
+    },
+    {
+      "id": "rel_045_051_same",
+      "version": 1,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_045_051",
+      "axis": "individual_collective",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "rel_045_051_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "合作での表現と旅先で共有する時間の比較。場面や回答時期の違いがあり、理由の一致や変化の原因は断定しない。"
+    },
+    {
+      "id": "rel_045_051_different",
+      "version": 1,
+      "type": "CONTEXT_SHIFT",
+      "enabled": true,
+      "priority": 50,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_045_051",
+      "axis": "individual_collective",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "rel_045_051_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "合作での表現と旅先で共有する時間の比較。場面や回答時期の違いがあり、理由の一致や変化の原因は断定しない。"
+    },
+    {
+      "id": "rel_048_054_same",
+      "version": 1,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_048_054",
+      "axis": "freedom_security",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "rel_048_054_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "共有の投稿欄と自分の受信欄の比較。保護の方法や回答時期も異なり、理由の一致や変化の原因は断定しない。"
+    },
+    {
+      "id": "rel_048_054_different",
+      "version": 1,
+      "type": "CONTEXT_SHIFT",
+      "enabled": true,
+      "priority": 50,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_048_054",
+      "axis": "freedom_security",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "rel_048_054_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "共有の投稿欄と自分の受信欄の比較。保護の方法や回答時期も異なり、理由の一致や変化の原因は断定しない。"
+    },
+    {
+      "id": "rel_042_055_same",
+      "version": 1,
+      "type": "CONSISTENCY",
+      "enabled": true,
+      "priority": 30,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_042_055",
+      "axis": "equality_efficiency",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "B"
+          },
+          {
+            "source": "B",
+            "target": "A"
+          }
+        ]
+      },
+      "templateId": "rel_042_055_same",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "得意な人への機械時間と、つまずく人への指導時間の配分を比較。配る相手・本人の立場・回答時期が異なり、理由を断定しない。"
+    },
+    {
+      "id": "rel_042_055_different",
+      "version": 1,
+      "type": "CONTEXT_SHIFT",
+      "enabled": true,
+      "priority": 50,
+      "detector": "related_option_pairs",
+      "minimumDistinctQuestions": 20,
+      "relationId": "rel_042_055",
+      "axis": "equality_efficiency",
+      "when": {
+        "optionPairs": [
+          {
+            "source": "A",
+            "target": "A"
+          },
+          {
+            "source": "B",
+            "target": "B"
+          }
+        ]
+      },
+      "templateId": "rel_042_055_different",
+      "evidencePolicy": "latest_comparable_answers",
+      "editorialRationale": "得意な人への機械時間と、つまずく人への指導時間の配分を比較。配る相手・本人の立場・回答時期が異なり、理由を断定しない。"
     }
   ],
   "templates": {
@@ -629,6 +785,12 @@
     "rel_040_041_same": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。利用時間と利用できる道、また、けがの条件で、似た理由を重く見ましたか。それとも別の理由でしたか？",
     "rel_040_041_different": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。利用時間と利用できる道、また、けがの条件では、考え方に違いがありましたか。この二つの判断を、あなたはどう捉えますか？",
     "rel_042_043_same": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。操作経験と作品紹介の機会で、似た理由を重く見ましたか。それとも別の理由でしたか？",
-    "rel_042_043_different": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。操作経験と作品紹介の機会では、考え方に違いがありましたか。この二つの判断を、あなたはどう捉えますか？"
+    "rel_042_043_different": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。操作経験と作品紹介の機会では、考え方に違いがありましたか。この二つの判断を、あなたはどう捉えますか？",
+    "rel_045_051_same": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。選ぶ方向には共通点がありました。大切にした理由も似ていましたか。合作での表現と旅先で共有する時間の比較。場面や回答時期の違いがあり、理由の一致や変化の原因は断定しない。",
+    "rel_045_051_different": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。選ぶ方向が異なりました。場面や、そのときの気持ちはどう違いましたか。合作での表現と旅先で共有する時間の比較。場面や回答時期の違いがあり、理由の一致や変化の原因は断定しない。",
+    "rel_048_054_same": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。選ぶ方向には共通点がありました。大切にした理由も似ていましたか。共有の投稿欄と自分の受信欄の比較。保護の方法や回答時期も異なり、理由の一致や変化の原因は断定しない。",
+    "rel_048_054_different": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。選ぶ方向が異なりました。場面や、そのときの気持ちはどう違いましたか。共有の投稿欄と自分の受信欄の比較。保護の方法や回答時期も異なり、理由の一致や変化の原因は断定しない。",
+    "rel_042_055_same": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。選ぶ方向には共通点がありました。大切にした理由も似ていましたか。得意な人への機械時間と、つまずく人への指導時間の配分を比較。配る相手・本人の立場・回答時期が異なり、理由を断定しない。",
+    "rel_042_055_different": "以前の「{previousTitle}」では「{previousAnswer}」、今回の「{currentTitle}」では「{currentAnswer}」を選びました。選ぶ方向が異なりました。場面や、そのときの気持ちはどう違いましたか。得意な人への機械時間と、つまずく人への指導時間の配分を比較。配る相手・本人の立場・回答時期が異なり、理由を断定しない。"
   }
 }

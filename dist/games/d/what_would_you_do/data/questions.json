@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "contentVersion": 5,
+  "contentVersion": 6,
   "status": "editorial_draft",
   "questions": [
     {
@@ -2734,6 +2734,862 @@
           "編集草案。±0.5は実証的な尺度ではなく、場面内の選択方向を表す暫定値。",
           "同じ広告費での均等な紹介機会と、見込まれる展示全体の来場者数を比べる。成果が多い人に報酬を与えることと区別する。",
           "予測への信頼や、広告の将来的な効果の想像が入り得る。実際の広告効果を保証する数値ではない。q042と同じ配分を選んでも理由まで同じとは断定しない。"
+        ]
+      }
+    },
+    {
+      "id": "q044",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "待っていた最終巻",
+      "body": "読み終えた本の最終巻を、次は友人に貸すと約束しています。友人が受け取れるのは一週間後です。今日、別の知人が「三日で読んで返せる」と貸してほしいと言いました。友人への受け渡しには間に合う見込みですが、今は友人と連絡が取れず、順番を変えてよいか確認できません。今回はどうしますか。",
+      "category": [
+        "relationship",
+        "personal"
+      ],
+      "axes": [
+        "principle_outcome"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "友人に渡すまで、ほかの人には貸さない",
+          "weights": {
+            "principle_outcome": -0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "返却日を決めて、知人に先に貸す",
+          "weights": {
+            "principle_outcome": 0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "先にした約束と、空いている時間の使い方が重なっています。約束の範囲をどう受け取ったかでも答えは変わります。",
+        "perspectives": [
+          "順番も約束の一部として守る考えがあります",
+          "受け渡しに影響しなければ融通できると考えることもあります。"
+        ],
+        "question": "あなたにとって、この約束は「次に読む順番」と「渡す日」のどちらまで含んでいましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "「次に貸す」という合意の順番を保つか、予定に間に合う見込みを理由に融通するかの比較。返却への信頼も混じるため、純粋な原則重視の測定ではない。"
+        ]
+      }
+    },
+    {
+      "id": "q045",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "合作の最後の一枚",
+      "body": "四人で一枚ずつ絵を描き、小さな作品集を作っています。画風は自由という約束です。あなたの一枚は、自分が表したい鮮やかな色に仕上がりました。ほかの三人は落ち着いた色で、あなたにも色を合わせてほしいと言っています。描き直す時間はあり、どちらでも掲載されます。あなたはどうしますか。",
+      "category": [
+        "personal",
+        "community"
+      ],
+      "axes": [
+        "individual_collective"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "色を変えて、四枚のまとまりに合わせる",
+          "weights": {
+            "individual_collective": 0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "今の色を残し、自分が表したい一枚にする",
+          "weights": {
+            "individual_collective": -0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "一人ずつの表現を残すことと、一冊として揃えることには、それぞれの良さがあります。",
+        "perspectives": [
+          "違いが見えることを合作の魅力と考えられます",
+          "まとまりを共同制作の楽しみと考えることもできます。"
+        ],
+        "question": "一人で発表する作品でも、同じ色にしたいと思いますか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "自分の表現と共同作品のまとまりのどちらを今回保つか。美的な好みや描き直しの負担も影響する。「集団に合わせる人」とは断定しない。"
+        ]
+      }
+    },
+    {
+      "id": "q046",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "友人が持ってきた案",
+      "body": "任意参加の企画相談会で、あなたも参加者として感想を伝えています。初対面の人の案には、良い点と気になった点を両方伝えました。次は親しい友人の案です。同じくらい気になる点があり、友人も率直な感想を求めています。落ち込んでいる様子はなく、後日個別に話すこともできます。今、この場ではどう伝えますか。",
+      "category": [
+        "relationship",
+        "community"
+      ],
+      "axes": [
+        "fairness_relationship"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "初対面の人と同じように、良い点も気になる点も伝える",
+          "weights": {
+            "fairness_relationship": -0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "友人には良い点を伝え、気になる点は後で個別に話す",
+          "weights": {
+            "fairness_relationship": 0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "内容を変えなくても、伝える場所を変えることがあります。その違いに、相手との関係は関わりましたか。",
+        "perspectives": [
+          "関係によらず同じ場で伝える考えがあります",
+          "親しい相手とは個別に伝える機会を使う考えもあります。"
+        ],
+        "question": "初対面の人にも後で個別に話せるなら、伝え方を変えますか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "同じ要望・状態の相手への扱いを揃えるか、親しい相手には伝える場を変えるか。配慮の必要性を異なって感じる可能性もあり、配慮と不公平を同一視しない。"
+        ]
+      }
+    },
+    {
+      "id": "q047",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "いつもの席から",
+      "body": "月に一度の交流会では、いつも同じ顔ぶれのテーブルに座っています。居心地がよく、また話したいこともあります。今回は、初めて参加した人たちのテーブルにも席があります。誰かと座る約束はなく、次回はいつもの席に戻れます。今日はどちらに座りますか。",
+      "category": [
+        "personal",
+        "community"
+      ],
+      "axes": [
+        "stability_change"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "初めて参加した人たちのテーブルに座る",
+          "weights": {
+            "stability_change": 0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "いつもの顔ぶれのテーブルに座る",
+          "weights": {
+            "stability_change": -0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "同じ人と話を深めることも、違う人と話し始めることも選べる場面です。",
+        "perspectives": [
+          "続いている関係だから話せることがあります",
+          "新しい相手だから出会える話もあります。"
+        ],
+        "question": "今日の気分と、普段から大切にしていることは、どのくらい関わりましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "慣れた関わりを継続するか、新しい関わりを試すか。社交の好み・疲れ・話題への関心が影響し、変化全般への態度を表すとは限らない。"
+        ]
+      }
+    },
+    {
+      "id": "q048",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "投稿する前の確認",
+      "body": "趣味のオンライン掲示板に参加します。二つの利用方法から選べます。一つはすぐに投稿できる代わりに、迷惑な投稿が削除される前に表示されることがあります。もう一つは全投稿を担当者が確認するため、そうした投稿は減りますが、自分の投稿も表示まで半日ほど待ちます。どちらも同じ利用者・話題で、料金はかかりません。あなたはどちらを選びますか。",
+      "category": [
+        "personal",
+        "community"
+      ],
+      "axes": [
+        "freedom_security"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "確認を経てから投稿が表示される方法を選ぶ",
+          "weights": {
+            "freedom_security": 0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "すぐに投稿が表示される方法を選ぶ",
+          "weights": {
+            "freedom_security": -0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "発信を待つことが安心につながる一方、その場でやり取りできる良さもあります。",
+        "perspectives": [
+          "事前の確認で、目に入る迷惑な投稿を減らせます",
+          "事後の削除を使いながら、その場の会話を続ける方法もあります。"
+        ],
+        "question": "何を投稿する場所かによって、待てる時間は変わりそうですか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "自分で発信するタイミングの自由と、事前確認による保護を比べる。単なる速度の好みとの混同に注意する。安全はオンライン上の保護という限定的な意味。"
+        ]
+      }
+    },
+    {
+      "id": "q049",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "自分も並ぶ受付",
+      "body": "地域のサービス窓口に、短い用事の人と長い用事の人が並んでいます。受付順を守る方法と、短い用事を先に済ませて一時間に対応できる人数を増やす方法があります。後者では長い用事の人がより長く待ちます。今日はあなたも長い用事で来ています。窓口が利用者に意見を聞いています。どちらの方法を希望しますか。",
+      "category": [
+        "personal",
+        "society"
+      ],
+      "axes": [
+        "equality_efficiency"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "来た順に受け付ける方法を希望する",
+          "weights": {
+            "equality_efficiency": -0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "短い用事を先に済ませる方法を希望する",
+          "weights": {
+            "equality_efficiency": 0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "受付の方法を決める立場と、自分も待っている立場では、見えることが違うかもしれません。",
+        "perspectives": [
+          "共通の順番なら、後から来た人に追い越されません",
+          "短い用事から進めると、同じ時間により多くの人が用事を終えられます。"
+        ],
+        "question": "自分が短い用事で来ていたら、同じ方法を希望しますか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "用事の長さによらない共通の受付順と、単位時間あたりの対応数を比較する。Aには自分の待ち時間も関わるため、利害のない平等観とは解釈しない。待ち時間の均等とは別の「同じ手続き」の平等である。"
+        ]
+      }
+    },
+    {
+      "id": "q050",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "頼まれたままの文章",
+      "body": "友人から、短い案内文を「この文章のまま」掲載してほしいと頼まれました。読むと意味は伝わりますが、少し順番を変えた方が分かりやすそうです。内容や名前、日時は変わりません。掲載時刻が迫り、友人には確認が取れません。今回はどうしますか。",
+      "category": [
+        "personal",
+        "relationship"
+      ],
+      "axes": [
+        "principle_outcome"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "内容を変えずに順番を整えて掲載する",
+          "weights": {
+            "principle_outcome": 0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "頼まれた文章のまま掲載する",
+          "weights": {
+            "principle_outcome": -0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "読みやすくするつもりの変更も、書いた人にとっては意味を持つかもしれません。",
+        "perspectives": [
+          "指定どおり載せると依頼の範囲を守れます",
+          "内容を保った編集で読み手を助けられることもあります。"
+        ],
+        "question": "どこまでの変更なら、依頼された範囲だと思いましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "明示された依頼の遵守と、読み手への伝わりやすさの改善を比べる。自分の編集判断への自信や、相手の表現の尊重も関わる。"
+        ]
+      }
+    },
+    {
+      "id": "q051",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "旅先の一時間",
+      "body": "友人三人と旅行中です。集合まで一時間あり、あなたは近くの小さな展示を見たいと思っています。三人は喫茶店で過ごす予定で、一緒に来てくれたらうれしいと言っています。別行動でも誰も困らず、集合には間に合います。今回はどう過ごしますか。",
+      "category": [
+        "personal",
+        "relationship"
+      ],
+      "axes": [
+        "individual_collective"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "一人で展示を見に行く",
+          "weights": {
+            "individual_collective": -0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "三人と喫茶店で過ごす",
+          "weights": {
+            "individual_collective": 0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "一緒に来た旅でも、それぞれに使う時間を持つことができます。",
+        "perspectives": [
+          "自分の関心を満たして、後で話を持ち寄れます",
+          "同じ時間を過ごすこと自体を旅の楽しみにもできます。"
+        ],
+        "question": "旅の思い出として、今回は何を残したいと思いましたか。"
+      },
+      "relations": [
+        {
+          "id": "rel_045_051",
+          "questionId": "q045",
+          "sourceVersions": [
+            1
+          ],
+          "targetVersions": [
+            1
+          ],
+          "type": "context",
+          "axis": "individual_collective",
+          "ruleIds": [
+            "rel_045_051_same",
+            "rel_045_051_different"
+          ],
+          "comparisonNote": "合作での表現と旅先で共有する時間の比較。場面や回答時期の違いがあり、理由の一致や変化の原因は断定しない。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "自分がしたい体験と、仲間と共有する時間のどちらを選ぶか。喫茶店や展示自体の好みも混じる。「一人で動く＝他者を軽視」と解釈しない。"
+        ]
+      }
+    },
+    {
+      "id": "q052",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "いつもの相手の小さな遅れ",
+      "body": "趣味の道具を貸す際、返却が一日遅れた人には、次に貸す前に返却日をもう一度確認しています。今回は、親しい友人が初めて一日遅れて返しました。道具に問題はなく、次の利用にも影響はありません。友人は遅れたことを謝っています。同じ条件の知人には確認をしてきましたが、今回はどうしますか。",
+      "category": [
+        "relationship",
+        "personal"
+      ],
+      "axes": [
+        "fairness_relationship"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "今回は確認を省き、いつもどおり貸す",
+          "weights": {
+            "fairness_relationship": 0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "ほかの人と同じように、次の返却日を確認する",
+          "weights": {
+            "fairness_relationship": -0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "同じ確認をすることが信頼を損なうとは限らず、確認を省くことだけが信頼の表し方でもありません。",
+        "perspectives": [
+          "誰にも同じ確認をすると手順が揃います",
+          "相手を知っていることをやり取りに反映する考えもあります。"
+        ],
+        "question": "確認することは、あなたにとって注意、段取り、あるいは別の意味でしたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "親しい相手に同じ確認を行うか、関係を踏まえて省くか。親しさから得た信頼と、親しい人を優先したい気持ちは区別できないため、その両方を「関係の影響」の候補として扱う。"
+        ]
+      }
+    },
+    {
+      "id": "q053",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "選ばない棚の一冊",
+      "body": "図書館で、次に読む本を一冊借ります。好きなシリーズの続きと、普段は読まない分野の入門書が気になっています。どちらも読みやすそうで、一週間で読み終えられる長さです。シリーズの続きは後でも借りられます。今日はどちらにしますか。",
+      "category": [
+        "personal"
+      ],
+      "axes": [
+        "stability_change"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "好きなシリーズの続きを借りる",
+          "weights": {
+            "stability_change": -0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "普段は読まない分野の入門書を借りる",
+          "weights": {
+            "stability_change": 0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "慣れた楽しみに戻ることも、まだ知らないものに触れることも、一冊の選び方です。",
+        "perspectives": [
+          "続けて読むことで深まる楽しみがあります",
+          "違う分野から新しい関心が生まれることもあります。"
+        ],
+        "question": "今は、楽しみを深めたい気分と、広げたい気分のどちらに近いでしょうか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "慣れた楽しみの継続と、新しい分野を試す選択。安定した生活への態度ではなく、今回の読書の選び方に限定する。好奇心や物語の続きへの関心が交絡する。"
+        ]
+      }
+    },
+    {
+      "id": "q054",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "知らない人からのメッセージ",
+      "body": "自分の作品を公開するページで、メッセージの受け取り方を設定します。誰からでも直接受け取れば、初めて作品を見た人ともすぐ話せますが、迷惑な連絡も届くことがあります。相互に承認した相手だけにすると、迷惑な連絡は減りますが、初めての相手とは承認後のやり取りになります。どちらも後から設定を変えられます。今はどうしますか。",
+      "category": [
+        "personal",
+        "relationship"
+      ],
+      "axes": [
+        "freedom_security"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "誰からでも直接受け取れる設定にする",
+          "weights": {
+            "freedom_security": -0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "相互に承認した相手だけから受け取る設定にする",
+          "weights": {
+            "freedom_security": 0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "話し始めやすくすることと、受け取る連絡を自分で絞ることを比べています。",
+        "perspectives": [
+          "開いた窓口から始まる交流があります",
+          "まず相手を確かめてから話し始める方法もあります。"
+        ],
+        "question": "いま公開したい作品や、話したい相手によって設定は変わりそうですか。"
+      },
+      "relations": [
+        {
+          "id": "rel_048_054",
+          "questionId": "q048",
+          "sourceVersions": [
+            1
+          ],
+          "targetVersions": [
+            1
+          ],
+          "type": "context",
+          "axis": "freedom_security",
+          "ruleIds": [
+            "rel_048_054_same",
+            "rel_048_054_different"
+          ],
+          "comparisonNote": "共有の投稿欄と自分の受信欄の比較。保護の方法や回答時期も異なり、理由の一致や変化の原因は断定しない。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "交流の開放性と、受け取る相手を制限する保護の比較。人気を得たい気持ちや交流の必要性も影響する。身体的安全と同じ場面だとは扱わない。"
+        ]
+      }
+    },
+    {
+      "id": "q055",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "発表前の練習",
+      "body": "四人で短い朗読を発表します。全員が個別に助言を受けたいと思っていますが、先生に見てもらえる時間は残り20分です。全員が5分ずつ受ける案と、今つまずいている二人が10分ずつ受ける案があります。後者の方が今回の発表全体は滑らかになる見込みです。あなたは、つまずいていない二人のうちの一人です。どちらに賛成しますか。",
+      "category": [
+        "personal",
+        "community"
+      ],
+      "axes": [
+        "equality_efficiency"
+      ],
+      "importance": 1,
+      "scoringMode": "behavior",
+      "options": [
+        {
+          "id": "A",
+          "label": "つまずいている二人が10分ずつ助言を受ける",
+          "weights": {
+            "equality_efficiency": 0.5
+          }
+        },
+        {
+          "id": "B",
+          "label": "全員が5分ずつ助言を受ける",
+          "weights": {
+            "equality_efficiency": -0.5
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "同じ時間を受け取ることと、必要なところに時間を集めることが並んでいます。",
+        "perspectives": [
+          "全員に自分の練習を見てもらう機会を残せます",
+          "一部に時間を集めて全体の発表を整える方法もあります。"
+        ],
+        "question": "発表の出来と、自分が助言を受ける機会は、今回どちらも気になりましたか。"
+      },
+      "relations": [
+        {
+          "id": "rel_042_055",
+          "questionId": "q042",
+          "sourceVersions": [
+            1
+          ],
+          "targetVersions": [
+            1
+          ],
+          "type": "context",
+          "axis": "equality_efficiency",
+          "ruleIds": [
+            "rel_042_055_same",
+            "rel_042_055_different"
+          ],
+          "comparisonNote": "得意な人への機械時間と、つまずく人への指導時間の配分を比較。配る相手・本人の立場・回答時期が異なり、理由を断定しない。"
+        }
+      ],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "等しい個別指導の機会と、今回の全体成果を改善する集中配分の比較。「上手な人に多く渡す」だけを効率と捉えない題材。Aは必要に応じた公平と考えることもでき、効率だけが動機とは断定しない。"
+        ]
+      }
+    },
+    {
+      "id": "q056",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "箱にしまってある記念品",
+      "body": "以前夢中になっていた趣味の道具を、一箱しまってあります。ここ数年使っていませんが、見ると思い出が浮かびます。欲しいという人に譲れば、今の趣味のための場所が空きます。急いで決める必要はなく、売却益もありません。今の気持ちに近いのはどちらですか。",
+      "category": [
+        "personal"
+      ],
+      "axes": [
+        "stability_change"
+      ],
+      "importance": 1,
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "A",
+          "label": "今は手元に残しておく",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "写真を残し、使いたい人に譲る",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "物を残すことと、思い出を大切にすることは、重なる場合も別々の場合もあります。",
+        "perspectives": [
+          "実物だから思い出せることがあります",
+          "形を変えて残すことにも意味があります。"
+        ],
+        "question": "この箱の何を、これからも手元に残したいと思いましたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "思い出への愛着、所有する意味、場所の事情を、安定／変化の一軸に置き換えられない。"
+        ]
+      }
+    },
+    {
+      "id": "q057",
+      "version": 1,
+      "status": "editorial_draft",
+      "kind": "choice",
+      "title": "返事をしない夜",
+      "body": "一日の終わりに、友人から今日あった出来事のメッセージが届きました。相談や急ぎの用件ではなく、翌日の返事でも相手は気にしません。あなたは少し疲れていますが、話を聞きたい気持ちもあります。今夜はどうしますか。",
+      "category": [
+        "personal",
+        "relationship"
+      ],
+      "axes": [
+        "individual_collective"
+      ],
+      "importance": 1,
+      "scoringMode": "none",
+      "options": [
+        {
+          "id": "A",
+          "label": "今夜は休み、翌日に返事をする",
+          "weights": {}
+        },
+        {
+          "id": "B",
+          "label": "少しだけ、今夜やり取りをする",
+          "weights": {}
+        },
+        {
+          "id": "unsure",
+          "label": "この条件だけでは決められない",
+          "weights": {},
+          "isNonAnswer": true
+        }
+      ],
+      "reflection": {
+        "summary": "休むことも話すことも、その日の自分に必要な場合があります。",
+        "perspectives": [
+          "余裕が戻ってから話す時間を持てます",
+          "短いやり取りが休息になることもあります。"
+        ],
+        "question": "今夜の自分には、どんな過ごし方が合っていそうでしたか。"
+      },
+      "relations": [],
+      "followUps": [
+        "fu_reason_conditions"
+      ],
+      "review": {
+        "humanReviewed": false,
+        "notes": [
+          "改訂・追加案をユーザー確認のうえ採用。心理尺度としての実証的検証は未実施。",
+          "疲労・生活リズム・会話したい気持ちは、個人／集団の価値判断と同一ではない。二人の会話を「集団への貢献」として加点しない。"
         ]
       }
     }

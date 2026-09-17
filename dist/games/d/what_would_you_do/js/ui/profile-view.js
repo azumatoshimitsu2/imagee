@@ -1,6 +1,7 @@
 import { LitElement, html, nothing } from '../vendor/lit.js';
 import { answerLabel, dateLabel } from './history-view.js';
 import { formatComment } from '../comment-engine.js';
+import { availableQuestions } from '../question-engine.js';
 import './plain-text.js';
 import './landscape-view.js';
 
@@ -29,6 +30,7 @@ class ProfileView extends LitElement {
       <landscape-view .profile=${profile} .catalog=${catalog} .state=${this.state} .discoveries=${this.discoveries}></landscape-view>
       <div class="map-grid">${catalog.axes.axes.map(axis => {
         const result = profile.axes[axis.id];
+        const remaining = availableQuestions(this.state, catalog, { axisId: axis.id }).length;
         const visible = result.visibility !== 'hidden' && result.score !== null;
         const direction = result.position === 'negative' ? axis.negativeLabel : axis.positiveLabel;
         const summary = !visible ? 'この軸を眺めるには、まだ回答が足りません。' : result.position === 'middle'
@@ -41,6 +43,7 @@ class ProfileView extends LitElement {
           <div class="axis-ends" aria-hidden="true"><span>${axis.negativeLabel}</span><span>${axis.positiveLabel}</span></div>
           <p class="axis-summary">${summary}</p>
           <p class="small muted">この軸の手がかり：${result.confidence}件${!visible && unlocked ? `（${catalog.settings.scoring.minimumAxisAnswers}件から表示）` : ''}</p>
+          <p class="axis-question-link"><a class="text-link" href=${`#archive?axis=${encodeURIComponent(axis.id)}`}>${remaining ? `この軸の問いに答える（未回答${remaining}問）` : 'この軸の問いを振り返る'} →</a></p>
           ${result.evidenceAnswerIds.length ? html`<details class="axis-details"><summary>根拠になった回答を読む（${result.confidence}件）</summary>${this.evidence(result.evidenceAnswerIds)}</details>` : nothing}
         </article>`;
       })}</div>

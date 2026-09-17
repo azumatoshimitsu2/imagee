@@ -8,7 +8,7 @@ import { scoreAnswers } from '../js/scoring-engine.js';
 import { detectComments, formatComment, selectComment, recordShownComment } from '../js/comment-engine.js';
 import { analyzeProfile, comparePeriods } from '../js/profile-engine.js';
 import { appendReflection } from '../js/reflection-engine.js';
-import { availableQuestions, chooseQuestion, assignToday, eligibleFollowUps, dailyProgress } from '../js/question-engine.js';
+import { availableQuestions, chooseQuestion, assignToday, eligibleFollowUps, dailyProgress, isQuestionActive } from '../js/question-engine.js';
 import { createGameService } from '../js/game-service.js';
 import { validateState } from '../js/state-validation.js';
 
@@ -21,6 +21,37 @@ const q = name => catalog.questions.questions.find(q => q.id === name);
 const f = name => catalog.followups.followUps.find(f => f.id === name);
 const add = (state, questionId = 'q003', option = 'A', options = {}) => appendAnswer(state, typeof questionId === 'string' ? q(questionId) : questionId, option, {now:time,id:id(),...options});
 const empty = () => createState(time);
+const store = (adapter = memoryAdapter()) => createStorage({schemas,adapter,now:()=>time});
+
+test('axis selection excludes unscored and unrelated questions and stops at exhaustion',()=>{
+  const storage=store(),game=createGameService({storage,catalog,clock:()=>time,makeId:id});
+  const axisId='individual_collective';
+  const seen=[];
+  let question;
+  while((question=game.getNextQuestion({axisId}))) {
+    assert.ok(question.options.some(o=>!o.isNonAnswer && Object.hasOwn(o.weights,axisId)));
+    assert.ok(!catalog.settings.scoring.ignoreModes.includes(question.scoringMode));
+    assert.ok(!seen.includes(question.id));seen.push(question.id);
+    game.answer(question.id,question.options.find(o=>Object.hasOwn(o.weights,axisId)).id,{expectedPreviousId:null});
+  }
+  assert.equal(seen.length,4);
+  assert.equal(game.getProfile().axes[axisId].visibility,'provisional');
+  assert.ok(game.getNextQuestion());
+  assert.throws(()=>game.getNextQuestion({axisId:'unknown'}),/Unknown question axis/);
+});
+
+test('reason prompts use shared general options and remain optional and unscored',()=>{
+  const reasons=catalog.followups.followUps.filter(f=>f.kind==='reason');
+  for(const reason of reasons) {
+    assert.equal(reason.version,2);
+    assert.equal(reason.optional,true);
+    assert.equal(reason.scoringMode,'none');
+    assert.deepEqual(reason.options,reasons[0].options);
+    assert.ok(reason.options.some(o=>o.id==='other'));
+    assert.ok(reason.options.some(o=>o.id==='unknown'));
+    assert.ok(reason.options.every(o=>Object.keys(o.weights).length===0));
+  }
+});
 
 test('self-paced selection advances on the same day and ignores unavailable legacy assignments',()=>{
   const storage=store();
@@ -51,7 +82,6 @@ test('self-paced sequence ends without repeating completed or unsure questions',
   const game=createGameService({storage,catalog,clock:()=>time});
   assert.equal(game.getNextQuestion(),null);
 });
-const store = (adapter = memoryAdapter()) => createStorage({schemas,adapter,now:()=>time});
 function fill(state,count) {
   while (distinctCount(state) < count) {
     const question = structuredClone(q('q004'));
@@ -623,9 +653,9 @@ test('the original 33 reviewed questions alone keep unsupported axes hidden',()=
 
 test('additional questions bring five axes only to provisional coverage and preserve history through export',()=>{
   let state=empty();
-  for(const question of catalog.questions.questions)state=add(state,question,question.options.find(o=>!o.isNonAnswer).id);
+  for(const question of catalog.questions.questions.filter(q=>isQuestionActive(q,catalog)))state=add(state,question,question.options.find(o=>!o.isNonAnswer).id);
   const result=scoreAnswers(state.answers,catalog.axes.axes,catalog.settings.scoring);
-  for(const [axis,count] of Object.entries({individual_collective:3,fairness_relationship:3,stability_change:4,freedom_security:4,equality_efficiency:3})) {
+  for(const [axis,count] of Object.entries({individual_collective:4,fairness_relationship:4,stability_change:5,freedom_security:5,equality_efficiency:4})) {
     assert.equal(result[axis].confidence,count);
     assert.equal(result[axis].visibility,'provisional');
   }
@@ -693,8 +723,8 @@ function directionState(axis,direction) {
   return fill(state,5);
 }
 
-test('landscape catalog resolves all 16 local WebP assets and fails unsafe definitions',async()=>{
-  assert.equal(landscapeData.landscapes.length,16);
+test('landscape catalog resolves all referenced local WebP assets and fails unsafe definitions',async()=>{
+  assert.equal(landscapeData.landscapes.length,22);
   for(const landscape of landscapeData.landscapes) {
     const bytes=await readFile(new URL(`../${landscape.image}`,import.meta.url));
     assert.equal(bytes.subarray(0,4).toString(),'RIFF');
@@ -780,7 +810,7 @@ test('pending analytical landscapes stay disabled even when draft metrics look h
 test('a data-only landscape addition participates in deterministic selection',()=>{
   const definition=structuredClone(landscapeData);
   const added=structuredClone(definition.landscapes.find(l=>l.id==='landscape_05'));
-  added.id='landscape_17';added.name='追加の風景';added.priority=99;
+  added.id='landscape_test_added';added.name='追加の風景';added.priority=99;
   definition.landscapes.push(added);
   validateLandscapes(definition,catalog.axes.axes);
   const profile=analyzeProfile(directionState('principle_outcome',1),catalog);
@@ -789,4 +819,123 @@ test('a data-only landscape addition participates in deterministic selection',()
   assert.equal(selectLandscape(definition,profile).landscape.id,'landscape_05');
   const invalid=structuredClone(definition);invalid.landscapes.find(l=>l.id==='landscape_11').enabled=true;
   assert.throws(()=>validateLandscapes(invalid,catalog.axes.axes),/Unsupported landscape condition/);
+});
+
+test('retired questions stay out of new reading while saved answers can be revised and imported',()=>{
+  const storage=store(), game=createGameService({storage,catalog,clock:()=>time,makeId:id});
+  const retired=catalog.settings.scheduling.retiredQuestionIds;
+  for(const questionId of retired) {
+    assert.ok(!availableQuestions(empty(),catalog).some(q=>q.id===questionId));
+    assert.throws(()=>game.answer(questionId,'A'),/retired/);
+    const assigned=empty();
+    assigned.dailyAssignments.push({localDate:localDate(time),questionId,questionVersion:q(questionId).version,completedAnswerId:null});
+    const result=assignToday(assigned,catalog,{date:localDate(time)});
+    assert.equal(result.question,null);assert.equal(result.unavailable,true);
+    assert.deepEqual(result.state,assigned);
+  }
+  let state=add(add(empty(),'q003','A'),'q024','B');
+  state=fill(state,10);
+  storage.saveState(state);
+  const saved=state.answers.find(a=>a.questionId==='q024');
+  game.revise(saved.id,'A');
+  const restored=store();restored.importJSON(storage.exportJSON());
+  assert.deepEqual(restored.getState().answers.find(a=>a.id===saved.id),saved);
+  assert.ok(detectComments(restored.getState(),catalog).some(c=>c.ruleId==='rel_003_024_different'));
+  assert.ok(!availableQuestions(restored.getState(),catalog).some(q=>retired.includes(q.id)));
+  for(const questionId of ['q044','q045','q046','q047','q048','q049']) {
+    assert.ok(availableQuestions(restored.getState(),catalog).some(q=>q.id===questionId));
+  }
+});
+
+test('reflection-only choices survive export without contributing to any axis',()=>{
+  let state=empty();
+  for(const questionId of ['q056','q057']) {
+    assert.ok(availableQuestions(state,catalog).some(q=>q.id===questionId));
+    for(const axis of catalog.axes.axes) assert.ok(!availableQuestions(state,catalog,{axisId:axis.id}).some(q=>q.id===questionId));
+    state=add(state,questionId,'A');
+  }
+  const storage=store();storage.saveState(state);
+  const restored=store();restored.importJSON(storage.exportJSON());
+  assert.deepEqual(restored.getState().answers,state.answers);
+  for(const score of Object.values(scoreAnswers(state.answers,catalog.axes.axes,catalog.settings.scoring))) {
+    assert.equal(score.confidence,0);assert.equal(score.score,null);
+  }
+  const invalid=structuredClone(catalog);
+  invalid.questions.questions.find(q=>q.id==='q056').options[0].weights.stability_change=0.5;
+  assert.throws(()=>validateCatalog(invalid),/reflection-only/);
+  const invalidRetired=structuredClone(catalog);
+  invalidRetired.settings.scheduling.retiredQuestionIds.push('q999');
+  assert.throws(()=>validateCatalog(invalidRetired),/retired/);
+});
+
+test('varied questions compare only the three explicit pairs and supported versions',()=>{
+  for(const [sourceId,targetId] of [['q045','q051'],['q048','q054'],['q042','q055']]) {
+    const prefix=`rel_${sourceId.slice(1)}_${targetId.slice(1)}`;
+    for(const [left,right,type] of [['A','B','CONSISTENCY'],['B','A','CONSISTENCY'],['A','A','CONTEXT_SHIFT'],['B','B','CONTEXT_SHIFT']]) {
+      const state=add(add(empty(),sourceId,left),targetId,right);
+      assert.ok(!detectComments(state,catalog).some(c=>c.ruleId.startsWith(prefix)));
+      const found=detectComments(fill(state,20),catalog).filter(c=>c.ruleId.startsWith(prefix));
+      assert.equal(found.length,1);assert.equal(found[0].type,type);
+      const text=formatComment(found[0],catalog);
+      assert.ok(text.includes(q(sourceId).options.find(o=>o.id===left).label));
+      assert.ok(text.includes(q(targetId).options.find(o=>o.id===right).label));
+    }
+    for(const version of [1,2]) {
+      const question=structuredClone(q(targetId));question.version=version;
+      const state=fill(add(add(empty(),sourceId,'A'),question,version===1?'unsure':'B'),20);
+      assert.ok(!detectComments(state,catalog).some(c=>c.ruleId.startsWith(prefix)));
+    }
+  }
+  assert.ok(q('q044').relations.length===0 && q('q050').relations.length===0);
+});
+
+test('every axis has a working standalone landscape in both directions',()=>{
+  for(const axis of catalog.axes.axes) for(const sign of [-1,1]) {
+    const profile=analyzeProfile(empty(),catalog);
+    Object.assign(profile.axes[axis.id],{visibility:'provisional',score:sign*0.5,confidence:3,evidenceAnswerIds:[`${axis.id}-a`,`${axis.id}-b`,`${axis.id}-c`]});
+    const result=selectLandscape(landscapeData,profile);
+    assert.equal(result.status,'base');
+    assert.deepEqual(result.matchedAxes,[axis.id]);
+    assert.deepEqual(result.evidenceAnswerIds,profile.axes[axis.id].evidenceAnswerIds);
+    assert.equal(result.provisional,true);
+    profile.axes[axis.id].confidence=2;
+    assert.equal(selectLandscape(landscapeData,profile).status,'insufficient');
+  }
+});
+
+test('matching combinations outrank stronger single axes and fall back when any condition is lost',()=>{
+  for(const [id,hints] of [
+    ['landscape_02',{freedom_security:-0.25,stability_change:0.2}],
+    ['landscape_03',{freedom_security:0.25,stability_change:-0.2}],
+    ['landscape_06',{fairness_relationship:-0.3,equality_efficiency:-0.2}],
+  ]) {
+    const profile=analyzeProfile(empty(),catalog);
+    const set=(axis,score)=>Object.assign(profile.axes[axis],{visibility:'provisional',score,confidence:3,evidenceAnswerIds:[axis]});
+    set('principle_outcome',0.9);
+    for(const [axis,score] of Object.entries(hints))set(axis,score);
+    const before=structuredClone(profile);
+    const result=selectLandscape(landscapeData,profile);
+    assert.equal(result.landscape.id,id);
+    assert.equal(result.matchedAxes.length,2);
+    assert.ok(!result.evidenceAnswerIds.includes('principle_outcome'));
+    assert.deepEqual(profile,before);
+    const first=Object.keys(hints)[0];
+    profile.axes[first].confidence=2;
+    assert.equal(selectLandscape(landscapeData,profile).landscape.id,'landscape_05');
+    profile.axes[first].confidence=3;profile.axes[first].score=0;
+    assert.equal(selectLandscape(landscapeData,profile).landscape.id,'landscape_05');
+  }
+});
+
+test('uncovered combinations resolve to deterministic single-axis candidates',()=>{
+  for(const [stability,freedom] of [[0.5,0.5],[-0.5,-0.5]]) {
+    const profile=analyzeProfile(empty(),catalog);
+    for(const [axis,score] of [['stability_change',stability],['freedom_security',freedom]]) {
+      Object.assign(profile.axes[axis],{visibility:'provisional',score,confidence:3,evidenceAnswerIds:[axis]});
+    }
+    const result=selectLandscape(landscapeData,profile);
+    assert.equal(result.status,'base');assert.equal(result.matchedAxes.length,1);
+    const reversed=structuredClone(landscapeData);reversed.landscapes.reverse();
+    assert.equal(selectLandscape(reversed,profile).landscape.id,result.landscape.id);
+  }
 });

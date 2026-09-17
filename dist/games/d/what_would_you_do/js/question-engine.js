@@ -8,11 +8,20 @@ function deferredEligible(f, state, catalog, date) {
   if (distinctCount(state) < (f.trigger.minimumDistinctQuestions ?? 0)) return false;
   return (f.trigger.requiresAnswered ?? []).every(id => current.has(id) && calendarDays(date,current.get(id).localDate) >= catalog.settings.scheduling.boundary.minimumDayGap);
 }
-export function availableQuestions(state, catalog, { date = localDate(), includeDrafts = true } = {}) {
+export function contributesToAxis(question, axisId, catalog) {
+  return !catalog.settings.scoring.ignoreModes.includes(question.scoringMode)
+    && question.options.some(option => !option.isNonAnswer && Object.hasOwn(option.weights, axisId));
+}
+export function isQuestionActive(question, catalog) {
+  return !(catalog.settings.scheduling.retiredQuestionIds ?? []).includes(question.id);
+}
+export function availableQuestions(state, catalog, { date = localDate(), includeDrafts = true, axisId = null } = {}) {
   check(validDate(date), 'Invalid local date');
+  check(axisId === null || catalog.axes.axes.some(axis => axis.id === axisId), 'Unknown question axis');
   const visited = new Set(state.answers.map(a => a.questionId));
   const guided = new Set((catalog.settings.boundaryJourneys ?? []).flatMap(j => j.questionIds));
-  return catalog.questions.questions.filter(q => (includeDrafts || q.status === 'reviewed') && !visited.has(q.id) && !guided.has(q.id)).filter(q => {
+  return catalog.questions.questions.filter(q => isQuestionActive(q, catalog) && (includeDrafts || q.status === 'reviewed') && !visited.has(q.id) && !guided.has(q.id)
+    && (axisId === null || contributesToAxis(q, axisId, catalog))).filter(q => {
     const deferred = catalog.followups.followUps.filter(f => f.kind === 'deferred_question' && f.targetQuestionId === q.id);
     return deferred.length === 0 || deferred.some(f => deferredEligible(f,state,catalog,date));
   });
@@ -44,6 +53,9 @@ export function assignToday(state, catalog, { date = localDate(), ...options } =
   check(validDate(date), 'Invalid local date');
   const existing = state.dailyAssignments.find(d => d.localDate === date);
   if (existing) {
+    if ((catalog.settings.scheduling.retiredQuestionIds ?? []).includes(existing.questionId)) {
+      return { state: clone(state), question: null, assignment: clone(existing), unavailable: true };
+    }
     const question = catalog.questions.questions.find(q => q.id === existing.questionId && q.version === existing.questionVersion)
       ?? state.answers.find(a => a.questionId === existing.questionId && a.questionVersion === existing.questionVersion)?.snapshot ?? null;
     return { state: clone(state), question: clone(question), assignment: clone(existing), unavailable: question === null };

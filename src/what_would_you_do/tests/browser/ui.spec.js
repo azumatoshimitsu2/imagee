@@ -54,12 +54,12 @@ test('optional reason precedes explanation and is recorded in history', async ({
   await page.getByRole('button', { name: 'この答えを記録する' }).click();
   await expect(page.getByRole('heading', { name: '判断の理由' })).toBeVisible();
   await expect(page.getByRole('heading', { name: '少し、視点を変えてみる' })).toHaveCount(0);
-  await page.getByRole('radio', { name: '起こりそうな結果を重く見た' }).check();
+  await page.getByRole('radio', { name: '結果やその後への影響を考えた' }).check();
   await page.getByRole('button', { name: '理由を記録して進む' }).click();
   await expect(page.getByRole('heading', { name: '少し、視点を変えてみる' })).toBeVisible();
-  await expect(page.locator('.reason-note')).toContainText('起こりそうな結果');
+  await expect(page.locator('.reason-note')).toContainText('結果やその後への影響');
   await page.getByRole('link', { name: '回答の足あとを読む' }).click();
-  await expect(page.locator('.history-card').filter({ has: page.getByRole('heading', { name: '会社のルール' }) })).toContainText('起こりそうな結果');
+  await expect(page.locator('.history-card').filter({ has: page.getByRole('heading', { name: '会社のルール' }) })).toContainText('結果やその後への影響');
 });
 
 test('reason can be skipped and stays skipped when the reading page reloads', async ({ page }) => {
@@ -74,12 +74,12 @@ test('reason can be skipped and stays skipped when the reading page reloads', as
 });
 
 test('related answers show a question back to the user and persist the discovery once', async ({ page }) => {
-  await open(page); await seed(page, ['q003', ...Array.from({ length: 8 }, (_, i) => `neutral-${i}`)]);
-  await page.goto('./#question?id=q024');
+  await open(page); await seed(page, ['q045', ...Array.from({ length: 18 }, (_, i) => `neutral-${i}`)]);
+  await page.goto('./#question?id=q051');
   await page.getByRole('radio').first().check();
   await page.getByRole('button', { name: 'この答えを記録する' }).click();
   await page.getByRole('link', { name: '今回は書かずに進む' }).click();
-  await expect(page.getByRole('region', { name: '過去の自分との対話' })).toContainText('この二つはあなたの中では矛盾していますか？');
+  await expect(page.getByRole('region', { name: '過去の自分との対話' })).toContainText('場面や、そのときの気持ちはどう違いましたか。');
   await page.reload();
   await expect(page.getByRole('region', { name: '過去の自分との対話' })).toBeVisible();
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('selfDialogueGame:v1')).discoveries.length)).toBe(1);

@@ -3,10 +3,10 @@
   "followUps": [
     {
       "id": "fu_reason_conditions",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
       "title": "判断の理由",
-      "body": "なぜ、その選択に近いと感じましたか。",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -18,33 +18,48 @@
       "scoringMode": "none",
       "options": [
         {
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
+          "weights": {}
+        },
+        {
           "id": "impact",
-          "label": "起こりそうな結果を重く見た",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "promise",
-          "label": "約束や手続きを重く見た",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
           "weights": {}
         },
         {
-          "id": "relationship",
-          "label": "相手との関係を重く見た",
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "自分でも分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
     },
     {
       "id": "fu_reason_rescue",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
-      "title": "救助の判断の理由",
-      "body": "なぜ、その選択に近いと感じましたか。",
+      "title": "判断の理由",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -56,33 +71,48 @@
       "scoringMode": "none",
       "options": [
         {
-          "id": "close",
-          "label": "身近な相手への責任を重く見た",
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
           "weights": {}
         },
         {
-          "id": "number",
-          "label": "助けられる人数を重く見た",
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "equal",
-          "label": "面識によって扱いを変えたくなかった",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
+          "weights": {}
+        },
+        {
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "自分でも分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
     },
     {
       "id": "fu_reason_autonomy",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
-      "title": "選択を支える理由",
-      "body": "なぜ、その選択に近いと感じましたか。",
+      "title": "判断の理由",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -94,23 +124,38 @@
       "scoringMode": "none",
       "options": [
         {
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
+          "weights": {}
+        },
+        {
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
+          "weights": {}
+        },
+        {
           "id": "experience",
-          "label": "本人が選ぶ経験を重く見た",
+          "label": "これまでの経験からそう感じた",
           "weights": {}
         },
         {
-          "id": "harm",
-          "label": "失敗や危険を減らしたかった",
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
           "weights": {}
         },
         {
-          "id": "responsibility",
-          "label": "支える側の責任を重く見た",
+          "id": "intuition",
+          "label": "直感で選んだ",
+          "weights": {}
+        },
+        {
+          "id": "other",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "自分でも分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
@@ -181,10 +226,10 @@
     },
     {
       "id": "fu_reason_q034",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
       "title": "判断の理由",
-      "body": "今回の判断で重く見たものは何ですか。",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -196,38 +241,48 @@
       "scoringMode": "none",
       "options": [
         {
-          "id": "reason_1",
-          "label": "自分で決めた時間",
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
           "weights": {}
         },
         {
-          "id": "reason_2",
-          "label": "共同で使う場所",
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "reason_3",
-          "label": "作業や読書そのものへの好み",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
+          "weights": {}
+        },
+        {
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
           "weights": {}
         },
         {
           "id": "other",
-          "label": "別の理由",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "まだ分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
     },
     {
       "id": "fu_reason_q035",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
       "title": "判断の理由",
-      "body": "今回の判断で重く見たものは何ですか。",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -239,38 +294,48 @@
       "scoringMode": "none",
       "options": [
         {
-          "id": "reason_1",
-          "label": "自分の制作",
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
           "weights": {}
         },
         {
-          "id": "reason_2",
-          "label": "共同で使えること",
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "reason_3",
-          "label": "道具の実用性",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
+          "weights": {}
+        },
+        {
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
           "weights": {}
         },
         {
           "id": "other",
-          "label": "別の理由",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "まだ分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
     },
     {
       "id": "fu_reason_q036",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
       "title": "判断の理由",
-      "body": "今回の判断で重く見たものは何ですか。",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -282,43 +347,48 @@
       "scoringMode": "none",
       "options": [
         {
-          "id": "reason_1",
-          "label": "同じ機会にすること",
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
           "weights": {}
         },
         {
-          "id": "reason_2",
-          "label": "これまでの付き合い",
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "reason_3",
-          "label": "自分が譲りたい相手",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
           "weights": {}
         },
         {
-          "id": "reason_4",
-          "label": "決めやすさ",
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
           "weights": {}
         },
         {
           "id": "other",
-          "label": "別の理由",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "まだ分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
     },
     {
       "id": "fu_reason_q037",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
       "title": "判断の理由",
-      "body": "今回の判断で重く見たものは何ですか。",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -330,43 +400,48 @@
       "scoringMode": "none",
       "options": [
         {
-          "id": "reason_1",
-          "label": "応募者の同じ機会",
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
           "weights": {}
         },
         {
-          "id": "reason_2",
-          "label": "親しい人との参加",
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "reason_3",
-          "label": "主催者としての役割",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
           "weights": {}
         },
         {
-          "id": "reason_4",
-          "label": "運営への安心感",
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
           "weights": {}
         },
         {
           "id": "other",
-          "label": "別の理由",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "まだ分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
     },
     {
       "id": "fu_reason_q038",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
       "title": "判断の理由",
-      "body": "今回の判断で重く見たものは何ですか。",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -378,43 +453,48 @@
       "scoringMode": "none",
       "options": [
         {
-          "id": "reason_1",
-          "label": "慣れていること",
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
           "weights": {}
         },
         {
-          "id": "reason_2",
-          "label": "試してみたい気持ち",
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "reason_3",
-          "label": "変更する必要の有無",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
           "weights": {}
         },
         {
-          "id": "reason_4",
-          "label": "書式の好み",
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
           "weights": {}
         },
         {
           "id": "other",
-          "label": "別の理由",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "まだ分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
     },
     {
       "id": "fu_reason_q039",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
       "title": "判断の理由",
-      "body": "今回の判断で重く見たものは何ですか。",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -426,43 +506,48 @@
       "scoringMode": "none",
       "options": [
         {
-          "id": "reason_1",
-          "label": "慣れた進行",
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
           "weights": {}
         },
         {
-          "id": "reason_2",
-          "label": "別の方法への関心",
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "reason_3",
-          "label": "進行役の責任",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
           "weights": {}
         },
         {
-          "id": "reason_4",
-          "label": "話し方への好み",
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
           "weights": {}
         },
         {
           "id": "other",
-          "label": "別の理由",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "まだ分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
     },
     {
       "id": "fu_reason_q040",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
       "title": "判断の理由",
-      "body": "今回の判断で重く見たものは何ですか。",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -474,43 +559,48 @@
       "scoringMode": "none",
       "options": [
         {
-          "id": "reason_1",
-          "label": "本人が時間を選べること",
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
           "weights": {}
         },
         {
-          "id": "reason_2",
-          "label": "けがを減らすこと",
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "reason_3",
-          "label": "工房を運営する責任",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
           "weights": {}
         },
         {
-          "id": "reason_4",
-          "label": "示された想定への疑問",
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
           "weights": {}
         },
         {
           "id": "other",
-          "label": "別の理由",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "まだ分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
     },
     {
       "id": "fu_reason_q041",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
       "title": "判断の理由",
-      "body": "今回の判断で重く見たものは何ですか。",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -522,43 +612,48 @@
       "scoringMode": "none",
       "options": [
         {
-          "id": "reason_1",
-          "label": "本人が道を選べること",
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
           "weights": {}
         },
         {
-          "id": "reason_2",
-          "label": "けがを減らすこと",
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "reason_3",
-          "label": "施設管理の責任",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
           "weights": {}
         },
         {
-          "id": "reason_4",
-          "label": "景色を見られること",
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
           "weights": {}
         },
         {
           "id": "other",
-          "label": "別の理由",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "まだ分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
     },
     {
       "id": "fu_reason_q042",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
       "title": "判断の理由",
-      "body": "今回の判断で重く見たものは何ですか。",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -570,43 +665,48 @@
       "scoringMode": "none",
       "options": [
         {
-          "id": "reason_1",
-          "label": "全員の操作機会",
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
           "weights": {}
         },
         {
-          "id": "reason_2",
-          "label": "今回保存できる枚数",
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "reason_3",
-          "label": "将来の習熟",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
           "weights": {}
         },
         {
-          "id": "reason_4",
-          "label": "役割分担",
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
           "weights": {}
         },
         {
           "id": "other",
-          "label": "別の理由",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "まだ分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]
     },
     {
       "id": "fu_reason_q043",
-      "version": 1,
+      "version": 2,
       "kind": "reason",
       "title": "判断の理由",
-      "body": "今回の判断で重く見たものは何ですか。",
+      "body": "その答えを選んだ理由として、今の感覚にいちばん近いものはどれですか。",
       "optional": true,
       "trigger": {
         "event": "after_answer",
@@ -618,33 +718,38 @@
       "scoringMode": "none",
       "options": [
         {
-          "id": "reason_1",
-          "label": "同じ紹介機会",
+          "id": "values",
+          "label": "自分が大切にしたいことに近かった",
           "weights": {}
         },
         {
-          "id": "reason_2",
-          "label": "展示全体の来場者数",
+          "id": "impact",
+          "label": "結果やその後への影響を考えた",
           "weights": {}
         },
         {
-          "id": "reason_3",
-          "label": "均等に分ける収入",
+          "id": "experience",
+          "label": "これまでの経験からそう感じた",
           "weights": {}
         },
         {
-          "id": "reason_4",
-          "label": "見込みへの疑問",
+          "id": "acceptable",
+          "label": "ほかの選択肢より納得できた",
+          "weights": {}
+        },
+        {
+          "id": "intuition",
+          "label": "直感で選んだ",
           "weights": {}
         },
         {
           "id": "other",
-          "label": "別の理由",
+          "label": "別の理由がある",
           "weights": {}
         },
         {
           "id": "unknown",
-          "label": "まだ分からない",
+          "label": "まだうまく言葉にできない",
           "weights": {}
         }
       ]

@@ -24,10 +24,10 @@ test('empty and globally insufficient profiles reveal no position', async ({page
   await open(page);
   await expect(page.locator('.map-axis')).toHaveCount(6);
   await expect(page.locator('.axis-position')).toHaveCount(0);
-  await expect(page.locator('.map-unlock')).toContainText('5問に答えると');
-  await seed(page,['q003','q001','q009','q006']);
+  await expect(page.locator('.map-unlock')).toContainText('3問に答えると');
+  await seed(page,['q003','q001']);
   await expect(page.locator('.axis-position')).toHaveCount(0);
-  await expect(page.locator('.map-count')).toContainText('4の問い');
+  await expect(page.locator('.map-count')).toContainText('2の問い');
 });
 
 test('provisional map links to actual answers and updates after a revision',async({page})=>{

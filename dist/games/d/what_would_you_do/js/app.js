@@ -4,7 +4,7 @@ import { createStorage, StorageConflictError } from './storage.js';
 import { createGameService } from './game-service.js';
 import { dailyReflectionCards } from './daily-reflection-engine.js';
 import { currentAnswers, distinctCount, localDate } from './answer-history.js';
-import { availableQuestions, eligibleFollowUps } from './question-engine.js';
+import { availableQuestions, contributesToAxis, eligibleFollowUps } from './question-engine.js';
 import { detectComments, selectComment, formatComment } from './comment-engine.js';
 import { dateLabel, answerLabel } from './ui/history-view.js';
 import { notebookSymbol } from './ui/notebook-symbol.js';
@@ -45,6 +45,8 @@ class SelfDialogueApp extends LitElement {
     } catch { this.error = 'ノートを開けませんでした。通信状況を確認して、もう一度お試しください。'; }
   }
   navigate(hash, replace = false) { if (location.hash === hash) this.openRoute(); else if (replace) location.replace(hash); else location.hash = hash; }
+  get selectedAxis() { return this.catalog.axes.axes.find(axis => axis.id === this.axisId); }
+  axisSuffix() { return this.selectedAxis ? `&axis=${encodeURIComponent(this.axisId)}` : ''; }
   async focusHeading() {
     await this.updateComplete;
     await Promise.all([...this.querySelectorAll('question-view, history-view, profile-view, past-view, comparison-view, boundary-view, reevaluation-view, words-view')].map(view => view.updateComplete));
@@ -58,26 +60,30 @@ class SelfDialogueApp extends LitElement {
     this.state = this.storage.getState(); this.error = ''; this.notice = ''; this.confirmation = ''; this.importText = '';
     const [name = 'home', search = ''] = location.hash.slice(1).split('?');
     const params = new URLSearchParams(search);
+    this.axisId = params.get('axis');
     this.pastView = params.get('view'); this.pastSourceType = params.get('type'); this.pastSourceId = params.get('id'); this.comparisonId = params.get('id'); this.boundaryId = params.get('id'); this.boundaryQuestionId = params.get('question'); this.revisitAnswerId = params.get('answer'); this.revisitResultId = params.get('result'); this.wordThreadId = params.get('id');
     this.page = name || 'home'; this.revision = null; this.result = null; this.activeQuestion = null;
-    if (this.page === 'question') {
+    if (this.axisId !== null && !this.selectedAxis) {
+      this.page = 'missing';
+    } else if (this.page === 'question') {
       const answerId = params.get('answer');
       if (answerId) {
         this.revision = currentAnswers(this.state.answers).find(a => a.id === answerId);
         this.activeQuestion = this.revision?.snapshot;
+        if (this.axisId && this.activeQuestion && !contributesToAxis(this.activeQuestion, this.axisId, this.catalog)) this.activeQuestion = null;
       } else if (['next', 'daily'].includes(params.get('source'))) {
         // Legacy daily links now enter the unrestricted question sequence.
-        const next = this.game.getNextQuestion();
-        this.navigate(next ? `#question?id=${encodeURIComponent(next.id)}` : '#home', true);
+        const next = this.game.getNextQuestion({ axisId: this.axisId });
+        this.navigate(next ? `#question?id=${encodeURIComponent(next.id)}${this.axisSuffix()}` : this.selectedAxis ? `#archive?axis=${encodeURIComponent(this.axisId)}` : '#home', true);
         return;
       } else {
-        this.activeQuestion = availableQuestions(this.state, this.catalog).find(q => q.id === params.get('id'));
+        this.activeQuestion = availableQuestions(this.state, this.catalog, { axisId: this.axisId }).find(q => q.id === params.get('id'));
         this.answerSource = 'archive';
       }
       if (!this.activeQuestion) this.page = 'missing';
     } else if (this.page === 'answer') {
       const answer = this.state.answers.find(a => a.id === params.get('id'));
-      if (!answer) this.page = 'missing';
+      if (!answer || (this.axisId && !contributesToAxis(answer.snapshot, this.axisId, this.catalog))) this.page = 'missing';
       else this.readResult(answer, params.get('stage') === 'read');
     } else if (!['home', 'history', 'about', 'archive', 'profile', 'past', 'compare', 'boundary', 'revisit', 'words', 'rest'].includes(this.page)) this.page = 'missing';
     if (this.page === 'rest') this.resetSession();
@@ -200,7 +206,7 @@ class SelfDialogueApp extends LitElement {
         this.sessionQuestions.add(answer.questionId);
         this.lastSessionQuestionId = answer.questionId;
       }
-      this.navigate(`#answer?id=${encodeURIComponent(answer.id)}`, true);
+      this.navigate(`#answer?id=${encodeURIComponent(answer.id)}${this.axisSuffix()}`, true);
     });
   }
   submitFollowUp(event) {
@@ -215,7 +221,7 @@ class SelfDialogueApp extends LitElement {
       } else {
         this.game.writeReflection(followUp.id, this.reflectionText, { sourceAnswerId: answer.id });
       }
-      this.navigate(`#answer?id=${encodeURIComponent(answerId)}&stage=read`, true);
+      this.navigate(`#answer?id=${encodeURIComponent(answerId)}&stage=read${this.axisSuffix()}`, true);
     });
   }
   download(text, filename) {
@@ -275,13 +281,13 @@ class SelfDialogueApp extends LitElement {
       <p class="answer-quote"><plain-text .text=${answerLabel(answer)}></plain-text></p><p>${f.body}</p>
       <form @submit=${event => this.submitFollowUp(event)}>
         ${f.kind === 'reason' ? html`<fieldset ?disabled=${this.busy}><legend>いちばん近い理由を選んでください（任意）。</legend><div class="choices">${f.options.map(o => html`<label class="choice ${this.reasonChoice === o.id ? 'selected' : ''}"><input type="radio" name="reason" .value=${o.id} .checked=${this.reasonChoice === o.id} @change=${() => { this.reasonChoice = o.id; }}><span>${o.label}</span></label>`)}</div></fieldset>` : html`<label class="field-label" for="reflection-text">あなたの言葉（任意）</label><textarea id="reflection-text" rows="6" maxlength=${f.maxLength} .value=${this.reflectionText} @input=${event => { this.reflectionText = event.target.value; }} aria-describedby="reflection-privacy"></textarea><p id="reflection-privacy" class="small muted">${this.catalog.copy.copy[f.privacyCopyId]}</p>`}
-        <div class="submit-row"><button class="button" ?disabled=${this.busy || (f.kind === 'reason' ? !this.reasonChoice : !this.reflectionText.trim())}>${f.kind === 'reason' ? '理由を記録して進む' : '言葉を記録して進む'}</button><a class="text-link" href=${`#answer?id=${encodeURIComponent(answer.id)}&stage=read`}>今回は書かずに進む</a></div>
+        <div class="submit-row"><button class="button" ?disabled=${this.busy || (f.kind === 'reason' ? !this.reasonChoice : !this.reflectionText.trim())}>${f.kind === 'reason' ? '理由を記録して進む' : '言葉を記録して進む'}</button><a class="text-link" href=${`#answer?id=${encodeURIComponent(answer.id)}&stage=read${this.axisSuffix()}`}>今回は書かずに進む</a></div>
       </form></article>`;
   }
   renderResult() {
     if (this.result.followUp) return this.renderFollowUp();
     const { answer, text } = this.result;
-    const next = this.game.getNextQuestion();
+    const next = this.game.getNextQuestion({ axisId: this.axisId });
     const pause = this.lastSessionQuestionId === answer.questionId && this.sessionQuestions.size > 0 && this.sessionQuestions.size % 3 === 0;
     return html`<article class="reading paper result-page"><p class="eyebrow">ひとつ、足あとが残りました</p><h1 tabindex="-1" data-page-heading>${answer.snapshot.title}</h1>
       <p class="small muted"><time datetime=${answer.answeredAt}>${dateLabel(answer.answeredAt)}</time>の回答</p><p class="answer-quote"><plain-text .text=${answerLabel(answer)}></plain-text></p>
@@ -290,15 +296,21 @@ class SelfDialogueApp extends LitElement {
         <ul class="perspectives">${answer.snapshot.reflection.perspectives.map(p => html`<li>${p}</li>`)}</ul><p class="reflection-question">${answer.snapshot.reflection.question}</p></section>
       ${text ? html`<section class="past-dialogue" aria-label="過去の自分との対話"><p class="eyebrow">過去の自分から</p><p class="preserve-lines"><plain-text .text=${text}></plain-text></p><p class="small muted">違いを、すぐに説明できなくても構いません。</p>${this.result.comment.evidence.answerIds.length === 2 ? html`<a class="text-link" href=${`#compare?id=${encodeURIComponent(this.result.comment.id)}`}>二つの答えを見比べて、振り返る →</a>` : nothing}</section>` : html`<p class="quiet-note">答えが増えると、関連する過去の判断と出会うことがあります。</p>`}
       ${pause ? html`<aside class="quiet-note" aria-labelledby="reading-pause-heading"><h2 id="reading-pause-heading">少し、立ち止まってみませんか。</h2><p>ここまでの答えを読み返しても、続けて答えても構いません。</p><a class="text-link" href="#history">ここまでの答えを振り返る →</a></aside>` : nothing}
-      <div class="submit-row">${next ? html`<a class="button" href=${`#question?id=${encodeURIComponent(next.id)}`}>次の問いへ <span aria-hidden="true">→</span></a>` : html`<p class="small muted">今読める未回答の問いはありません。過去の答えも、いつでも読み返せます。</p>`}<a class="button secondary" href="#rest">ここでひと休み</a></div>
+      <div class="submit-row">${next ? html`<a class="button" href=${`#question?id=${encodeURIComponent(next.id)}${this.axisSuffix()}`}>${this.selectedAxis ? 'この軸の次の問いへ' : '次の問いへ'} <span aria-hidden="true">→</span></a>` : html`<p class="small muted">${this.selectedAxis ? 'この軸の未回答の問いは、今はありません。地図で今の手がかりを眺めてみてください。' : '今読める未回答の問いはありません。過去の答えも、いつでも読み返せます。'}</p>${this.selectedAxis ? html`<a class="button" href="#profile">あなたの地図を見る <span aria-hidden="true">→</span></a>` : nothing}`}<a class="button secondary" href="#rest">ここでひと休み</a></div>
       <div class="submit-row"><a class="text-link" href="#history">回答の足あとを読む <span aria-hidden="true">→</span></a></div>
     </article>`;
   }
   renderArchive() {
-    const questions = availableQuestions(this.state, this.catalog);
-    return html`<section class="reading"><p class="eyebrow">ページをめくる</p><h1 tabindex="-1" data-page-heading>ほかの問い</h1><p class="intro">気になる問いを、あなたのペースで。<br>ここでの回答も、足あとに残ります。</p>
-      <div class="archive-list">${questions.map(q => html`<a class="archive-item" href=${`#question?id=${encodeURIComponent(q.id)}`}><span>${q.title}</span><span aria-hidden="true">↗</span></a>`)}</div>
-      ${!questions.length ? html`<p class="quiet-note">今読める未回答の問いはありません。回答の足あとを読み返したり、今の考えで答え直したりできます。</p>` : nothing}</section>`;
+    const axis = this.selectedAxis;
+    const questions = availableQuestions(this.state, this.catalog, { axisId: this.axisId });
+    const previous = axis ? currentAnswers(this.state.answers).filter(answer => contributesToAxis(answer.snapshot, axis.id, this.catalog)) : [];
+    const score = axis ? this.game.getProfile().axes[axis.id] : null;
+    return html`<section class="reading"><p class="eyebrow">${axis ? '一つの軸を、いくつかの場面から' : 'ページをめくる'}</p><h1 tabindex="-1" data-page-heading>${axis ? `${axis.negativeLabel} / ${axis.positiveLabel}の問い` : 'ほかの問い'}</h1>
+      ${axis ? html`<p class="intro">この軸の手がかりになる問いだけを並べています。回答後も、同じ軸の問いを続けられます。</p><p class="small muted">今の手がかりは${score.confidence}件です。${this.catalog.settings.scoring.minimumAxisAnswers}件から、地図に暫定の位置を表示します。「決められない」は件数に含めません。</p><p><a class="text-link" href="#profile">あなたの地図へ戻る →</a></p>` : html`<p class="intro">気になる問いを、あなたのペースで。<br>ここでの回答も、足あとに残ります。</p>`}
+      <div class="archive-list">${questions.map(q => html`<a class="archive-item" href=${`#question?id=${encodeURIComponent(q.id)}${this.axisSuffix()}`}><span>${q.title}</span><span aria-hidden="true">↗</span></a>`)}</div>
+      ${!questions.length ? html`<p class="quiet-note">${axis ? 'この軸の未回答の問いは、今はありません。下の記録から考え直すことも、地図へ戻ることもできます。' : '今読める未回答の問いはありません。回答の足あとを読み返したり、今の考えで答え直したりできます。'}</p>` : nothing}
+      ${previous.length ? html`<section class="axis-answered"><h2>この軸に残した答え</h2><p class="small muted">選び直しても、以前の回答は残ります。同じ問いを答え直しても、手がかりの件数は増えません。</p><ul class="map-evidence">${previous.map(answer => html`<li><a href=${`#answer?id=${encodeURIComponent(answer.id)}&stage=read${this.axisSuffix()}`}>${answer.snapshot.title} →</a><p><plain-text .text=${answerLabel(answer)}></plain-text></p><a class="text-link" href=${`#question?answer=${encodeURIComponent(answer.id)}${this.axisSuffix()}`}>今ならどう答えるか、考える</a></li>`)}</ul></section>` : nothing}
+    </section>`;
   }
   renderAbout() {
     return html`<article class="reading paper"><p class="eyebrow">安心して、書き残すために</p><h1 tabindex="-1" data-page-heading>このノートについて</h1>
@@ -321,6 +333,7 @@ class SelfDialogueApp extends LitElement {
       ${this.error ? html`<aside class="error-message" role="alert">${this.error}${this.conflict ? html`<div class="data-actions"><button class="text-button" @click=${() => this.exportData()}>今の記録を書き出す</button><button class="text-button" @click=${() => this.perform(() => { this.storage.reload(); this.resetSession(); this.navigate('#home'); })}>最新の記録を読み直す</button></div>` : nothing}</aside>` : nothing}
       ${this.notice ? html`<p class="notice" role="status">${this.notice}</p>` : nothing}
       <main id="main-content" tabindex="-1">
+        ${this.selectedAxis && ['question', 'answer'].includes(this.page) ? html`<nav class="reading axis-reading-context" aria-label="選択中の軸"><p class="small muted">${this.selectedAxis.negativeLabel} / ${this.selectedAxis.positiveLabel}の問い</p><a class="text-link" href=${`#archive?axis=${encodeURIComponent(this.axisId)}`}>この軸の問い一覧へ</a><a class="text-link" href="#profile">あなたの地図へ</a></nav>` : nothing}
         ${this.page === 'home' ? this.renderHome() : this.page === 'rest' ? this.renderRest() : this.page === 'question' ? html`<question-view .question=${this.activeQuestion} .revision=${Boolean(this.revision)} .previousLabel=${this.revision ? answerLabel(this.revision) : ''} .busy=${this.busy} @answer-submit=${event => this.submitAnswer(event)}></question-view>`
           : this.page === 'answer' ? this.renderResult() : this.page === 'history' ? html`<history-view .state=${this.state} @reconsider-answer=${event => this.navigate(`#question?answer=${encodeURIComponent(event.detail.answerId)}`)}></history-view>`
           : this.page === 'words' ? html`<words-view .state=${this.state} .definition=${this.catalog.followups.wordDialogue} .threadId=${this.wordThreadId} .busy=${this.busy} @words-submit=${event => this.submitWords(event)}></words-view>`

@@ -15,7 +15,7 @@
     "fallbackLandscapeId": "landscape_01",
     "minimumAxisAnswers": 3,
     "axisMatch": "all",
-    "baseStrategy": "mean_absolute_score",
+    "baseStrategy": "multiple_axes_then_mean_absolute_score",
     "tieBreak": "priority_then_id",
     "specialFirst": true,
     "note": "閾値は編集上の暫定値。profileの表示条件を満たした軸だけを用い、confidenceを確率として扱わない。"
@@ -344,9 +344,135 @@
       "alt": "岸辺の木々と空を映す静かな水面。",
       "enabled": false,
       "pendingReason": "文脈差で説明できないという判定と、確率ではないconfidenceの扱いが未確定。"
+    },
+    {
+      "id": "landscape_17",
+      "name": "同じ高さの灯り",
+      "slug": "fairness_lights",
+      "image": "img/landscape_06_equal_lights.webp",
+      "type": "base",
+      "meaning": "今回の回答で公平側の選択が比較的多かった状態。他の軸の方向は条件にしない。",
+      "resultText": "相手が違っても、揃えておきたいものはありますか。",
+      "conditions": {
+        "axisHints": {
+          "fairness_relationship": {
+            "max": -0.3
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "街の家々に並ぶ窓の灯り。",
+      "enabled": true,
+      "assetNote": "単独軸用の専用画像を用意するまでは、同じ名称・代替テキストの既存画像を共用する。",
+      "plannedImage": "img/landscape_17_fairness_lights.webp"
+    },
+    {
+      "id": "landscape_18",
+      "name": "同じ高さの灯り",
+      "slug": "equality_benches",
+      "image": "img/landscape_06_equal_lights.webp",
+      "type": "base",
+      "meaning": "今回の回答で平等側の選択が比較的多かった状態。他の軸の方向は条件にしない。",
+      "resultText": "それぞれに同じ機会があることを、どう感じますか。",
+      "conditions": {
+        "axisHints": {
+          "equality_efficiency": {
+            "max": -0.2
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "街の家々に並ぶ窓の灯り。",
+      "enabled": true,
+      "assetNote": "単独軸用の専用画像を用意するまでは、同じ名称・代替テキストの既存画像を共用する。",
+      "plannedImage": "img/landscape_18_equality_benches.webp"
+    },
+    {
+      "id": "landscape_19",
+      "name": "灯りのある窓",
+      "slug": "stability_garden",
+      "image": "img/landscape_03_lit_window.webp",
+      "type": "base",
+      "meaning": "今回の回答で安定側の選択が比較的多かった状態。他の軸の方向は条件にしない。",
+      "resultText": "続いている時間の中に、残しておきたいものはありますか。",
+      "conditions": {
+        "axisHints": {
+          "stability_change": {
+            "max": -0.2
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "静かな住宅地で灯りのともる窓。",
+      "enabled": true,
+      "assetNote": "単独軸用の専用画像を用意するまでは、同じ名称・代替テキストの既存画像を共用する。",
+      "plannedImage": "img/landscape_19_stability_garden.webp"
+    },
+    {
+      "id": "landscape_20",
+      "name": "開いた門",
+      "slug": "change_path",
+      "image": "img/landscape_02_open_gate.webp",
+      "type": "base",
+      "meaning": "今回の回答で変化側の選択が比較的多かった状態。他の軸の方向は条件にしない。",
+      "resultText": "いつもと違う方へ進むと、何に出会うでしょう。",
+      "conditions": {
+        "axisHints": {
+          "stability_change": {
+            "min": 0.2
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "その先へ続く空間に向かって開いた門。",
+      "enabled": true,
+      "assetNote": "単独軸用の専用画像を用意するまでは、同じ名称・代替テキストの既存画像を共用する。",
+      "plannedImage": "img/landscape_20_change_path.webp"
+    },
+    {
+      "id": "landscape_21",
+      "name": "開いた門",
+      "slug": "freedom_field",
+      "image": "img/landscape_02_open_gate.webp",
+      "type": "base",
+      "meaning": "今回の回答で自由側の選択が比較的多かった状態。他の軸の方向は条件にしない。",
+      "resultText": "行き先を自分で選べる余地が、ここにあります。",
+      "conditions": {
+        "axisHints": {
+          "freedom_security": {
+            "max": -0.25
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "その先へ続く空間に向かって開いた門。",
+      "enabled": true,
+      "assetNote": "単独軸用の専用画像を用意するまでは、同じ名称・代替テキストの既存画像を共用する。",
+      "plannedImage": "img/landscape_21_freedom_field.webp"
+    },
+    {
+      "id": "landscape_22",
+      "name": "灯りのある窓",
+      "slug": "security_shelter",
+      "image": "img/landscape_03_lit_window.webp",
+      "type": "base",
+      "meaning": "今回の回答で安全側の選択が比較的多かった状態。他の軸の方向は条件にしない。",
+      "resultText": "備えのある場所から、何を始めたいでしょう。",
+      "conditions": {
+        "axisHints": {
+          "freedom_security": {
+            "min": 0.25
+          }
+        }
+      },
+      "priority": 20,
+      "alt": "静かな住宅地で灯りのともる窓。",
+      "enabled": true,
+      "assetNote": "単独軸用の専用画像を用意するまでは、同じ名称・代替テキストの既存画像を共用する。",
+      "plannedImage": "img/landscape_22_security_shelter.webp"
     }
   ],
-  "contentVersion": 1,
+  "contentVersion": 2,
   "copy": {
     "intro": "今までの答えを、一枚の風景に重ねて眺めます。あなたの人格や気持ちを決めるものではありません。",
     "insufficient": "まだ、風景を選ぶための回答が十分に集まっていません。今は、考え始める余白としてこの景色を置いています。",
@@ -354,6 +480,6 @@
     "base": "表示できる軸の現在の回答から、この風景を選びました。別の場面での判断や、選んだ理由までは表していません。",
     "special": "条件を変えた関連する問いで、選択が切り替わった組み合わせが見つかりました。観察した条件の間を表す風景です。",
     "provisional": "まだ少ない回答から選んだ、暫定の風景です。",
-    "method": "条件に合う風景が複数ある場合は、対象軸の平均値の絶対値を平均して選びます。風景の選び方も仮のもので、心の状態を測定するものではありません。"
+    "method": "各軸で採点対象の回答が3件以上あり、方向の条件を満たした風景を候補にします。複数軸の条件をすべて満たす風景を、単独軸の風景より優先します。同じ種類の候補では、対象軸のスコアの絶対値の平均、設定された優先度、IDの順で一枚を選びます。判断が切り替わる境界が見つかった場合は、その風景を優先します。風景は心の状態を測定するものではありません。"
   }
 }

@@ -619,7 +619,7 @@ main {
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
-  padding: 20px 4px;
+  padding: 20px 12px;
   border-bottom: 1px solid var(--line);
   gap: 20px
 }
@@ -1639,4 +1639,25 @@ landscape-view {
   display: inline-block;
   vertical-align: -0.1em;
   flex-shrink: 0;
+}
+
+/* Keep an axis-specific reading session connected to its map. */
+.axis-question-link {
+  margin-top: 18px;
+}
+
+.axis-reading-context {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  margin-bottom: 24px;
+}
+
+.axis-reading-context p {
+  flex-basis: 100%;
+}
+
+.axis-answered {
+  margin-top: 36px;
 }

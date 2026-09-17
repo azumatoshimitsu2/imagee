@@ -23,6 +23,7 @@ export function validateCatalog(data) {
     for (const o of q.options) {
       check(Object.keys(o.weights).every(id => q.axes.includes(id)), `${q.id}: undeclared weight`);
       if (o.isNonAnswer) check(Object.keys(o.weights).length === 0, `${q.id}: non-answer cannot score`);
+      if (q.scoringMode === 'none') check(Object.keys(o.weights).length === 0, `${q.id}: reflection-only question cannot score`);
     }
     for (const id of q.followUps) check(followups.has(id), `${q.id}: unknown follow-up`);
     if (q.scenario) {
@@ -79,6 +80,10 @@ export function validateCatalog(data) {
     if (f.privacyCopyId) check(typeof data.copy.copy[f.privacyCopyId] === 'string', `${f.id}: unknown copy`);
   }
   const s = data.settings;
+  const retired = s.scheduling.retiredQuestionIds ?? [];
+  check(Array.isArray(retired) && new Set(retired).size === retired.length && retired.every(id => questions.has(id)), 'Invalid retired questions');
+  check(s.scheduling.initialQuestionIds.every(id => !retired.includes(id)), 'Retired initial question');
+  check(data.followups.followUps.every(f => f.kind !== 'deferred_question' || !retired.includes(f.targetQuestionId)), 'Retired deferred question');
   check(s.storage.schemaVersion === 1 && s.scoring.method === 'weighted_mean', 'Unsupported storage/scoring policy');
   check(s.scoring.minimumAxisAnswers >= 3 && s.scoring.provisionalBelow >= s.scoring.minimumAxisAnswers && s.scoring.middleAbsoluteBelow >= 0, 'Invalid score thresholds');
   check(s.scheduling.initialQuestionIds.every(id => questions.has(id)), 'Unknown initial question');
@@ -90,6 +95,7 @@ export function validateCatalog(data) {
     check(typeof journey.title === 'string' && typeof journey.description === 'string' && typeof journey.variableLabel === 'string' && typeof journey.observationNote === 'string', 'Invalid journey text');
     check(Array.isArray(journey.questionIds) && journey.questionIds.length >= 2 && new Set(journey.questionIds).size === journey.questionIds.length, 'Invalid journey questions');
     const series = journey.questionIds.map(id => questions.get(id));
+    check(journey.questionIds.every(id => !retired.includes(id)), 'Retired journey question');
     check(series.every(q => q?.scenario?.seriesId === journey.id), 'Unknown journey scenario');
     const first = series[0].scenario;
     check(series.every(q => q.scenario.variable === first.variable && q.scenario.unit === first.unit && JSON.stringify(q.scenario.constants) === JSON.stringify(first.constants)), 'Journey must change only one condition');

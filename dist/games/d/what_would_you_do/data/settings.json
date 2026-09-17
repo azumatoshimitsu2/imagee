@@ -23,7 +23,7 @@
   },
   "progression": {
     "countPolicy": "distinct_answered_question_ids_excluding_non_answers",
-    "profileFrom": 5,
+    "profileFrom": 3,
     "relationsFrom": 10,
     "contextAndBoundaryFrom": 20,
     "freeTextFrom": 20,
@@ -71,6 +71,14 @@
       "optional_followup",
       "explanation",
       "past_dialogue"
+    ],
+    "retiredQuestionIds": [
+      "q024",
+      "q035",
+      "q037",
+      "q039",
+      "q041",
+      "q043"
     ]
   },
   "analysisDraft": {

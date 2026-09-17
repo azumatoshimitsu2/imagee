@@ -13,6 +13,7 @@ class QuestionView extends LitElement {
       <p class="eyebrow">${this.revision ? 'もう一度、考えてみる' : 'ひとつの問い'}</p>
       <h1 tabindex="-1" data-page-heading>${q.title}</h1>
       <p class="question-body"><plain-text .text=${q.body}></plain-text></p>
+      ${q.scoringMode === 'none' ? html`<p class="small muted">この問いは地図の位置には反映せず、あとから読み返すための記録として残します。</p>` : nothing}
       ${this.revision ? html`<aside class="quiet-note">以前の選択：<plain-text .text=${this.previousLabel}></plain-text><br>選び直しても、以前の回答は残ります。</aside>` : nothing}
       <form @submit=${event => { event.preventDefault(); if (this.selection && !this.busy) this.dispatchEvent(new CustomEvent('answer-submit', { bubbles: true, detail: { optionId: this.selection } })); }}>
         <fieldset ?disabled=${this.busy}>

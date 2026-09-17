@@ -7,7 +7,7 @@ export function validateLandscapes(data, axes) {
   const entries = indexById(data.landscapes, 'landscapes');
   const axisIds = new Set(axes.map(a => a.id));
   const policy = data.selection;
-  check(policy?.axisMatch === 'all' && policy.baseStrategy === 'mean_absolute_score'
+  check(policy?.axisMatch === 'all' && policy.baseStrategy === 'multiple_axes_then_mean_absolute_score'
     && policy.tieBreak === 'priority_then_id' && policy.specialFirst === true, 'Unsupported landscape selection');
   check(Number.isInteger(policy.minimumAxisAnswers) && policy.minimumAxisAnswers >= 3, 'Insufficient landscape evidence threshold');
   for (const key of ['intro', 'insufficient', 'unmatched', 'base', 'special', 'provisional', 'method']) {
@@ -79,7 +79,10 @@ export function selectLandscape(definition, profile, discoveries = []) {
       provisional: matchedAxes.some(id => profile.axes[id].visibility === 'provisional'),
       evidenceAnswerIds: [...new Set(matchedAxes.flatMap(id => profile.axes[id].evidenceAnswerIds))], discoveryIds: [] }];
   });
-  if (bases.length) return bases.sort((a, b) => b.fit - a.fit || order(a, b))[0];
+  // Prefer a matching combination over any single-axis candidate, even a stronger one.
+  // Among combinations, more axes do not automatically mean better evidence.
+  if (bases.length) return bases.sort((a, b) => Number(b.matchedAxes.length > 1) - Number(a.matchedAxes.length > 1)
+    || b.fit - a.fit || order(a, b))[0];
   return { landscape: fallback, status: Object.values(profile.axes).some(visible) ? 'unmatched' : 'insufficient',
     matchedAxes: [], evidenceAnswerIds: [], discoveryIds: [], provisional: false };
 }

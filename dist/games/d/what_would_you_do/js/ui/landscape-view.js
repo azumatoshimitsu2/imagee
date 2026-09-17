@@ -37,6 +37,10 @@ class LandscapeView extends LitElement {
           : html`<img class="landscape-image" src=${imageURL} alt=${landscape.alt} width="1536" height="1024" loading="lazy" decoding="async" @error=${() => { this.failedImage = imageURL; }}>`}
         <figcaption class="landscape-caption"><h3>${landscape.name}</h3><p class="landscape-words">${landscape.resultText}</p>
           <p class="small muted">${this.definition.copy[result.status]}</p>
+          ${result.matchedAxes.length ? html`<p class="small muted landscape-selection-reason">${result.matchedAxes.map(id => {
+            const axis = this.catalog.axes.axes.find(a => a.id === id);
+            return this.profile.axes[id].score < 0 ? axis.negativeLabel : axis.positiveLabel;
+          }).join('と')}寄りの回答を手がかりに、${result.matchedAxes.length > 1 ? '組み合わせの風景' : '一つの軸の風景'}を選びました。</p>` : nothing}
           ${result.provisional ? html`<p class="small muted">${this.definition.copy.provisional}</p>` : nothing}
           ${answers.length ? html`<details class="axis-details landscape-evidence"><summary>この風景につながった回答を読む（${answers.length}件）</summary>
             ${result.matchedAxes.length ? html`<p class="small muted">${result.matchedAxes.map(id => {

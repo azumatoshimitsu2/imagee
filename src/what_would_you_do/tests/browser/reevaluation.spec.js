@@ -7,7 +7,7 @@ async function seed(page){
     const catalog=await loadCatalog(),storage=createStorage({schemas:catalog.schemas});
     let s=appendAnswer(storage.getState(),catalog.questions.questions.find(q=>q.id==='q003'),'A',{id:'old',now:'2026-01-01T00:00:00Z'});
     const f=catalog.followups.followUps.find(f=>f.id==='fu_reason_conditions');
-    s=appendReason(s,'old',f,f.options[0].id,{id:'with-reason',now:'2026-01-01T00:00:00Z'});storage.saveState(s);
+    s=appendReason(s,'old',f,'impact',{id:'with-reason',now:'2026-01-01T00:00:00Z'});storage.saveState(s);
   });await page.reload();
 }
 test('empty revisit offers a first answer without automatic scheduling',async({page})=>{
@@ -19,16 +19,16 @@ test('empty revisit offers a first answer without automatic scheduling',async({p
 test('old reasons are hidden until submission; same choice can have new reasons and saved insights',async({page})=>{
   const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await open(page);await seed(page);
-  await expect(page.locator('reevaluation-view')).not.toContainText('起こりそうな結果を重く見た');
+  await expect(page.locator('reevaluation-view')).not.toContainText('結果やその後への影響を考えた');
   await page.locator('a[href="#revisit?answer=with-reason"]').click();
   await expect(page.getByRole('radio',{checked:true})).toHaveCount(0);
-  await expect(page.locator('reevaluation-view')).not.toContainText('起こりそうな結果を重く見た');
+  await expect(page.locator('reevaluation-view')).not.toContainText('結果やその後への影響を考えた');
   await expect(page.getByRole('article',{name:'以前の回答',exact:true})).toHaveCount(0);
   await page.getByRole('radio').first().focus();await page.keyboard.press('Space');
   const reason='<img src=x onerror=alert(1)> 今は責任を大切にした。';
   await page.getByLabel('今、この答えを選んだ理由（任意）').fill(reason);
   await page.getByRole('button',{name:'今の答えを残して、見比べる'}).click();
-  await expect(page.getByRole('article',{name:'以前の回答',exact:true})).toContainText('起こりそうな結果を重く見た');
+  await expect(page.getByRole('article',{name:'以前の回答',exact:true})).toContainText('結果やその後への影響を考えた');
   await expect(page.getByRole('article',{name:'今回の回答',exact:true})).toContainText(reason);
   await expect(page.getByText('今回は、以前と同じ選択でした。理由も同じでしょうか。')).toBeVisible();
   await page.getByRole('radio',{name:'答えは同じでも、理由は変わった',exact:true}).check();
