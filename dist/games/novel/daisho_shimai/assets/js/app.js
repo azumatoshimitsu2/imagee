@@ -126,6 +126,7 @@ async function main() {
   startButton.addEventListener("click", startGame);
   continueButton.addEventListener("click", continueGame);
   document.addEventListener("keydown", e => {
+    if (e.target.closest('a')) return;
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
       if (!started) return;
