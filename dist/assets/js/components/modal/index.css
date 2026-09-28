@@ -35,7 +35,7 @@
   top: 2em;
   left: 50%;
   transform: translate(-50%,0);
-  max-width: 60%;
+  max-width: 70vw;
   transition-property: margin;
   transition-duration: .4s;
   padding: 2em;

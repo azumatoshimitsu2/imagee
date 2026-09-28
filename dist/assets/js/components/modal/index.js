@@ -48,11 +48,11 @@ export default class ModalDialog extends HTMLElement {
     });
 
     const initialOpen = this.getAttribute('open');
-    if ((initialOpen === 'true' || initialOpen === '') && !this.dismissedInThisTab()) {
+    if ((initialOpen === 'true' || initialOpen === '') && !this.hasRememberedDismissal()) {
       this._autoOpenPending = true;
       // Styles must be applied before the initial fade-in.
       sheetPromise.then(() => {
-        if (this.isConnected && this._autoOpenPending && !this.dismissedInThisTab()) this.openModal();
+        if (this.isConnected && this._autoOpenPending && !this.hasRememberedDismissal()) this.openModal();
       });
     }
   }
@@ -107,7 +107,7 @@ export default class ModalDialog extends HTMLElement {
     clearTimeout(this._closeTimer);
   }
 
-  dismissedInThisTab() {
+  hasRememberedDismissal() {
     return this.hasAttribute('remember-dismissal') && this.id && wasDismissed(location.pathname, this.id);
   }
 }

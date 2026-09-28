@@ -315,6 +315,7 @@ class SelfDialogueApp extends LitElement {
   renderAbout() {
     return html`<article class="reading paper"><p class="eyebrow">安心して、書き残すために</p><h1 tabindex="-1" data-page-heading>このノートについて</h1>
       <p>これは、性格や心理状態を診断するものではありません。場面ごとに何を重く見たのか、過去と今で何が変わったのかを考えるためのノートです。</p>
+      <p><a href="./about/">ゲームの内容・価値観の軸・正解を出さない理由について</a></p>
       <p>回答はこのブラウザ内に保存され、外部へ送信されません。ほかの端末やブラウザとは自動で共有されません。</p>
       <section class="explanation"><h2>記録を手元に残す</h2><p>JSONファイルとして書き出し、同じノートへ読み戻せます。ファイルには、回答や自由に書いた言葉も含まれます。</p>
         <div class="data-actions"><button class="button secondary" @click=${() => this.exportData()}>JSONを書き出す</button><label class="button secondary file-button">JSONを読み込む<input type="file" accept=".json,application/json" aria-label="JSONを読み込む" @change=${event => this.chooseImport(event)}></label></div>
@@ -343,7 +344,7 @@ class SelfDialogueApp extends LitElement {
           : this.page === 'past' ? html`<past-view .catalog=${this.catalog} .view=${this.pastView} .state=${this.state} .definition=${this.catalog.followups.manualDialogue} .sourceType=${this.pastSourceType} .sourceId=${this.pastSourceId} .busy=${this.busy} @past-reply=${event => this.submitPastReply(event)}></past-view>`
           : this.page === 'profile' ? html`<profile-view .profile=${this.game.getProfile()} .catalog=${this.catalog} .state=${this.state} .discoveries=${detectComments(this.state, this.catalog)}></profile-view>` : this.page === 'archive' ? this.renderArchive() : this.page === 'about' ? this.renderAbout() : html`<section class="reading paper"><h1 tabindex="-1" data-page-heading>このページは見つかりませんでした。</h1><p>問いが更新されたか、記録が変更された可能性があります。</p><a class="button" href="#home">ホームへ戻る</a></section>`}
       </main>
-      <footer class="site-footer"><p><span class="status-dot" aria-hidden="true"></span>${status.mode === 'persistent' ? '回答は、このブラウザの中に。' : '今の記録は、このページの中に。'}</p><a href="#about">このノートについて・データ管理</a></footer>
+      <footer class="site-footer"><p><span class="status-dot" aria-hidden="true"></span>${status.mode === 'persistent' ? '回答は、このブラウザの中に。' : '今の記録は、このページの中に。'}</p><a href="./about/">このゲームについて</a><a href="#about">このノートについて・データ管理</a></footer>
     </div>`;
   }
 }

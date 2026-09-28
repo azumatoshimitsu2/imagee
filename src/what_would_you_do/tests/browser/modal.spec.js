@@ -1,5 +1,32 @@
 import { test, expect } from '@playwright/test';
 
+test('dismissed help stays closed after closing the tab and can still be opened manually', async ({ page, context }) => {
+  await page.goto('./#home');
+  const modal = page.locator('#js-modal-help');
+  await expect(modal).toHaveClass(/is-show/);
+  await modal.getByRole('button', { name: '閉じる', exact: true }).click();
+  await expect(modal).toBeHidden();
+  await page.close();
+
+  const reopened = await context.newPage();
+  await reopened.goto('./#home');
+  // Wait for both the component and its stylesheet, including queued auto-opening.
+  await reopened.evaluate(async () => {
+    await customElements.whenDefined('imagee-modal');
+    const modal = document.querySelector('#js-modal-help');
+    while (!modal.shadowRoot.adoptedStyleSheets.length) {
+      await new Promise(resolve => requestAnimationFrame(resolve));
+    }
+    await new Promise(resolve => setTimeout(resolve, 50));
+  });
+  const reopenedModal = reopened.locator('#js-modal-help');
+  await expect(reopenedModal).toBeHidden();
+  await expect(reopened.locator('body')).not.toHaveClass(/is-show-modal/);
+  await reopened.locator('imagee-btn-help').click();
+  await expect(reopenedModal).toHaveClass(/is-show/);
+  await expect(reopenedModal.getByRole('heading', { name: 'ゲームの遊び方' })).toBeVisible();
+});
+
 test('open=true displays help initially and the help button can reopen it after closing', async ({ page }) => {
   await page.goto('./#home');
   const modal = page.locator('imagee-modal#js-modal-help');
