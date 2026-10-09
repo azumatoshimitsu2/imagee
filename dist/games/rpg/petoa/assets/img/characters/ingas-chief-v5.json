@@ -1,0 +1,32 @@
+{
+  "frames": {
+    "chief-front": {
+      "frame": {
+        "x": 309,
+        "y": 182,
+        "w": 557,
+        "h": 1075
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 557,
+        "h": 1075
+      },
+      "sourceSize": {
+        "w": 557,
+        "h": 1075
+      }
+    }
+  },
+  "meta": {
+    "image": "ingas-chief-v5.png",
+    "size": {
+      "w": 1159,
+      "h": 1358
+    },
+    "scale": "1"
+  }
+}

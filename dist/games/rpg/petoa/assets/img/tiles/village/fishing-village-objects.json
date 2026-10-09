@@ -1,0 +1,73 @@
+{
+  "frames": {
+    "house-blue": {
+      "frame": { "x": 0, "y": 0, "w": 106, "h": 106 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 106, "h": 106 },
+      "sourceSize": { "w": 106, "h": 106 }
+    },
+    "house-shop": {
+      "frame": { "x": 110, "y": 4, "w": 146, "h": 100 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 146, "h": 100 },
+      "sourceSize": { "w": 146, "h": 100 }
+    },
+    "shed": {
+      "frame": { "x": 0, "y": 107, "w": 94, "h": 70 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 94, "h": 70 },
+      "sourceSize": { "w": 94, "h": 70 }
+    },
+    "dock-boat": {
+      "frame": { "x": 101, "y": 106, "w": 155, "h": 84 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 155, "h": 84 },
+      "sourceSize": { "w": 155, "h": 84 }
+    },
+    "sign": {
+      "frame": { "x": 7, "y": 197, "w": 57, "h": 49 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 57, "h": 49 },
+      "sourceSize": { "w": 57, "h": 49 }
+    },
+    "basket": {
+      "frame": { "x": 66, "y": 204, "w": 39, "h": 39 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 39, "h": 39 },
+      "sourceSize": { "w": 39, "h": 39 }
+    },
+    "crate": {
+      "frame": { "x": 111, "y": 202, "w": 35, "h": 41 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 35, "h": 41 },
+      "sourceSize": { "w": 35, "h": 41 }
+    },
+    "lamp": {
+      "frame": { "x": 150, "y": 190, "w": 39, "h": 65 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 39, "h": 65 },
+      "sourceSize": { "w": 39, "h": 65 }
+    },
+    "barrel": {
+      "frame": { "x": 193, "y": 199, "w": 38, "h": 46 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 46 },
+      "sourceSize": { "w": 38, "h": 46 }
+    }
+  },
+  "meta": {
+    "image": "fishing-village-objects-retro.png",
+    "format": "RGBA8888",
+    "size": { "w": 256, "h": 256 },
+    "scale": "1"
+  }
+}

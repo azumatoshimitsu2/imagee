@@ -1,0 +1,12 @@
+# ベクテーナ市民の追加画像 v1
+
+- Tool: built-in `image_gen.imagegen` (transparent background)
+- Reference: `vektena-residents-front-v1.png` (style and proportions)
+- Original: `/Users/azuma/.codex/generated_images/01a0fb36-25f6-7100-9c76-29e4a6e6fd1b/exec-795fdcb5-6e2e-48d1-9836-2d89fd839b53.png`
+- Game image: `vektena-residents-extra-v1.png` (original PNG copied unchanged)
+- Atlas: `vektena-residents-extra-v1.json`; five separate alpha-bounded frames, scaled to the existing 70px resident height.
+- User approved the sample before implementation. Five new appearances replace reused moving-resident appearances; population, routes, collision spacing and enemy counts remain the same. Old saves retain movement/pursuit progress while refreshing appearance and dialogue.
+
+## Generation prompt
+
+Use case: stylized-concept. Create ONE preview sprite sheet of FIVE NEW city residents for this Japanese RPG, using the supplied sheet strictly as a STYLE and BODY PROPORTIONS reference, not as identities to copy. Transparent background. Five full-body front-facing characters arranged in one evenly spaced horizontal row, same height and baseline, each completely separate, ample clear space, no cropping, no labels or text. Match the reference's warm earthy colors, dark outlines, compact rounded sturdy bodies, substantial boots, expressive heads, 2.5 to 3 heads tall, sprite-friendly pixel detailing. These are civilians in a future world fragmented after nuclear war, with repaired garments and visible class differences, not contemporary businesspeople. Left to right: (1) broad stout middle-aged porter, shaved head, tan skin, rust-red patched work vest, cream sleeves, dark trousers; (2) older market woman, ochre headscarf, teal apron, full skirt, sturdy build; (3) young courier with short tight black curls, darker skin, muted mustard jacket, brown trousers, small cross-body satchel, empty hands; (4) dignified wealthy older lady with a silver-gray bun, deep plum tailored long jacket with restrained gold embroidery, cream skirt, rounded normal build; (5) female repair worker with short blue-black hair, goggles resting on head, faded blue work overalls over cream shirt, sturdy normal body, empty hands. Make five unmistakably different silhouettes and faces. Neither exaggerated giant heads nor thin elongated limbs. No military uniforms, weapons, paper, smartphones, modern suits, scenery, cast shadows, checkerboard background, or extra characters.

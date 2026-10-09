@@ -1,0 +1,92 @@
+{
+  "frames": {
+    "modern-shophouse": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 604
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 604
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 604
+      }
+    },
+    "heritage-shophouse": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 604
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 604
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 604
+      }
+    },
+    "temple-hall": {
+      "frame": {
+        "x": 0,
+        "y": 604,
+        "w": 627,
+        "h": 650
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 650
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 650
+      }
+    },
+    "apartment": {
+      "frame": {
+        "x": 627,
+        "y": 604,
+        "w": 627,
+        "h": 650
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 650
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 650
+      }
+    }
+  },
+  "meta": {
+    "image": "bazaar-buildings-v1.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "scale": "1"
+  }
+}

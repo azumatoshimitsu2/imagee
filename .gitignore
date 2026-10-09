@@ -1,6 +1,7 @@
 src/**/
 # Keep the self-dialogue development/test setup reproducible.
 !src/what_would_you_do/
+!src/petoa/
 src/what_would_you_do/*
 !src/what_would_you_do/.gitignore
 !src/what_would_you_do/README.md

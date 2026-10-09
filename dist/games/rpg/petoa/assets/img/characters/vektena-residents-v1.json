@@ -1,0 +1,172 @@
+{
+  "frames": {
+    "office-worker": {
+      "frame": {
+        "x": 86,
+        "y": 16,
+        "w": 209,
+        "h": 486
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 209,
+        "h": 486
+      },
+      "sourceSize": {
+        "w": 209,
+        "h": 486
+      }
+    },
+    "student": {
+      "frame": {
+        "x": 492,
+        "y": 47,
+        "w": 186,
+        "h": 455
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 186,
+        "h": 455
+      },
+      "sourceSize": {
+        "w": 186,
+        "h": 455
+      }
+    },
+    "researcher": {
+      "frame": {
+        "x": 851,
+        "y": 27,
+        "w": 180,
+        "h": 479
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 180,
+        "h": 479
+      },
+      "sourceSize": {
+        "w": 180,
+        "h": 479
+      }
+    },
+    "shop-assistant": {
+      "frame": {
+        "x": 1253,
+        "y": 17,
+        "w": 159,
+        "h": 485
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 159,
+        "h": 485
+      },
+      "sourceSize": {
+        "w": 159,
+        "h": 485
+      }
+    },
+    "transit-attendant": {
+      "frame": {
+        "x": 108,
+        "y": 528,
+        "w": 180,
+        "h": 475
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 180,
+        "h": 475
+      },
+      "sourceSize": {
+        "w": 180,
+        "h": 475
+      }
+    },
+    "casual-youth": {
+      "frame": {
+        "x": 482,
+        "y": 517,
+        "w": 206,
+        "h": 490
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 206,
+        "h": 490
+      },
+      "sourceSize": {
+        "w": 206,
+        "h": 490
+      }
+    },
+    "shopper": {
+      "frame": {
+        "x": 846,
+        "y": 526,
+        "w": 242,
+        "h": 476
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 242,
+        "h": 476
+      },
+      "sourceSize": {
+        "w": 242,
+        "h": 476
+      }
+    },
+    "elder-resident": {
+      "frame": {
+        "x": 1228,
+        "y": 528,
+        "w": 211,
+        "h": 472
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 211,
+        "h": 472
+      },
+      "sourceSize": {
+        "w": 211,
+        "h": 472
+      }
+    }
+  },
+  "meta": {
+    "image": "vektena-residents-v1.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "scale": "1"
+  }
+}

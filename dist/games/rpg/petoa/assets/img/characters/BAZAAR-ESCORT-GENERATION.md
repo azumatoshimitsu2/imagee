@@ -1,0 +1,11 @@
+# Bazaar escort atlas
+
+Generated with the built-in `image_gen` tool on 2026-09-25. The final transparent PNG is saved as `bazaar-escort-v1.png`; `bazaar-escort-v1.json` selects Mados, Iria and Adba's messenger without altering source pixels. Used in CHAPTER 12 (`scene=14`). These are static poses; party movement follows the player's route.
+
+## Original prompt
+
+Use case: stylized-concept. Asset type: ONE production sprite atlas for a retro 16-bit top-down JRPG. Exactly THREE distinct characters, one row of three equal columns, transparent alpha background, no ground shadows. Whole bodies centered in cells with generous clear separation and padding. Crisp chunky pixel art with dark brown outlines, warm earthy limited palette, large readable heads and compact bodies, slightly overhead front-facing standing poses. Left: Mados, adult male bodyguard, broad shoulders, short dark hair, stubble, dark blue long jacket over practical brown leather clothing, boots, sheathed short sword at waist, calm alert expression. Center: Iria, adult female bodyguard, dark hair tied high, muted sage-green travel jacket and cream scarf, brown leather belt and boots, compact travel bag, alert confident expression. Right: Adba's messenger, slim young adult with short auburn hair, mustard-yellow waistcoat over cream shirt, russet trousers, small leather satchel, holding a folded sealed letter. Each recognizable different silhouette and colors, cohesive with warm pixel art bazaar town. All figures same approximate adult height and fully visible. No text, no labels, no grid lines, no background, no scenery, no photorealism, no smooth vector illustration. Canvas wide landscape, 1536x1024, characters around 70% of image height each.
+
+## Final edit prompt
+
+Use case: background-extraction. Edit the preceding three-character sprite atlas. Remove ALL background including dark brown glows and shadows, replace with genuine transparent alpha. Preserve exactly all three characters, faces, hair, clothing, props, poses and pixel-art detail. Expand canvas if needed so characters remain separated and nothing is clipped. One row of three figures. No background color, no glow, no ground or shadows, no checkerboard painted into image. Production transparent game sprite atlas.

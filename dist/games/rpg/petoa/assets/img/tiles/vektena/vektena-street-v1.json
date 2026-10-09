@@ -1,0 +1,132 @@
+{
+  "frames": {
+    "food-cart": {
+      "frame": {
+        "x": 0,
+        "y": 35,
+        "w": 520,
+        "h": 470
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 520,
+        "h": 470
+      },
+      "sourceSize": {
+        "w": 520,
+        "h": 470
+      }
+    },
+    "scooters": {
+      "frame": {
+        "x": 560,
+        "y": 45,
+        "w": 505,
+        "h": 465
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 505,
+        "h": 465
+      },
+      "sourceSize": {
+        "w": 505,
+        "h": 465
+      }
+    },
+    "palm": {
+      "frame": {
+        "x": 1070,
+        "y": 0,
+        "w": 466,
+        "h": 512
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 466,
+        "h": 512
+      },
+      "sourceSize": {
+        "w": 466,
+        "h": 512
+      }
+    },
+    "bus": {
+      "frame": {
+        "x": 5,
+        "y": 520,
+        "w": 585,
+        "h": 490
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 585,
+        "h": 490
+      },
+      "sourceSize": {
+        "w": 585,
+        "h": 490
+      }
+    },
+    "pole": {
+      "frame": {
+        "x": 600,
+        "y": 520,
+        "w": 405,
+        "h": 500
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 405,
+        "h": 500
+      },
+      "sourceSize": {
+        "w": 405,
+        "h": 500
+      }
+    },
+    "produce": {
+      "frame": {
+        "x": 1030,
+        "y": 550,
+        "w": 500,
+        "h": 460
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 500,
+        "h": 460
+      },
+      "sourceSize": {
+        "w": 500,
+        "h": 460
+      }
+    }
+  },
+  "meta": {
+    "image": "vektena-street-v1.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "scale": "1"
+  }
+}

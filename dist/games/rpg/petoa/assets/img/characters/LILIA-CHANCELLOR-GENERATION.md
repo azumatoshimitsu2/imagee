@@ -1,0 +1,5 @@
+Current asset: lilia-chancellor-v1.png / .json. Built-in image_gen; approved revised sample copied unchanged; alpha bounds in atlas. Original output: /Users/azuma/.codex/generated_images/01a0fb36-25f6-7100-9c76-29e4a6e6fd1b/exec-e7ca6f1a-3a9d-47b4-83ca-e732fbfd29df.png.
+
+Initial sample: exec-0847c648-1215-4996-b4e8-f82004340755.png, guard-v3 style/proportion reference. Male chancellor, age about 38, Southeast Asian royal ancestry, swept black hair, calm mature expression, sturdy body, emerald civilian court jacket with gold lotus trim and burgundy woven waist sash, dark trousers/shoes, frontal standing, chunky pixel art, transparent background.
+
+Final edit prompt: Make head including hair about 20% bigger relative to body to match compact 2.5–3-head RPG citizens; target 38–40% visible height, slightly shorten torso/legs, preserve thick body and broad shoulders, age/identity/calm face, costume/colors, frontal hands-down pose, dark stepped pixel outlines, transparent background. Change proportions only; no added props, text or backdrop.

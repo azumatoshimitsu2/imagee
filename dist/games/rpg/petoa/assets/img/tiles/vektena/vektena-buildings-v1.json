@@ -1,0 +1,132 @@
+{
+  "frames": {
+    "shophouses": {
+      "frame": {
+        "x": 50,
+        "y": 30,
+        "w": 420,
+        "h": 465
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 420,
+        "h": 465
+      },
+      "sourceSize": {
+        "w": 420,
+        "h": 465
+      }
+    },
+    "tower": {
+      "frame": {
+        "x": 550,
+        "y": 0,
+        "w": 435,
+        "h": 505
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 435,
+        "h": 505
+      },
+      "sourceSize": {
+        "w": 435,
+        "h": 505
+      }
+    },
+    "apartments": {
+      "frame": {
+        "x": 1030,
+        "y": 24,
+        "w": 495,
+        "h": 486
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 495,
+        "h": 486
+      },
+      "sourceSize": {
+        "w": 495,
+        "h": 486
+      }
+    },
+    "corner": {
+      "frame": {
+        "x": 0,
+        "y": 525,
+        "w": 525,
+        "h": 495
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 525,
+        "h": 495
+      },
+      "sourceSize": {
+        "w": 525,
+        "h": 495
+      }
+    },
+    "research": {
+      "frame": {
+        "x": 535,
+        "y": 530,
+        "w": 465,
+        "h": 465
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 465,
+        "h": 465
+      },
+      "sourceSize": {
+        "w": 465,
+        "h": 465
+      }
+    },
+    "terminal": {
+      "frame": {
+        "x": 1005,
+        "y": 620,
+        "w": 530,
+        "h": 370
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 530,
+        "h": 370
+      },
+      "sourceSize": {
+        "w": 530,
+        "h": 370
+      }
+    }
+  },
+  "meta": {
+    "image": "vektena-buildings-v1.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "scale": "1"
+  }
+}

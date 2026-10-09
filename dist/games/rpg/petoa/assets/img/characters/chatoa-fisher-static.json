@@ -1,0 +1,43 @@
+{
+  "image": "chatoa-fisher-static-v2.png",
+  "frameWidth": 64,
+  "frameHeight": 64,
+  "displayWidth": 72,
+  "displayHeight": 72,
+  "columns": 4,
+  "rows": 1,
+  "anchor": {
+    "x": 24,
+    "y": 42
+  },
+  "directions": {
+    "down": 0,
+    "left": 2,
+    "right": 1,
+    "up": 3
+  },
+  "frames": {
+    "down": [0],
+    "left": [2],
+    "right": [1],
+    "up": [3]
+  },
+  "animation": {
+    "frameRate": {
+      "down": 12,
+      "left": 8,
+      "right": 8,
+      "up": 12
+    },
+    "moveDurationMs": {
+      "walk": {
+        "vertical": 320,
+        "horizontal": 390
+      },
+      "run": {
+        "vertical": 190,
+        "horizontal": 250
+      }
+    }
+  }
+}

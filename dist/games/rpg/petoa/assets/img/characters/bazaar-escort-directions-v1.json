@@ -1,0 +1,252 @@
+{
+  "frames": {
+    "mados-down": {
+      "frame": {
+        "x": 47,
+        "y": 17,
+        "w": 256,
+        "h": 401
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 401
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 401
+      }
+    },
+    "mados-right": {
+      "frame": {
+        "x": 372,
+        "y": 17,
+        "w": 195,
+        "h": 401
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 195,
+        "h": 401
+      },
+      "sourceSize": {
+        "w": 195,
+        "h": 401
+      }
+    },
+    "mados-left": {
+      "frame": {
+        "x": 688,
+        "y": 17,
+        "w": 195,
+        "h": 401
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 195,
+        "h": 401
+      },
+      "sourceSize": {
+        "w": 195,
+        "h": 401
+      }
+    },
+    "mados-up": {
+      "frame": {
+        "x": 952,
+        "y": 17,
+        "w": 256,
+        "h": 401
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 401
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 401
+      }
+    },
+    "iria-down": {
+      "frame": {
+        "x": 47,
+        "y": 429,
+        "w": 232,
+        "h": 407
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 232,
+        "h": 407
+      },
+      "sourceSize": {
+        "w": 232,
+        "h": 407
+      }
+    },
+    "iria-right": {
+      "frame": {
+        "x": 354,
+        "y": 429,
+        "w": 232,
+        "h": 407
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 232,
+        "h": 407
+      },
+      "sourceSize": {
+        "w": 232,
+        "h": 407
+      }
+    },
+    "iria-left": {
+      "frame": {
+        "x": 669,
+        "y": 429,
+        "w": 231,
+        "h": 408
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 231,
+        "h": 408
+      },
+      "sourceSize": {
+        "w": 231,
+        "h": 408
+      }
+    },
+    "iria-up": {
+      "frame": {
+        "x": 975,
+        "y": 429,
+        "w": 232,
+        "h": 408
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 232,
+        "h": 408
+      },
+      "sourceSize": {
+        "w": 232,
+        "h": 408
+      }
+    },
+    "messenger-down": {
+      "frame": {
+        "x": 58,
+        "y": 847,
+        "w": 224,
+        "h": 388
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 224,
+        "h": 388
+      },
+      "sourceSize": {
+        "w": 224,
+        "h": 388
+      }
+    },
+    "messenger-right": {
+      "frame": {
+        "x": 373,
+        "y": 842,
+        "w": 193,
+        "h": 393
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 193,
+        "h": 393
+      },
+      "sourceSize": {
+        "w": 193,
+        "h": 393
+      }
+    },
+    "messenger-left": {
+      "frame": {
+        "x": 688,
+        "y": 842,
+        "w": 193,
+        "h": 393
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 193,
+        "h": 393
+      },
+      "sourceSize": {
+        "w": 193,
+        "h": 393
+      }
+    },
+    "messenger-up": {
+      "frame": {
+        "x": 974,
+        "y": 847,
+        "w": 223,
+        "h": 388
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 223,
+        "h": 388
+      },
+      "sourceSize": {
+        "w": 223,
+        "h": 388
+      }
+    }
+  },
+  "meta": {
+    "image": "bazaar-escort-directions-v1.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "scale": "1"
+  }
+}

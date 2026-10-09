@@ -1,0 +1,92 @@
+{
+  "frames": {
+    "pier": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      }
+    },
+    "quay": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      }
+    },
+    "yard": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      }
+    },
+    "wall": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      }
+    }
+  },
+  "meta": {
+    "image": "harbor-ground-v1.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "scale": "1"
+  }
+}

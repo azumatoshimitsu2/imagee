@@ -1,0 +1,21 @@
+{
+  "image": "sea-turtle-beast-static-v1.png",
+  "frameWidth": 96,
+  "frameHeight": 96,
+  "displayWidth": 96,
+  "displayHeight": 96,
+  "columns": 4,
+  "rows": 1,
+  "directions": {
+    "down": 0,
+    "left": 1,
+    "right": 2,
+    "up": 3
+  },
+  "frames": {
+    "down": [0],
+    "left": [1],
+    "right": [2],
+    "up": [3]
+  }
+}

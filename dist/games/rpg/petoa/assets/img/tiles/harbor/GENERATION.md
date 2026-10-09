@@ -1,0 +1,12 @@
+# Working harbor tiles and props
+
+Generated with the built-in image_gen tool on 2026-09-24. Original PNG pixels and transparency are preserved. JSON atlas frames select the terrain quadrants and individual props. Used in the shared scenes 11/12 harbor map.
+
+## harbor-ground-v1.png
+
+Use case: stylized-concept. Asset type: production terrain tile atlas for a top-down 16-bit JRPG harbor. Generate a square image divided into exactly 2 by 2 equal quadrants with no gutter or borders. TOP LEFT: weathered warm brown timber pier decking, parallel horizontal planks, subtle nails and salt wear, seamless repeat on all edges. TOP RIGHT: gray rough stone quay paving, irregular compact blocks, seamless repeat. BOTTOM LEFT: sandy worn cargo yard cobblestones, muted warm gray and tan, seamless repeat. BOTTOM RIGHT: dark wet harbor retaining-wall masonry texture, seamless repeat. Flat overhead textures ONLY, no objects, no raised borders, no perspective, no water, no text. Crisp chunky pixel art, approximately 32x32 logical pixels per quadrant enlarged nearest neighbor, restrained SNES palette, sunlight upper left, opaque full canvas. Intended to display each tile at 48x48 game pixels.
+
+## harbor-props-v1.png
+
+Use case: stylized-concept. Production transparent PNG sprite atlas for a top-down 16-bit JRPG tropical working harbor. Square canvas divided into exactly 3 columns and 2 rows, six independent sprites, one centered in each cell, wide transparent gutters, absolutely no overlap. Top left: low wide weathered timber warehouse with gray corrugated roof and open cargo doors, NO shop awning. Top middle: small open-sided dock cargo shed with rusty corrugated roof and timber posts. Top right: pile of stacked wooden shipping crates tied with rope. Bottom left: three wooden barrels with a coiled thick mooring rope. Bottom middle: folded fishing nets with small orange floats and two fish baskets. Bottom right: wooden two-wheeled cargo handcart carrying sacks. Classic JRPG view from above with south-facing front walls, straight horizontal facades, NOT diamond isometric. Crisp compact pixel art, chunky deliberate clusters, limited warm weathered browns gray roofs muted teal rope, sunlight upper left. Each object fully visible inside own cell, no ground slab, no background, genuinely transparent alpha, no shadows outside own cell, no letters or labels or watermark. Match SNES game sprites at small sizes.
+

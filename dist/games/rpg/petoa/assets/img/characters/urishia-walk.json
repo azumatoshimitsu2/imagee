@@ -1,0 +1,29 @@
+{
+  "image": "urishia-static-v1.png",
+  "frameWidth": 64,
+  "frameHeight": 64,
+  "displayWidth": 72,
+  "displayHeight": 72,
+  "columns": 4,
+  "rows": 1,
+  "directions": {
+    "down": 0,
+    "left": 2,
+    "right": 1,
+    "up": 3
+  },
+  "frames": {
+    "down": [0],
+    "left": [2],
+    "right": [1],
+    "up": [3]
+  },
+  "animation": {
+    "frameRate": {
+      "down": 10,
+      "left": 10,
+      "right": 10,
+      "up": 10
+    }
+  }
+}

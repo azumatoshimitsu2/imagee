@@ -1,0 +1,172 @@
+{
+  "frames": {
+    "noble-man": {
+      "frame": {
+        "x": 77,
+        "y": 30,
+        "w": 292,
+        "h": 482
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 292,
+        "h": 482
+      },
+      "sourceSize": {
+        "w": 292,
+        "h": 482
+      }
+    },
+    "noble-woman": {
+      "frame": {
+        "x": 443,
+        "y": 12,
+        "w": 325,
+        "h": 499
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 325,
+        "h": 499
+      },
+      "sourceSize": {
+        "w": 325,
+        "h": 499
+      }
+    },
+    "wealthy-merchant": {
+      "frame": {
+        "x": 768,
+        "y": 44,
+        "w": 356,
+        "h": 468
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 356,
+        "h": 468
+      },
+      "sourceSize": {
+        "w": 356,
+        "h": 468
+      }
+    },
+    "administrator": {
+      "frame": {
+        "x": 1178,
+        "y": 45,
+        "w": 267,
+        "h": 467
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 267,
+        "h": 467
+      },
+      "sourceSize": {
+        "w": 267,
+        "h": 467
+      }
+    },
+    "repair-artisan": {
+      "frame": {
+        "x": 65,
+        "y": 516,
+        "w": 307,
+        "h": 488
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 307,
+        "h": 488
+      },
+      "sourceSize": {
+        "w": 307,
+        "h": 488
+      }
+    },
+    "seamstress": {
+      "frame": {
+        "x": 437,
+        "y": 512,
+        "w": 294,
+        "h": 493
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 294,
+        "h": 493
+      },
+      "sourceSize": {
+        "w": 294,
+        "h": 493
+      }
+    },
+    "poor-elder": {
+      "frame": {
+        "x": 783,
+        "y": 512,
+        "w": 337,
+        "h": 493
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 337,
+        "h": 493
+      },
+      "sourceSize": {
+        "w": 337,
+        "h": 493
+      }
+    },
+    "poor-youth": {
+      "frame": {
+        "x": 1178,
+        "y": 512,
+        "w": 302,
+        "h": 493
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 302,
+        "h": 493
+      },
+      "sourceSize": {
+        "w": 302,
+        "h": 493
+      }
+    }
+  },
+  "meta": {
+    "image": "vektena-residents-front-v1.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "scale": "1"
+  }
+}

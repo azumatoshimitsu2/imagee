@@ -1,0 +1,32 @@
+{
+  "frames": {
+    "counter": {
+      "frame": {
+        "x": 72,
+        "y": 91,
+        "w": 2030,
+        "h": 508
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 2030,
+        "h": 508
+      },
+      "sourceSize": {
+        "w": 2030,
+        "h": 508
+      }
+    }
+  },
+  "meta": {
+    "image": "reception-counter-v1.png",
+    "size": {
+      "w": 2172,
+      "h": 724
+    },
+    "scale": "1"
+  }
+}

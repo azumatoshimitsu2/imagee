@@ -1,0 +1,92 @@
+{
+  "frames": {
+    "spy-down": {
+      "frame": {
+        "x": 168,
+        "y": 16,
+        "w": 400,
+        "h": 580
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 400,
+        "h": 580
+      },
+      "sourceSize": {
+        "w": 400,
+        "h": 580
+      }
+    },
+    "spy-right": {
+      "frame": {
+        "x": 708,
+        "y": 28,
+        "w": 331,
+        "h": 572
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 331,
+        "h": 572
+      },
+      "sourceSize": {
+        "w": 331,
+        "h": 572
+      }
+    },
+    "spy-left": {
+      "frame": {
+        "x": 202,
+        "y": 634,
+        "w": 339,
+        "h": 579
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 339,
+        "h": 579
+      },
+      "sourceSize": {
+        "w": 339,
+        "h": 579
+      }
+    },
+    "spy-up": {
+      "frame": {
+        "x": 694,
+        "y": 629,
+        "w": 406,
+        "h": 584
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 406,
+        "h": 584
+      },
+      "sourceSize": {
+        "w": 406,
+        "h": 584
+      }
+    }
+  },
+  "meta": {
+    "image": "vektena-spy-v1.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "scale": "1"
+  }
+}

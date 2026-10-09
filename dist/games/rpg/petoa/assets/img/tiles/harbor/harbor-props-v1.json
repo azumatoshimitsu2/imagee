@@ -1,0 +1,132 @@
+{
+  "frames": {
+    "warehouse": {
+      "frame": {
+        "x": 20,
+        "y": 255,
+        "w": 415,
+        "h": 325
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 415,
+        "h": 325
+      },
+      "sourceSize": {
+        "w": 415,
+        "h": 325
+      }
+    },
+    "shed": {
+      "frame": {
+        "x": 470,
+        "y": 280,
+        "w": 390,
+        "h": 300
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 300
+      },
+      "sourceSize": {
+        "w": 390,
+        "h": 300
+      }
+    },
+    "crates": {
+      "frame": {
+        "x": 890,
+        "y": 270,
+        "w": 350,
+        "h": 310
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 350,
+        "h": 310
+      },
+      "sourceSize": {
+        "w": 350,
+        "h": 310
+      }
+    },
+    "barrels": {
+      "frame": {
+        "x": 40,
+        "y": 730,
+        "w": 385,
+        "h": 330
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 385,
+        "h": 330
+      },
+      "sourceSize": {
+        "w": 385,
+        "h": 330
+      }
+    },
+    "nets": {
+      "frame": {
+        "x": 445,
+        "y": 750,
+        "w": 390,
+        "h": 310
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 310
+      },
+      "sourceSize": {
+        "w": 390,
+        "h": 310
+      }
+    },
+    "cart": {
+      "frame": {
+        "x": 880,
+        "y": 700,
+        "w": 365,
+        "h": 365
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 365,
+        "h": 365
+      },
+      "sourceSize": {
+        "w": 365,
+        "h": 365
+      }
+    }
+  },
+  "meta": {
+    "image": "harbor-props-v1.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "scale": "1"
+  }
+}

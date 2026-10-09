@@ -1,0 +1,15 @@
+# Vektena residents v1
+
+Generated with the built-in `image_gen` tool on 2026-10-02. Eight stationary modern city NPCs for scene 16 only; bazaar residents remain in their own scenes.
+
+`vektena-residents-v1.png` preserves the generated transparent PNG. The companion JSON atlas selects each figure without modifying image pixels. Figures retain their aspect ratios and are displayed at 70 px tall.
+
+Frames: office-worker, student, researcher, shop-assistant, transit-attendant, casual-youth, shopper, elder-resident. Fixed speakers use their corresponding occupations; background residents alternate between office worker, shopper, student and casual youth.
+
+## Generation prompt
+
+Use case: stylized-concept. Asset type: ONE production sprite atlas for PETOA modern capital-city residents. Generate exactly eight distinct full-body stationary NPC sprites in a strict regular 4-column by 2-row grid on genuinely transparent alpha background. Landscape canvas 1536x1024 preferred. Eight equal cells; each single figure centered in its cell with generous transparent padding on all sides, no overlap, entire head and shoes visible; aligned soles within each row. Crisp 16-bit JRPG pixel art, dark brown outlines, warm detailed pixel shading, big readable heads compact bodies (about 3 heads tall), slight overhead front-facing or three-quarter toward viewer; match cozy detailed retro game sprites, not vector art. Each figure about 200 pixels wide and 350 pixels tall, consistent scale, no ground or cast shadows. Order left to right top to bottom: (1) male office worker, dark navy business suit, pale shirt teal tie, short black hair, briefcase; (2) female teenage student, navy blazer pleated skirt sneakers bob haircut, school backpack and book; (3) female scientist, white lab coat over teal shirt and charcoal trousers, glasses tied dark hair, small tablet; (4) young male modern shop assistant, coral polo shirt and dark trousers, short auburn hair, name badge; (5) female transit attendant, blue uniform jacket trousers and peaked cap, tidy short hair, small timetable; (6) casually dressed young adult man, mustard hoodie blue jeans white sneakers, curly hair headphones around neck; (7) middle-aged woman shopper, mint cardigan cream shirt ankle-length navy trousers, brown shoulder bag and reusable shopping bag; (8) elderly man, silver hair glasses beige cardigan brown trousers loafers, walking cane. Different ages genders builds silhouettes hairstyles, contemporary ordinary city clothing, visually readable when displayed 70 pixels tall. NO medieval tunics cloaks turbans aprons armor weapons fantasy adventurer gear. NO text labels numbers gridlines borders scenery backgrounds or decorative objects. Preserve true transparent alpha.
+
+## Final background cleanup prompt
+
+Use case: background-extraction. Remove all dark colored background, gradient, haze and glows around the eight people. Preserve the eight full-body figures, belongings, designs, poses, positions, scale and 4-column by 2-row arrangement. Keep the 1536x1024 canvas with genuine transparent alpha. No shadows, text or new features.

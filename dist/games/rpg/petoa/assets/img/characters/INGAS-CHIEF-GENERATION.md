@@ -1,0 +1,21 @@
+# Ingas intelligence pursuit chief v1
+
+User-approved civilian intelligence executive sample. Built-in image_gen tool, revised from the earlier officer preview. Original output: /Users/azuma/.codex/generated_images/01a0fb36-25f6-7100-9c76-29e4a6e6fd1b/exec-fdbc27d3-bd0e-40bb-b253-91abc00ddcf7.png. PNG copied without changes and with original alpha. Atlas frames the visible alpha bounds. Displayed at 70px height to match residents.
+
+Prompt: preserve silver hair, sharp eyes, scar, pointed moustache/goatee and cold smirk, 2.6-head-high RPG proportions and detailed warm sprite style. Redesign as a conspicuous sinister civilian intelligence executive in a tailored charcoal long coat with oxblood lining, burgundy waistcoat, ivory shirt and red cravat with a small antique tie pin. Black gloves, repaired dark leather boots. Remove military epaulettes, medals, rank insignia and military cape. Maintained old expensive fabrics in a post-nuclear-war reconstructed world. Full-body isolated character on transparent background, no weapon, modern tactical equipment, background or text.
+
+## v2: matching resident proportions
+
+Previous game asset: ingas-chief-v2.png / ingas-chief-v2.json. Built-in image_gen edit using v1 as the target and vektena-residents-front-v1.png as the strict proportions reference. Prompt: enlarge head to approximately 43% of visible height, shorten torso and legs and coat tails to match compact resident proportions, preserve identity, civilian clothing, sinister expression and transparent background. Original output: /Users/azuma/.codex/generated_images/01a0fb36-25f6-7100-9c76-29e4a6e6fd1b/exec-c0c8623a-1640-4b9e-907d-21bd0897d897.png. PNG copied unchanged; native alpha bounds framed in atlas.
+
+## v3: approximately 2.7 heads tall
+
+Current game asset: ingas-chief-v3.png / ingas-chief-v3.json. Built-in image_gen edit using v2. Prompt: match the other characters at approximately 2.7 heads tall; head including hair about 36–37% of total visible height, reduce head and hair width, lengthen torso and legs, preserve sinister civilian black and burgundy clothing and transparent background. Original output: /Users/azuma/.codex/generated_images/01a0fb36-25f6-7100-9c76-29e4a6e6fd1b/exec-51730788-49da-4219-bdf9-b956cdad60f5.png. PNG copied unchanged; native alpha bounds framed in atlas.
+
+## v4: user-supplied civilian sprite reference
+
+Current game asset: ingas-chief-v4.png / ingas-chief-v4.json. Built-in image_gen edit, target v3, style and proportion reference user-uploaded brown-haired civilian screenshot. Final prompt: Redraw the silver-haired intelligence chief as a game pixel-art sprite matching the supplied civilian: compact head/shoulder/torso/leg ratios, approximately 2.5–3 heads tall, hair-inclusive head around 36% of visible height, compact torso and short substantial legs. Preserve sinister eyebrows, moustache, silver hair, black civilian coat with muted gold trim and burgundy waistcoat; chunky square pixels, dark outlines, limited muted palette and simple pixel shading readable at 70px; full-body front standing pose, transparent background; no smooth painting, text or other characters. Original output: /Users/azuma/.codex/generated_images/01a0fb36-25f6-7100-9c76-29e4a6e6fd1b/exec-03f1220b-c24e-411b-89b6-af421878056c.png. PNG copied unchanged; alpha bounds in atlas.
+
+## Stockier physique correction: ingas-chief-v5
+
+Current asset: ingas-chief-v5.png / .json. Built-in image_gen edit with vektena-residents-front-v1.png as body-build reference. Final prompt: Edit only physique, match stocky compact residents (top-left noble and bottom-left craftsman). Preserve head size, total height, pixel style, pose, face, identity, colors and costume. Widen body below neck about 30% with broad shoulders, thick chest/waist, substantial arms, thicker thighs/calves and sturdy broad boots. Shoulders extend slightly beyond head width. Compact everyday build, not obese or muscular superhero. Maintain 2.5–3 head proportions; single full-body sprite, transparent background, no shadow/text/other characters, no enlarged head. Original output: /Users/azuma/.codex/generated_images/01a0fb36-25f6-7100-9c76-29e4a6e6fd1b/exec-bc7514a1-6dc8-49ef-938a-eedea0dc91f2.png. Copied PNG unchanged; atlas uses alpha bounds.

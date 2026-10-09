@@ -1,0 +1,72 @@
+{
+  "frames": {
+    "mados": {
+      "frame": {
+        "x": 65,
+        "y": 222,
+        "w": 418,
+        "h": 696
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 418,
+        "h": 696
+      },
+      "sourceSize": {
+        "w": 418,
+        "h": 696
+      }
+    },
+    "iria": {
+      "frame": {
+        "x": 584,
+        "y": 220,
+        "w": 354,
+        "h": 698
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 354,
+        "h": 698
+      },
+      "sourceSize": {
+        "w": 354,
+        "h": 698
+      }
+    },
+    "messenger": {
+      "frame": {
+        "x": 1101,
+        "y": 245,
+        "w": 357,
+        "h": 673
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 357,
+        "h": 673
+      },
+      "sourceSize": {
+        "w": 357,
+        "h": 673
+      }
+    }
+  },
+  "meta": {
+    "image": "bazaar-escort-v2.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "scale": "1"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "frames": {
+    "fruit-stall": {
+      "frame": {
+        "x": 20,
+        "y": 125,
+        "w": 390,
+        "h": 465
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 465
+      },
+      "sourceSize": {
+        "w": 390,
+        "h": 465
+      }
+    },
+    "noodle-cart": {
+      "frame": {
+        "x": 445,
+        "y": 135,
+        "w": 385,
+        "h": 465
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 385,
+        "h": 465
+      },
+      "sourceSize": {
+        "w": 385,
+        "h": 465
+      }
+    },
+    "sala": {
+      "frame": {
+        "x": 865,
+        "y": 55,
+        "w": 355,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 355,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 355,
+        "h": 540
+      }
+    },
+    "planters": {
+      "frame": {
+        "x": 20,
+        "y": 675,
+        "w": 390,
+        "h": 455
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 455
+      },
+      "sourceSize": {
+        "w": 390,
+        "h": 455
+      }
+    },
+    "tables": {
+      "frame": {
+        "x": 435,
+        "y": 710,
+        "w": 395,
+        "h": 440
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 440
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 440
+      }
+    },
+    "gate": {
+      "frame": {
+        "x": 865,
+        "y": 640,
+        "w": 360,
+        "h": 500
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 360,
+        "h": 500
+      },
+      "sourceSize": {
+        "w": 360,
+        "h": 500
+      }
+    }
+  },
+  "meta": {
+    "image": "bazaar-street-life-v1.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "scale": "1"
+  }
+}

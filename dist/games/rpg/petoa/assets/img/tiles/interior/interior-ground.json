@@ -1,0 +1,16 @@
+{
+  "image": "interior-ground-retro.png",
+  "tileSize": 32,
+  "columns": 8,
+  "rows": 1,
+  "frames": {
+    "floor": 0,
+    "wall": 1,
+    "rug": 2,
+    "plank": 3,
+    "hearth": 4,
+    "window": 5,
+    "counter": 6,
+    "empty": 7
+  }
+}

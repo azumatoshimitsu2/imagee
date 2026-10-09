@@ -1,0 +1,32 @@
+{
+  "frames": {
+    "guard-front": {
+      "frame": {
+        "x": 290,
+        "y": 39,
+        "w": 616,
+        "h": 1238
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 616,
+        "h": 1238
+      },
+      "sourceSize": {
+        "w": 616,
+        "h": 1238
+      }
+    }
+  },
+  "meta": {
+    "image": "yuatea-guard-v1.png",
+    "size": {
+      "w": 1199,
+      "h": 1312
+    },
+    "scale": "1"
+  }
+}

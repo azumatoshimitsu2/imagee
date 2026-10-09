@@ -1,0 +1,14 @@
+{
+  "image": "adba-static-v1.png",
+  "frameWidth": 543,
+  "frameHeight": 724,
+  "columns": 4,
+  "rows": 1,
+  "directions": {
+    "down": 0,
+    "right": 1,
+    "left": 2,
+    "up": 3
+  },
+  "note": "Original generated sheet; size characters to match existing NPCs when integrating."
+}

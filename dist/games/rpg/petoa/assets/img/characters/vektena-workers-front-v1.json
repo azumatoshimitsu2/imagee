@@ -1,0 +1,52 @@
+{
+  "frames": {
+    "office-worker": {
+      "frame": {
+        "x": 241,
+        "y": 37,
+        "w": 507,
+        "h": 929
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 507,
+        "h": 929
+      },
+      "sourceSize": {
+        "w": 507,
+        "h": 929
+      }
+    },
+    "transit-attendant": {
+      "frame": {
+        "x": 798,
+        "y": 34,
+        "w": 505,
+        "h": 932
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 505,
+        "h": 932
+      },
+      "sourceSize": {
+        "w": 505,
+        "h": 932
+      }
+    }
+  },
+  "meta": {
+    "image": "vektena-workers-front-v1.png",
+    "size": {
+      "w": 1536,
+      "h": 1024
+    },
+    "scale": "1"
+  }
+}

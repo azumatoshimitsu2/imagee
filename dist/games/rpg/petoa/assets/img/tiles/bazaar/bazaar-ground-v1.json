@@ -1,0 +1,92 @@
+{
+  "frames": {
+    "sidewalk": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      }
+    },
+    "asphalt": {
+      "frame": {
+        "x": 627,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      }
+    },
+    "heritage-brick": {
+      "frame": {
+        "x": 0,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      }
+    },
+    "canal": {
+      "frame": {
+        "x": 627,
+        "y": 627,
+        "w": 627,
+        "h": 627
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 627,
+        "h": 627
+      },
+      "sourceSize": {
+        "w": 627,
+        "h": 627
+      }
+    }
+  },
+  "meta": {
+    "image": "bazaar-ground-v1.png",
+    "size": {
+      "w": 1254,
+      "h": 1254
+    },
+    "scale": "1"
+  }
+}

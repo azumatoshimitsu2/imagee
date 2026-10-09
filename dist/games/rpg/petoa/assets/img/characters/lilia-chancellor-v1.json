@@ -1,0 +1,32 @@
+{
+  "frames": {
+    "chancellor-front": {
+      "frame": {
+        "x": 240,
+        "y": 87,
+        "w": 674,
+        "h": 1215
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 674,
+        "h": 1215
+      },
+      "sourceSize": {
+        "w": 674,
+        "h": 1215
+      }
+    }
+  },
+  "meta": {
+    "image": "lilia-chancellor-v1.png",
+    "size": {
+      "w": 1159,
+      "h": 1358
+    },
+    "scale": "1"
+  }
+}

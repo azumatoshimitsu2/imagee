@@ -1,0 +1,112 @@
+{
+  "frames": {
+    "porter": {
+      "frame": {
+        "x": 24,
+        "y": 73,
+        "w": 476,
+        "h": 636
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 476,
+        "h": 636
+      },
+      "sourceSize": {
+        "w": 476,
+        "h": 636
+      }
+    },
+    "market-woman": {
+      "frame": {
+        "x": 508,
+        "y": 87,
+        "w": 394,
+        "h": 622
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 394,
+        "h": 622
+      },
+      "sourceSize": {
+        "w": 394,
+        "h": 622
+      }
+    },
+    "courier": {
+      "frame": {
+        "x": 936,
+        "y": 89,
+        "w": 335,
+        "h": 620
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 335,
+        "h": 620
+      },
+      "sourceSize": {
+        "w": 335,
+        "h": 620
+      }
+    },
+    "wealthy-lady": {
+      "frame": {
+        "x": 1322,
+        "y": 47,
+        "w": 383,
+        "h": 662
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 383,
+        "h": 662
+      },
+      "sourceSize": {
+        "w": 383,
+        "h": 662
+      }
+    },
+    "repair-worker": {
+      "frame": {
+        "x": 1775,
+        "y": 91,
+        "w": 341,
+        "h": 618
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 341,
+        "h": 618
+      },
+      "sourceSize": {
+        "w": 341,
+        "h": 618
+      }
+    }
+  },
+  "meta": {
+    "image": "vektena-residents-extra-v1.png",
+    "size": {
+      "w": 2172,
+      "h": 724
+    },
+    "scale": "1"
+  }
+}
